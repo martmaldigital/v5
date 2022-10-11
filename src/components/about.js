@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import Image from 'next/Image';
+import Image from 'next/image';
 import { Row, Col, Carousel } from 'antd';
 import { useMediaQuery } from 'components/useWidth';
 
@@ -196,21 +196,6 @@ const AboutPage = () => {
               </Row>
             </div>
           </div>
-
-          {/* <div className="keyofferings">
-            <h1 className="title">
-              Our Key Offerings
-            </h1>
-            <div className="offerings-holder">
-              {
-                keyOfferings.map((item) => (
-                  <div className="offerings-card">
-                    {item}
-                  </div>
-                ))
-              }
-            </div>
-          </div> */}
         </div>
       </div>
     </>

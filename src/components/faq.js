@@ -1,4 +1,4 @@
-import Image from 'next/Image';
+import Image from 'next/image';
 import { Collapse } from 'antd';
 
 import { FAQ, testimonies } from 'pages/api/hello';

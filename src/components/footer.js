@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Row, Col } from 'antd';
-import Image from 'next/Image';
-import Link from 'next/Link';
+import Image from 'next/image';
+import Link from 'next/link';
 
 import Instagram from 'assets/logo/instagram.svg';
 import Twitter from 'assets/logo/twitter.svg';
