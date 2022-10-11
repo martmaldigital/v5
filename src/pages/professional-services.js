@@ -1,4 +1,4 @@
-import Image from 'next/Image';
+import Image from 'next/image';
 import ProfessionalNav from 'components/nav/professionalNav'
 import Footer from 'components/footer'
 

@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { Carousel } from 'antd';
-import Image from 'next/Image';
+import Image from 'next/image';
 import { useMediaQuery } from 'components/useWidth';
 
 import { facilityList, testimonies } from 'pages/api/hello';

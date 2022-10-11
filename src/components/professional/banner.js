@@ -1,4 +1,4 @@
-import Image from 'next/Image';
+import Image from 'next/image';
 
 import DocBanner from 'assets/doctor/doc_banner.svg';
 
