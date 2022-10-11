@@ -1,0 +1,19 @@
+{
+  "/_error": "pages/_error.js",
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/about": "pages/about.html",
+  "/contact": "pages/contact.html",
+  "/corporate": "pages/corporate.html",
+  "/": "pages/index.html",
+  "/membership": "pages/membership.html",
+  "/professional-about": "pages/professional-about.html",
+  "/professional-contact": "pages/professional-contact.html",
+  "/professional-corporate": "pages/professional-corporate.html",
+  "/professional-membership": "pages/professional-membership.html",
+  "/professional-services": "pages/professional-services.html",
+  "/professional": "pages/professional.html",
+  "/services": "pages/services.html",
+  "/api/hello": "pages/api/hello.js",
+  "/404": "pages/404.html"
+}

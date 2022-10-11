@@ -1,0 +1,55 @@
+// responsiveness and breakpoints
+
+@mixin mobile() {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (min-width: 481px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablandscape() {
+  @media (min-width: 769px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin laptop() {
+  @media (min-width: 1024px) and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media (min-width: 1201px) and (max-width: 1349px) {
+    @content;
+  }
+}
+
+@mixin biggerscreen() {
+  @media (min-width: 1350px) {
+    @content;
+  }
+}
+
+//colors
+
+$blue: #2d9cdb;
+$navblue: #d0e9f7;
+$orange: #f2994a;
+$white: #ffffff;
+$black: #000000;
+$textblack: #0f3d57;
+$red: #e41b1b;
+$lightgrey: #f2f2f2;
+
+$fontgrey: #4f4f4f;
+
+$title: 'Dosis', sans-serif;
+
+$background-blue: rgba(208, 233, 247, 0.5);
+$nav-border: 1px solid rgba(208, 233, 247, 0.5);

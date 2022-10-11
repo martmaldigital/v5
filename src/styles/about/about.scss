@@ -1,0 +1,658 @@
+.about {
+  background: $white;
+
+  .about-main {
+    padding-top: 5rem;
+
+    @include mobile() {
+      padding-top: 2rem;
+    }
+    @include tablet() {
+      padding-top: 2rem;
+    }
+
+    .banner {
+      // background: $white;
+      // display: none;
+      width: 100%;
+      background: url('/about/banner.png');
+      height: 10rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+
+      &.profServ {
+        background: url('/services/profbanner.png');
+        background-position   : 50px;
+        background-size       : 95% 100%;
+      }
+      &.membership {
+        background: $white;
+      }
+
+      @include mobile() {
+        // height: 10rem;
+      }
+
+      .banner-holder {
+        background: linear-gradient(
+          91.06deg,
+          rgba(15, 61, 87, 0.8) 0.43%,
+          rgba(15, 61, 87, 0.08) 100%
+        );
+        width: 100%;
+        height: 100%;
+        &.profServ {
+          background: none;
+
+        }
+      }
+
+      .info-text {
+        padding: 4rem 3rem 3rem;
+        &.corporate {
+          padding: 2rem 3rem 3rem;
+        }
+
+        @include mobile() {
+          padding: 4rem 1.5rem;
+          position: relative;
+        }
+        @include tablet() {
+          padding: 5rem 2rem;
+        }
+        @include biggerscreen() {
+          padding: 4rem 6rem;
+        }
+        @include laptop() {
+          padding: 4rem 4rem;
+        }
+        .banner-title {
+          font-family: $title;
+          color: $white;
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 14px;
+          @include mobile() {
+            font-size: 20px;
+          }
+          &.profServ {
+            text-align: center;
+            color: $textblack;
+            line-height: 140px;
+
+          }
+        }
+        .text {
+          color: $white;
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .weare {
+      padding: 3rem 3rem;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-column-gap: 2rem;
+
+      &.profServ{
+        grid-template-columns: 50% 50%;
+        background: $background-blue;
+        padding: 1rem 3rem;
+        grid-column-gap: 3rem;
+
+      }
+
+      @include mobile() {
+        grid-template-columns: 100%;
+        padding: 2.5rem 2rem 0rem 1.5rem;
+      }
+      @include tablet() {
+        padding: 2.5rem 2rem 0rem 2rem;
+        grid-template-columns: 100%;
+      }
+      @include biggerscreen() {
+        padding: 4rem 6rem;
+      }
+      @include laptop() {
+        padding: 4rem 4rem;
+      }
+      .info-text {
+        &.profServ {
+          padding: 5rem 0rem;
+          // ul {
+          //   list-style: none;
+          // }
+          
+          // ul li::before {
+          //   content: "\2022";
+          //   color: $blue;
+          //   font-weight: bold;
+          //   display: inline-block; 
+          //   width: 1em;
+          //   margin-left: -1em;
+          // }
+        }
+        .info-title {
+          cursor: $textblack;
+          font-family: $title;
+          line-height: 56px;
+          font-weight: 600;
+          font-size: 35px;
+
+          @include mobile() {
+            font-size: 30px;
+            line-height: 38.95px;
+          }
+        }
+        .text {
+          line-height: 30px;
+          font-weight: 400;
+          font-size: 16px;
+          color: $textblack;
+        }
+      }
+      .action-holder {
+        margin-top: 30px;
+      }
+
+      .img-holder {
+        position: relative;
+        height: 24rem;
+        width: 100%;
+        @include mobile() {
+          height: 16rem;
+        }
+        @include tablet() {
+          height: 20rem;
+        }
+      }
+    }
+
+    .aboutcontent {
+      background: $background-blue;
+      padding: 3rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &.profServ {
+        background: $white;
+        padding: 1rem 3rem;
+      }
+        &.limited {
+          background: $background-blue;
+          align-items: normal;
+          justify-content: space-between;
+          @include mobile() {
+            padding: 2.625rem 1.5rem;
+            display: block;       
+             }
+             @include tablet() {
+              padding: 2.625rem 2rem;
+              display: block;           
+             }
+        }
+        &.general {
+          background: #F3F2F2;
+          align-items: normal;
+          @include mobile() {
+            padding: 2.625rem 1.5rem;
+            display: block;       
+             }
+             @include tablet() {
+              padding: 2.625rem 2rem;
+              display: block;           
+             }
+        }
+        &.special {
+          background: #FFFBE580;
+          align-items: normal;
+          @include mobile() {
+            padding: 2.625rem 1.5rem;
+            display: block;       
+             }
+             @include tablet() {
+              padding: 2.625rem 2rem;
+              display: block;           
+             }
+        }
+        &.small {
+          background: #F0E8FC80;
+          align-items: normal;
+          @include mobile() {
+            padding: 2.625rem 1.5rem;
+            display: block;       
+             }
+             @include tablet() {
+              padding: 2.625rem 2rem;
+              display: block;           
+             }
+        }
+        &.midi {
+          background: #FCE8E880;
+          align-items: normal;
+          @include mobile() {
+            padding: 2.625rem 1.5rem;
+            display: block;       
+             }
+             @include tablet() {
+              padding: 2.625rem 2rem;
+              display: block;           
+             }
+        }
+        &.large {
+          background: #EAF7FB80;
+          align-items: normal;
+          @include mobile() {
+            padding: 2.625rem 1.5rem;
+            display: block;       
+             }
+             @include tablet() {
+              padding: 2.625rem 2rem;
+              display: block;           
+             }
+        }
+      
+
+      @include mobile() {
+        padding: 2.625rem 1.5rem;
+        flex-direction: column-reverse;
+      }
+      @include tablet() {
+        padding: 2.625rem 2rem;
+        flex-direction: column-reverse;
+      }
+      @include laptop() {
+        padding: 4rem 4rem;
+      }
+      @include biggerscreen() {
+        padding: 4rem 6rem;
+      }
+
+      .img-holder {
+        width: 48%;
+        position: relative;
+        height: 35rem;
+        &.profServ {
+          width: 45%;
+        }
+        &.membership {
+          width: 20%;
+          // padding: 6rem;
+          height: 6rem;  
+          color: #196980;
+ 
+          &.l {
+            color: #196980;
+            ;
+          }    
+        
+        }
+
+        @include mobile() {
+          width: 100%;
+          height: 20rem;
+        }
+        @include tablet() {
+          width: 100%;
+          height: 25rem;
+        }
+        @include laptop() {
+          height: 30rem;
+        }
+        @include tablandscape() {
+          height: 22rem;
+        }
+      }
+
+      .info-text {
+        width: 47%;
+        &.large {
+          width: 100%;
+        ul {
+          font-size: 16px;
+          padding: 1em;
+            list-style: none;
+            color: #2AAFD5;
+
+          }
+          ul li::before {
+            content: "\2022";
+            color: #196980;
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em;
+          }
+        }
+
+        &.midi {
+          width: 100%;
+          ul {
+            font-size: 16px;
+            padding: 1rem;
+              list-style: none;
+              color: #891010;
+  
+            }
+            ul li::before {
+              content: "\2022";
+              color: #E41B1B;
+              font-weight: bold;
+              display: inline-block; 
+              width: 1em;
+              margin-left: -1em;
+            }
+        }
+
+        &.small {
+          width: 100%;
+          ul {
+            font-size: 16px;
+            padding: 1rem;
+              list-style: none;
+              color: #5816B6;
+  
+            }
+            ul li::before {
+              content: "\2022";
+              color: #8B49E9;
+              font-weight: bold;
+              display: inline-block; 
+              width: 1em;
+              margin-left: -1em;
+            }
+        }
+
+        &.special {
+          width: 100%;
+          ul {
+            font-size: 16px;
+            padding: 1rem;
+              list-style: none;
+              color: #998100;
+            }
+            ul li::before {
+              content: "\2022";
+              color: #F5CF00;
+              font-weight: bold;
+              display: inline-block; 
+              width: 1em;
+              margin-left: -1em;
+            }
+        }
+
+        &.general {
+          width: 100%;
+          ul {
+            font-size: 16px;
+            padding: 1rem;
+              list-style: none;
+              color: #504949;
+  
+            }
+            ul li::before {
+              content: "\2022";
+              color: #898080;
+              font-weight: bold;
+              display: inline-block; 
+              width: 1em;
+              margin-left: -1em;
+            }
+        }
+
+        &.limited {
+          width: 100%;
+          ul {
+            font-size: 16px;
+            padding: 1rem;
+              list-style: none;
+              color:#0F3D57;
+  
+            }
+            ul li::before {
+              content: "\2022";
+              color: #2D9CDB;
+              font-weight: bold;
+              display: inline-block; 
+              width: 1em;
+              margin-left: -1em;
+            }
+        }
+
+        @include mobile() {
+          width: 100%;
+        }
+        @include tablet() {
+          width: 100%;
+        }
+        .info-title {
+          font-family: $title;
+          line-height: 48.95px;
+          font-weight: 600;
+          font-size: 33px;
+          @include mobile() {
+            font-size: 28px;
+            line-height: 38.95px;
+          }
+          &.lp {
+            color:#0F3D57;
+          }
+          &.gp {
+            color:#504949;
+          }
+          &.sp{
+            color: #998100;
+          }
+          &.s {
+            color:#5816B6
+          }
+          &.m {
+            color:#891010
+          }
+          &.l {
+            color: #2AAFD5;
+          }
+        }
+        .text {
+          line-height: 28.95px;
+          font-weight: 400;
+          font-size: 16px;
+          color: $fontgrey;
+          &.bolder {
+            font-family: $title;
+            color: $orange;
+            font-size: 18px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+
+    .txt {
+      font-size: 18px;
+      margin-top: 1rem;
+    }
+
+    .ourteam {
+      padding: 0rem 3rem;
+      background: $white;
+      // margin-bottom: 7rem;
+
+      @include mobile() {
+        padding: 0rem 1.5rem;
+      }
+      @include tablet() {
+        padding: 0rem 2rem;
+      }
+      @include laptop() {
+        padding: 1rem 4rem;
+      }
+      @include biggerscreen() {
+        padding: 2rem 6rem;
+      }
+
+      .title {
+        font-family: $title;
+        line-height: 48.95px;
+        font-weight: 900;
+        font-size: 33px;
+        text-align: center;
+        @include mobile() {
+          font-size: 28px;
+          line-height: 38.95px;
+        }
+      }
+
+      .team-holder {
+        &.impact {
+          @include tablet() {
+            display: none;
+          }
+          @include mobile() {
+            display: none;
+          }
+        }
+        &.impact2 {
+          @include biggerscreen() {
+            display: none;
+          }
+          @include desktop() {
+            display: none;
+          }
+          @include laptop() {
+            display: none;
+          }
+          @include tablandscape() {
+            display: none;
+          }
+        }
+        .teamcard {
+          // @include mobile() {
+          //   margin-bottom: 2rem;
+          // }
+
+          .img-holder {
+            background: $orange;
+            border-radius: 8px 8px 0px 0px;
+            img {
+              border-radius: 8px 8px 0px 0px;
+              // height: 10rem;
+              width: 100%;
+              object-fit: cover;
+              @include mobile() {
+                height: 12rem;
+              }
+            }
+          }
+          .img-key {
+            background: $orange;
+            border-radius: 8px 8px 0px 0px;
+            img {
+              border-radius: 8px 8px 0px 0px;
+              // height: 10rem;
+              width: 100%;
+              object-fit: cover;
+              @include mobile() {
+                height: 4rem;
+              }
+            }
+          }
+
+          .card-text-holder {
+            height: 5rem;
+            margin-bottom: 1rem;
+            background: $background-blue;
+            padding: 0.5rem 0.5rem;
+
+            &.k {
+              height: 24rem;
+              border-radius: 0px 0px 8px 8px;
+              @include mobile() {
+                height: 27rem;
+              }
+              @include tablet() {
+                height: 26rem;
+              }
+            }
+          }
+
+          .name {
+            font-family: $title;
+            text-align: center;
+            font-weight: 700;
+            font-size: 24px;
+            margin-bottom: 0.3rem;
+            @include laptop() {
+              font-size: 20px;
+            }
+
+            &.k {
+              text-align: left;
+              font-size: 24px;
+              padding: 1rem 0rem 0.5rem 1.5rem;
+            }
+          }
+
+          .post {
+            text-align: center;
+            font-weight: 400;
+            line-height: 15px;
+            font-size: 16px;
+            margin-bottom: 0;
+
+            &.k {
+              font-size: 16px;
+              line-height: 24px;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+
+    .video {
+      background: $background-blue;
+      padding: 4rem 8rem;
+      @include tablandscape() {
+        padding: 2.625rem 3rem;
+      }
+      @include tablet() {
+        padding: 2.625rem 0rem;
+      }
+      @include mobile() {
+        padding: 1rem 1.5rem;
+      }
+
+      .v-title {
+        color: $orange;
+        font-family: $title;
+        font-size: 30px;
+        text-align: center;
+        @include mobile() {
+          font-size: 25px;
+        }
+      }
+
+      .videolink {
+        margin-bottom: 2rem;
+
+        div:first-child {
+          width: 100% !important;
+          height: 30rem !important;
+          border-radius: 10px;
+          @include tablet() {
+            height: 20rem !important;
+          }
+          @include mobile() {
+            height: 15rem !important;
+          }
+        }
+      }
+    }
+  }
+}

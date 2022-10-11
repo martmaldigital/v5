@@ -1,0 +1,381 @@
+@import './mixins.scss';
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Lato&family=Roboto&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+//input
+.input {
+  position: relative;
+  border: 1px solid $blue;
+  width: 45%;
+  padding: 0.7rem;
+  border-radius: 4px 0px 0px 4px;
+  background: $background-blue !important;
+
+  span {
+    display: none;
+    font-size: 12px;
+    color: $red;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $orange !important;
+  }
+}
+.ant-input {
+  //  width: 60% !important;
+  height: 3rem;
+  border-radius: 4px;
+  border-color: $blue !important;
+  box-shadow: none !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    height: 3rem;
+    box-shadow: $orange !important;
+  }
+
+  &.book-input {
+    border-color: $blue !important;
+
+    // &:hover,
+    // &:focus,
+    // &:active {
+    //   border-color: $orange !important;
+    // }
+  }
+}
+
+.title {
+  font-family: $title;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 56px;
+  text-align: center;
+  margin-top: 2.5rem;
+  &.membership {
+    margin-top: 0rem;
+    padding-bottom: 8rem;
+    padding-right: 3rem;
+    @include mobile() {
+      padding-bottom: 0rem;
+      padding-right: 0rem; 
+    }
+    @include tablet() {
+      padding-bottom: 0rem;
+      padding-right: 0rem; 
+    }
+    &.l {
+      color: #196980;
+    }
+    &.m{
+      color: #E41B1B;
+    }
+    &.s {
+      color: #8B49E9;
+    }
+    &.sp {
+      color: #F5CF00;
+    }
+    &.gp{
+      color: #898080;
+    }
+    &.lp {
+      color: #2D9CDB;
+    }
+  }
+  @include mobile() {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  &.feat {
+    text-align: left;
+  }
+
+  &.work-span {
+    color: $blue;
+
+    @include tablandscape() {
+      font-size: 30px;
+    }
+  }
+}
+
+.footnote {
+  text-align: center;
+  color: $textblack;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  padding: 0rem 6rem;
+  @include tablet() {
+    padding: 0rem 2rem;
+  }
+  @include tablandscape() {
+    padding: 0rem 1rem;
+  }
+  @include mobile() {
+    padding: 0;
+  }
+
+  &.d {
+    font-size: 24px;
+    font-weight: 400;
+    font-family: $title;
+  }
+
+  @include laptop() {
+    padding: 0rem 6rem;
+  }
+}
+
+.ant-carousel .slick-dots li button {
+  // display: block;
+  // background: $blue !important;
+
+  // width: 100%;
+  // height: 3px;
+  // padding: 0;
+  // color: transparent;
+  // font-size: 0;
+  background: grey !important;
+  // border: 0;
+  // border-radius: 1px;
+  // outline: none;
+  cursor: pointer;
+  opacity: 2 !important;
+  // transition: all 0.5s;
+  margin-top: 1rem;
+}
+.ant-carousel .slick-dots li.slick-active button {
+  background: $orange !important;
+  opacity: 2;
+}
+
+//interested modal
+.interested-modal {
+  width: 60% !important;
+
+  .anticon svg {
+    color: orange !important;
+  }
+  @include mobile() {
+    width: 100% !important;
+  }
+  .ant-modal-body {
+    padding: 32px !important;
+  }
+  .form-holder {
+    .modal-footnote {
+      color: $textblack;
+      font-family: 'Dosis', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 1rem;
+    }
+    .ant-form-item {
+      padding: 1.1rem;
+      border: 1px solid $blue;
+      margin-bottom: 1rem;
+      &:last-child {
+        padding: unset;
+        border: unset;
+        margin-bottom: unset;
+      }
+    }
+    .ant-checkbox-group {
+      width: 100%;
+      margin-bottom: 0.5rem;
+
+      .ant-checkbox-wrapper {
+        width: 100%;
+
+        .ant-checkbox + span {
+          padding-right: 0.5rem;
+        }
+      }
+    }
+  }
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: $orange;
+    border-color: $orange;
+  }
+  .ant-checkbox-inner {
+    border: 1px solid $orange !important;
+  }
+}
+
+.ant-collapse {
+  box-sizing: border-box;
+  margin: 0.4rem !important;
+  padding: 0;
+  color: $textblack;
+  font-size: 16px !important;
+  font-variant: tabular-nums;
+  list-style: none;
+  font-feature-settings: 'tnum', 'tnum';
+  background-color: rgba(208, 233, 247, 0.1) !important;
+  border: 0.7px solid $orange !important;
+  border-bottom: 0px !important;
+  border-radius: 2px;
+}
+
+.anticon svg {
+  color: black !important;
+}
+
+.error {
+  color: $red;
+  // display: none;
+}
+
+.custom-btn {
+  outline: none;
+  border: 0px;
+  border-radius: 4px;
+  height: 3rem;
+  padding: 0rem 2rem;
+  cursor: pointer;
+
+  &.disable {
+    pointer-events: none !important;
+    cursor: not-allowed !important;
+    background: $orange;
+  }
+
+  &.into-btn {
+    color: $white;
+    background: $blue;
+    font-weight: 600;
+    font-size: 18px;
+    @include tablandscape() {
+      font-size: 14px;
+    }
+    @include mobile() {
+      width: 100%;
+    }
+    @include tablet() {
+      width: 100%;
+    }
+  }
+  &.sub {
+    color: $white;
+    background: $blue;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 0rem 2.5rem;
+    @include mobile() {
+    }
+  }
+
+  &.skel-btn {
+    border: 1px solid $orange;
+    background: none;
+    color: $orange;
+
+    @include mobile() {
+      display: none;
+    }
+    @include tablet() {
+      display: none;
+    }
+  }
+
+  &.side-btn1 {
+    color: $blue;
+    background: $white;
+    width: 100%;
+    font-size: 14px;
+    @include tablandscape() {
+      display: none;
+    }
+    @include desktop() {
+      display: none;
+    }
+    @include laptop() {
+      display: none;
+    }
+  }
+
+  &.side-btn2 {
+    color: $white;
+    background: $blue;
+    width: 100%;
+    font-size: 14px;
+    border: 1px solid $white;
+    @include tablandscape() {
+      display: none;
+    }
+    @include desktop() {
+      display: none;
+    }
+    @include laptop() {
+      display: none;
+    }
+  }
+  &.side-btn3 {
+    color: $orange;
+    background: $white;
+    width: 100%;
+    font-size: 14px;
+    @include tablandscape() {
+      display: none;
+    }
+    @include desktop() {
+      display: none;
+    }
+    @include laptop() {
+      display: none;
+    }
+  }
+
+  &.nav-btn {
+    color: $white;
+    background: $blue;
+    @include mobile() {
+      display: none;
+    }
+    @include tablet() {
+      display: none;
+    }
+    // @include laptop() {
+    //   display: none;
+    // }
+  }
+}
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  position: relative;
+  background-color: $background-blue !important;
+  border: 1px solid $blue !important;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+  width: 100%;
+  height: 48px;
+  padding: 9px 19px;
+}
+
+.slick-list {
+  margin: 0 -7px !important;
+}
+
+.slick-slide > div {
+  padding: 0 9px !important;
+}
+
+@import './nav/nav.scss';
+@import './footer/footer.scss';
+@import './homepage/homepage.scss';
+@import './about/about.scss';
+@import './corporate/corporate.scss';
+@import './contact/contact.scss';
