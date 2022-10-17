@@ -26,6 +26,21 @@
     border-color: $orange !important;
   }
 }
+
+.ant-select-multiple .ant-select-selector {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  // padding: 1px 4px;
+  height: 55px !important;
+  padding: 0.7rem !important;
+}
+
+.ant-btn:hover, .ant-btn:focus, .ant-btn:active {
+  text-decoration: none;
+   background: grey !important; 
+}
+
 .ant-input {
   //  width: 60% !important;
   height: 3rem;
@@ -178,27 +193,28 @@
       font-weight: 500;
       font-size: 16px;
       line-height: 24px;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
     .ant-form-item {
-      padding: 1.1rem;
-      border: 1px solid $blue;
-      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border: 0px !important;
+      margin-bottom: 0.5rem;
       &:last-child {
         padding: unset;
         border: unset;
         margin-bottom: unset;
       }
+
     }
     .ant-checkbox-group {
       width: 100%;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
 
       .ant-checkbox-wrapper {
         width: 100%;
 
         .ant-checkbox + span {
-          padding-right: 0.5rem;
+          padding-right: 1.5rem;
         }
       }
     }
@@ -213,22 +229,27 @@
 }
 
 .ant-collapse {
-  box-sizing: border-box;
-  margin: 0.4rem !important;
-  padding: 0;
-  color: $textblack;
+  color: $textblack !important;
   font-size: 16px !important;
   font-variant: tabular-nums;
   list-style: none;
   font-feature-settings: "tnum", "tnum";
   background-color: rgba(208, 233, 247, 0.1) !important;
-  border: 0.7px solid $orange !important;
+  border: 0 !important;
   border-bottom: 0px !important;
   border-radius: 2px;
+
+
+
+  .anticon svg {
+    color: black !important;
+  }
 }
 
-.anticon svg {
-  color: black !important;
+.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+  margin-bottom: 5px !important;
+  color: rgba(0, 0, 0, 0.85);
+  border: 0.8px solid $orange !important;
 }
 
 .error {
@@ -372,6 +393,267 @@
 .slick-slide > div {
   padding: 0 9px !important;
 }
+
+//doctor bio modal
+.modal-doc-bio {
+  border-radius: 8px;
+  width: 70% !important;
+
+  @include mobile() {
+    width: 100% !important;
+  }
+
+  .modal-doc-main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 1rem;
+    padding-top: 1rem;
+
+    @include mobile() {
+      grid-template-columns: 100%;
+    }
+
+    .img-holder {
+      @include mobile() {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+      }
+
+      img {
+        width: 100%;
+        height: 24rem;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+    }
+
+    .doctor-details {
+      min-height: auto;
+      max-height: 24rem;
+      overflow-y: scroll;
+
+      &.forgroup-pratice {
+        max-height: 44rem;
+      }
+
+      p.info-label {
+        line-height: 18.13px;
+        font-weight: 500;
+        font-size: 16px;
+        margin-bottom: 0.2rem;
+        text-transform: capitalize;
+
+        &.available-header {
+          margin-bottom: 1rem;
+        }
+      }
+
+      p.info-answer {
+        line-height: 23.13px;
+        font-weight: 700;
+        font-size: 16px;
+        margin-bottom: 1rem;
+        color: grey;
+        text-transform: capitalize;
+      }
+
+      .available-for {
+        padding: 1rem 1rem 0.5rem;
+        background: $white;
+        box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .action-holder {
+    margin-top: 1rem;
+
+    button {
+      width: 100%;
+    }
+  }
+}
+.ant-drawer-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  display: block;
+  padding: 20px;
+  color: rgba(0, 0, 0, 0.45);
+  font-weight: 700;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1;
+  text-align: center;
+  text-transform: none;
+  text-decoration: none;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: color 0.3s;
+  text-rendering: auto;
+}
+
+.ant-btn {
+  border-radius: 8px;
+  height: 3rem;
+  outline: none;
+  box-shadow: none;
+  background: $blue;
+  color: $white;
+  border: 1px solid transparent !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 1px solid transparent !important;
+    background: $blue;
+    outline: none !important;
+    box-shadow: none !important;
+    color: $white;
+  }
+}
+.ant-drawer-header {
+  align-items: center;
+  padding: 0 !important;
+  line-height: 22px;
+  border-bottom: 0 !important;
+}
+//book drawer
+.book-drawer {
+  .cancel-btn {
+    background: $black;
+    color: $white;
+    padding: 1.5rem;
+    line-height: 0rem;
+  }
+  .go-btn {
+    background: $blue;
+    color: $white;
+    padding: 1.5rem;
+    line-height: 0rem;
+  }
+
+
+  .ant-drawer-content-wrapper {
+    width: 40% !important;
+
+    @include mobile() {
+      width: 85% !important;
+    }
+
+    .heading {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 1rem;
+      &.hidctor,
+      &.amount {
+        font-weight: 700;
+      }
+      &.amount {
+        font-size: 25px;
+
+        &.former-price {
+          text-decoration: line-through;
+        }
+
+        &:last-child {
+          margin-left: 0.5rem;
+        }
+      }
+    }
+
+    .footnote {
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    .form-holder {
+      box-sizing: border-box;
+
+      .slots-holder {
+        position: relative;
+
+        &.loading {
+          margin: 1rem 0rem 2rem;
+        }
+
+        .none-found {
+          margin-left: 1.7rem;
+          color: $fontgrey;
+        }
+      }
+    }
+    .payment-main {
+      padding: 6rem 2rem;
+      .cost-numbers {
+        display: flex;
+      }
+
+      .heading {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 1rem;
+        &.hidctor,
+        &.amount {
+          font-weight: 700;
+        }
+        &.amount {
+          font-size: 25px;
+          margin-bottom: 0rem;
+  
+          @include mobile() {
+            margin-bottom: 1rem;
+          }
+  
+          &.former-price {
+            text-decoration: line-through;
+          }
+  
+          &:last-child {
+            margin-left: 0.5rem;
+          }
+        }
+      }
+      .cost-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+  
+        @include mobile() {
+          flex-direction: column;
+        }
+      }
+  
+      .paystack-btn {
+        width: 50%;
+        background: $blue;
+        color: $white;
+        font-size: 18px;
+  
+        @include mobile() {
+          width: 100%;
+        }
+      }
+      .text {
+        margin-top: 1rem;
+        color: #e41b1b;
+        font-size: 18px;
+      }
+    }
+
+    .cost-numbers {
+      display: flex;
+    }
+  }
+}
+
 
 @import "./nav/nav.scss";
 @import "./footer/footer.scss";

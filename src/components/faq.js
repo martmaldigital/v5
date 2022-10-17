@@ -37,15 +37,15 @@ const Faq = () => {
         <h1 className="title">
           FAQs, Let us Answer Some of your Frequent Questions
         </h1>
-        {FAQ.map((Item, index) => (
-          <div className="faq-container" key={index}>
-            <Collapse expandIconPosition="end" accordion>
-              <Panel header={Item.header}>
-                <p className="faq-text">{Item.text}</p>
+          <div className="">
+            <Collapse expandIconPosition='end' accordion>
+        {FAQ.map((item, index) => (
+              <Panel header={item.header} key={index}>
+                <p className="faq-text">{item.text}</p>
               </Panel>
-            </Collapse>
-          </div>
         ))}
+        </Collapse>
+        </div>
       </div>
     </>
   );

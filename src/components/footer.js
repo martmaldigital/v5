@@ -28,6 +28,7 @@ const Footer = () => {
 
   return (
     <>
+    <div className="spaces"></div>
       <div className="footer-container">
         <Row gutter={32}>
           <Col lg={6} sm={12} xs={24}>
@@ -60,7 +61,7 @@ const Footer = () => {
               <li>
                 <a href="tel: +2348105094729">Phone: +2348105094729</a>
               </li>
-              <li>Email: Doctoora@gmail.com</li>
+              <li>Email: admin@doctoora.com.ng</li>
               <h2>Office Address</h2>
               <li>
                 11 Gbajumo Crescent,

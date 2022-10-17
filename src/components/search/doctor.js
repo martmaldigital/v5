@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Col, Row, Rate, Checkbox, Modal, Button } from "antd";
+import { Col, Row, Rate, Modal, } from "antd";
 import numeral from "numeral";
-import Image from "next/image";
 
 const Doctor = ({ openDrawer, doctor }) => {
   const [viewBio, setViewBio] = useState(false);
@@ -22,24 +21,6 @@ const Doctor = ({ openDrawer, doctor }) => {
             }
             alt=""
           />
-
-          {/* {
-                doc.accept_coin === 1 && <p className="accepts-coin">
-                  Accepts coin
-              </p>
-              } */}
-
-          {/* {
-                doc.practices !== undefined ?
-                  doc.practices.length > 0 &&
-                  <div className="show-grouping" onClick={() => this.openViewGroupPractice()}>
-                    <Badge count={doc.practices.length}>
-                      <span className="grouping-text">
-                        Group Practices &nbsp;&nbsp;</span>
-                    </Badge>
-                  </div>
-                  : null
-              } */}
         </div>
         {doctor === undefined ? null : (
           <h3 className="doc-name">
@@ -53,32 +34,15 @@ const Doctor = ({ openDrawer, doctor }) => {
 
         <div className="ratings-holder">
           <Rate disabled allowHalf defaultValue={doctor.review} />
-
-          {/* <ReactStars
-                count={5}
-                value={doc.review}
-                size={24}
-                color2={'#FDBF00'}
-                edit={false}
-              /> */}
         </div>
 
         <div className="actions">
-          {/* <button
-                className="custom-btn prime-btn"
-                onClick={() => this.showSlots()}
-              >
-                View Slots
-           </button> */}
           <button
-            className="custom-btn prime-btn"
+            className="custom-btn into-btn"
             onClick={() => setViewBio(true)}
           >
             View Bio
           </button>
-          {/* <button className="custom-btn view-btn" onClick={() => this.viewBio()}>
-                View Bio
-          </button> */}
         </div>
       </div>
 
@@ -118,11 +82,9 @@ const Doctor = ({ openDrawer, doctor }) => {
               </p>
 
               <p className="info-label available-header">Available Schedule </p>
-              {/* <Checkbox.Group */}
 
               {doctor.appointment_intervals.length > 0 ? (
                 doctor.appointment_intervals.map((item, index) => (
-                  // <Checkbox value={item} key={index}>
                   <div className="available-for">
                     <Row>
                       <Col lg={12} xs={24} sm={24}>
@@ -159,7 +121,6 @@ const Doctor = ({ openDrawer, doctor }) => {
                           </span>
                         </p>
                       </Col>
-
                       <Col lg={12} xs={24} sm={24}>
                         <p className="info-label">Price</p>
                         <p className="info-answer">
@@ -167,19 +128,16 @@ const Doctor = ({ openDrawer, doctor }) => {
                         </p>
                       </Col>
                     </Row>
-                  </div>
-                  // </Checkbox>
+                  </div>               
                 ))
               ) : (
                 <p className="none-found">There are no available schedules</p>
               )}
-
-              {/* </Checkbox.Group> */}
             </div>
           </div>
           <div className="action-holder">
             <button
-              className="custom-btn prime-btn"
+              className="custom-btn into-btn"
               onClick={() => openDrawer(doctor)}
             >
               Book Dr {`${doctor.firstname} ${doctor.lastname}`}
@@ -187,9 +145,6 @@ const Doctor = ({ openDrawer, doctor }) => {
           </div>
         </Modal>
       )}
-
-      {/* -------------------------------------------------------------
-    --------------------------------------------------------- */}
     </>
   );
 };

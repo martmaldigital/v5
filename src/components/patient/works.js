@@ -17,7 +17,9 @@ const Works = () => {
           Get <span className="title work-span">Doctoora</span> Healthcare
           Services Faster
         </h1>
+        <div className="search-holder">
         <Bannerform />
+        </div>
       </div>
 
       <div className="allinone">

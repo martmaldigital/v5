@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Modal, Form, Checkbox, Row, Col } from "antd";
+import { Modal, Form, Checkbox, Row, Col, Input } from "antd";
 
 const Getstarted = (props) => {
   const { onOk, onCancel, open } = props;
@@ -51,8 +51,34 @@ const Getstarted = (props) => {
             package that best suites your taste and lifestyle <br />
             (Select as many as apply to you)
           </p>
-
+    
           <Form layout="vertical" ref={formRef} onFinish={onFinish}>
+          <Form.Item
+                    name="Fullname"
+                    rules={[
+                      {
+                        required: true,
+                        message: "Input required",
+                      },
+                    ]}
+                  >
+                    <Input placeholder="Full Name" />
+                  </Form.Item>
+                  <Form.Item
+                    name="email"
+                    rules={[
+                      {
+                        type: "email",
+                        message: "The input is not valid email",
+                      },
+                      {
+                        required: true,
+                        message: "Input required",
+                      },
+                    ]}
+                  >
+                    <Input placeholder="Email Address" />
+                  </Form.Item>
             <Form.Item
               label="Which of our service(s) would you be most interested in?"
               name="services"

@@ -1,15 +1,12 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import PatientNav from "components/nav/patientNav";
 import Bannerform from "../components/bannerform/bannerform";
-import { ArrowLeftOutlined, LoadingOutlined } from "@ant-design/icons";
 import { useRouter } from "next/router";
 import {
   Form,
   Row,
   Col,
   Select,
-  Rate,
-  Pagination,
   Drawer,
   Input,
   DatePicker,
@@ -45,18 +42,9 @@ const titles = ["Dr.", "Mr.", "Mrs.", "Ms.", "Miss", "Prof", "PT"];
 
 const reasons = ["First Time Visit", "Follow Up", "Procedure"];
 
-// const location = []
 
-// const conditions = []
-
-// const slots = []
-
-// const loadingSlot = false
-
-// const loading = false
 
 const Search = () => {
-  const router = useRouter();
   const formRef = useRef(null);
 
   const [laoding, setLaoding] = useState(false);
@@ -252,7 +240,7 @@ const Search = () => {
     setLoadingSlot(true);
     setPrice(0);
     formRef.current.setFieldsValue({
-      time: [],
+      // time: [],
     });
     let day = moment(e).format("dddd").toLowerCase();
     if (visitTypeChoosen === null) {
@@ -467,17 +455,8 @@ const Search = () => {
   };
 
   return (
+    <>
     <div className="search">
-      {/* {
-        processing &&
-        <div className="processing">
-          <LoadingOutlined style={{ fontSize: 60 }} />
-          <p className="pro-text">
-            Processing... <br />
-            Don't move out of this page.
-           </p>
-        </div>
-      } */}
       <Headtags
         title="Doctoora - Same-Day Appointments With The Best Doctors Near You. "
         desc="Doctoora provides easy and affordable online and offline access to verified, quality healthcare services by Doctors, other experts and hospitals in Nigeria"
@@ -486,14 +465,8 @@ const Search = () => {
       <PatientNav />
       <div className="search-main">
         <div className="banner">
-          <p
-            className="footnote"
-            onClick={() => {
-              router.back();
-            }}
-          >
-            <ArrowLeftOutlined /> Back
-          </p>
+          <h1 className="title">Get Doctoora Healthcare Services Faster
+</h1>
           <Bannerform />
         </div>
         <div className="search-body">
@@ -536,7 +509,7 @@ const Search = () => {
                     </p>
                   </>
                 ) : null}
-                <Row gutter={20}>
+                <Row gutter={0}>
                   {!search.useAlternative
                     ? search.result.map((doctor) => (
                         <Col lg={6} xs={24} md={8} key={doctor.id}>
@@ -548,11 +521,14 @@ const Search = () => {
                         </Col>
                       ))
                     : search.alternativeResult.map((doctor) => (
+                      <Col lg={6} xs={24} md={8} key={doctor.id}>
+
                         <Doctor
                           doctor={doctor}
                           key={`doctor-key-${doctor.id}`}
                           openDrawer={openDrawer}
                         />
+                      </Col>
                       ))}
                 </Row>
               </>
@@ -566,7 +542,7 @@ const Search = () => {
           title={null}
           placement="left"
           onClose={onClose}
-          visible={drawerVisible}
+          open={drawerVisible}
           className="book-drawer"
           footer={
             <Row gutter={16}>
@@ -574,7 +550,7 @@ const Search = () => {
                 <Button
                   block
                   className="go-btn"
-                  disabled={validating || processing}
+                  disabled={validating || processing || visible}
                   loading={validating || processing}
                   onClick={() => {
                     formRef.current.submit();
@@ -587,7 +563,7 @@ const Search = () => {
                 <Button
                   block
                   className="cancel-btn"
-                  disabled={validating || processing}
+                  disabled={validating || processing || visible}
                   loading={validating || processing}
                   onClick={() => {
                     onClose();
@@ -599,6 +575,9 @@ const Search = () => {
             </Row>
           }
         >
+            {!visible &&
+            (
+              <>
           <h1 className="heading">
             Hi, I’m {currentDoctor?.firstname} {currentDoctor?.lastname}
             <br />
@@ -803,7 +782,11 @@ const Search = () => {
                   },
                 ]}
               >
-                <Input.TextArea
+                <Input.TextArea rows={4}
+                style={{
+                  resize: "none",
+                  height:"100%"
+                }}
                   className="book-input"
                   placeholder="Reason for Visit/Complaint"
                 />
@@ -821,10 +804,10 @@ const Search = () => {
                   dateRender={(current) => {
                     const style = {};
                     getNumberForDay(availableDays).map((item) => {
-                      // if (moment(current).day() === item) {
-                      //   style.border = '1px solid #1890ff';
-                      //   style.borderRadius = '50%';
-                      // }
+                      if (moment(current).day() === item) {
+                        style.border = '1px solid #1890ff';
+                        style.borderRadius = '50%';
+                      }
                     });
                     return (
                       <div className="ant-picker-cell-inner" style={style}>
@@ -838,7 +821,6 @@ const Search = () => {
                   format="YYYY-MM-DD"
                 />
               </Form.Item>
-              <Col lg={8} xs={24}>
                 <Form.Item
                   name="time"
                   label="Time (Pick a suitable time)"
@@ -859,7 +841,7 @@ const Search = () => {
                     >
                       {loadingSlot ? (
                         <div className="x-loader">
-                          <LoadingOutlined style={{ fontSize: 40 }} />
+                         <div className="loader"></div>
                         </div>
                       ) : (
                         <>
@@ -867,7 +849,7 @@ const Search = () => {
                             slots.map((slot, index) => (
                               <Col
                                 key={index}
-                                lg={6}
+                                sm={12}
                                 xs={24}
                                 className="book-check"
                               >
@@ -884,7 +866,6 @@ const Search = () => {
                     </Row>
                   </Checkbox.Group>
                 </Form.Item>
-              </Col>
               <Form.Item
                 name="health_condition"
                 rules={[
@@ -950,10 +931,44 @@ const Search = () => {
               </Form.Item>
             </Form>
           </div>
+          </>
+            )}
+        { visible && (
+
+         <div className="payment-main">
+          <h1 className="heading hidctor">Total booking amount</h1>
+          <div className="cost-btn">
+            <div className="cost-numbers">
+              {couponData !== null && (
+                <h1
+                  className={`heading amount ${
+                    couponData !== null ? "former-price" : ""
+                  }`}
+                >
+                  ₦
+                  {numeral(
+                    price === 0
+                      ? getPrice(formRef.current.getFieldValue("time"))
+                      : price + couponData.value
+                  ).format("0,0")}
+                </h1>
+              )}
+              <h1 className="heading amount">
+                ₦{numeral(price).format("0,0")}
+              </h1>
+            </div>
+            <PaystackButton
+              className={`custom-btn paystack-btn`}
+              {...componentProps}
+            />
+          </div>
+          <p className="text">Please proceed to complete your payment.</p>
+        </div>)}
         </Drawer>
       )}
+</div>
 
-      <Modal
+      {/* <Modal
         visible={visible}
         footer={null}
         className="paystack-modal"
@@ -988,8 +1003,8 @@ const Search = () => {
             />
           </div>
         </div>
-      </Modal>
-    </div>
+      </Modal> */}
+      </>
   );
 };
 

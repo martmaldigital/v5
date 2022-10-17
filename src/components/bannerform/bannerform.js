@@ -30,14 +30,14 @@ const Bannerform = () => {
     },
     {
       active: false,
-      name: "Facility visit",
+      name: "Facility Visit",
       pos: "two",
       image: "Facility1.svg",
       image2: "Facility2.svg"
     },
     {
       active: false,
-      name: "Home visit",
+      name: `Home Visit`,
       pos: "three",
       image: "home1.svg",
       image2: "home2.svg"
