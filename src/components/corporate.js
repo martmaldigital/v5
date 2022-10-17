@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import { Row, Col } from 'antd';
+import Image from "next/image";
+import { Row, Col } from "antd";
 
-import { corporateServices, servPortal, pricing } from 'pages/api/hello';
+import { corporateServices, servPortal, pricing } from "pages/api/hello";
 
 const CorporatePage = () => {
   return (

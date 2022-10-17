@@ -1,8 +1,8 @@
-@import './mixins.scss';
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Lato&family=Roboto&display=swap');
+@import "./mixins.scss";
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Lato&family=Roboto&display=swap");
 
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 //input
@@ -64,29 +64,29 @@
     padding-right: 3rem;
     @include mobile() {
       padding-bottom: 0rem;
-      padding-right: 0rem; 
+      padding-right: 0rem;
     }
     @include tablet() {
       padding-bottom: 0rem;
-      padding-right: 0rem; 
+      padding-right: 0rem;
     }
     &.l {
       color: #196980;
     }
-    &.m{
-      color: #E41B1B;
+    &.m {
+      color: #e41b1b;
     }
     &.s {
-      color: #8B49E9;
+      color: #8b49e9;
     }
     &.sp {
-      color: #F5CF00;
+      color: #f5cf00;
     }
-    &.gp{
+    &.gp {
       color: #898080;
     }
     &.lp {
-      color: #2D9CDB;
+      color: #2d9cdb;
     }
   }
   @include mobile() {
@@ -174,7 +174,7 @@
   .form-holder {
     .modal-footnote {
       color: $textblack;
-      font-family: 'Dosis', sans-serif;
+      font-family: "Dosis", sans-serif;
       font-weight: 500;
       font-size: 16px;
       line-height: 24px;
@@ -220,7 +220,7 @@
   font-size: 16px !important;
   font-variant: tabular-nums;
   list-style: none;
-  font-feature-settings: 'tnum', 'tnum';
+  font-feature-settings: "tnum", "tnum";
   background-color: rgba(208, 233, 247, 0.1) !important;
   border: 0.7px solid $orange !important;
   border-bottom: 0px !important;
@@ -355,14 +355,14 @@
   position: relative;
   background-color: $background-blue !important;
   border: 1px solid $blue !important;
-  border-radius: 2px;
+  // border-radius: 4px 0px 0px 4px !important;
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
   width: 100%;
-  height: 48px;
-  padding: 9px 19px;
+  height: 55px !important;
+  padding: 0.7rem !important;
 }
 
 .slick-list {
@@ -373,9 +373,12 @@
   padding: 0 9px !important;
 }
 
-@import './nav/nav.scss';
-@import './footer/footer.scss';
-@import './homepage/homepage.scss';
-@import './about/about.scss';
-@import './corporate/corporate.scss';
-@import './contact/contact.scss';
+@import "./nav/nav.scss";
+@import "./footer/footer.scss";
+@import "./homepage/homepage.scss";
+@import "./about/about.scss";
+@import "./corporate/corporate.scss";
+@import "./contact/contact.scss";
+@import "./search/bannerform.scss";
+@import "./search/doctor.scss";
+@import "./search/search.scss";

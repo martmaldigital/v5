@@ -1,24 +1,14 @@
-import ContactPage from 'components/contact'
-import ProfessionalNav from 'components/nav/professionalNav'
-import Footer from 'components/footer'
-
+import ContactPage from "components/contact";
+import ProfessionalNav from "components/nav/professionalNav";
+import Footer from "components/footer";
 
 const Index = () => {
-    return (
-      <>
+  return (
+    <>
+      <ProfessionalNav />
       <ContactPage />
-      </>
-    )
-  }
-  
-  export default Index
-  
-  Index.getLayout = (page) => {
-      return (
-          <>
-          <ProfessionalNav />
-          {page}
-          <Footer />
-          </>
-      )
-  }
+    </>
+  );
+};
+
+export default Index;

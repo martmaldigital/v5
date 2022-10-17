@@ -1,24 +1,13 @@
-import AboutPage from 'components/about'
-import React from 'react'
-import ProfessionalNav from 'components/nav/professionalNav'
-import Footer from 'components/footer'
+import ProfessionalNav from "components/nav/professionalNav";
+import AboutPage from "components/about";
 
-const Index= () => {
+const Index = () => {
   return (
     <>
-    <AboutPage />
+      <ProfessionalNav />
+      <AboutPage />
     </>
-  )
-}
+  );
+};
 
-export default Index
-
-Index.getLayout = (page) => {
-    return (
-      <>
-        <ProfessionalNav />
-        {page}
-        <Footer />
-      </>
-    );
-  };
+export default Index;

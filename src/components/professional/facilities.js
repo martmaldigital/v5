@@ -1,9 +1,9 @@
-import { useRef } from 'react';
-import { Carousel } from 'antd';
-import Image from 'next/image';
-import { useMediaQuery } from 'components/useWidth';
+import { useRef } from "react";
+import { Carousel } from "antd";
+import Image from "next/image";
+import { useMediaQuery } from "components/useWidth";
 
-import { facilityList, testimonies } from 'pages/api/hello';
+import { facilityList, testimonies } from "pages/api/hello";
 
 const Facilities = () => {
   const slider = useRef(null);

@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import { Modal, Form, Checkbox, Row, Col } from 'antd';
+import React, { useRef } from "react";
+import { Modal, Form, Checkbox, Row, Col } from "antd";
 
 const Getstarted = (props) => {
   const { onOk, onCancel, open } = props;
@@ -10,29 +10,29 @@ const Getstarted = (props) => {
   };
 
   const servicesPool = [
-    'Homecare',
-    'Diagnostics',
-    'In-Patient Care',
-    'Telemedicine',
-    'Online Pharmacy',
+    "Homecare",
+    "Diagnostics",
+    "In-Patient Care",
+    "Telemedicine",
+    "Online Pharmacy",
   ];
 
   const howoften = [
-    'Very Often',
-    'Monthly',
-    'Yearly',
-    'Only when there is need',
+    "Very Often",
+    "Monthly",
+    "Yearly",
+    "Only when there is need",
   ];
 
-  const annalList = ['Yes', 'No'];
+  const annalList = ["Yes", "No"];
 
   const approaches = [
-    'Regular Exercise',
-    'Healthy Eating',
-    'Calorie Counting',
-    'Preventative Health Screening',
-    'Yoga',
-    'Natural Herbs',
+    "Regular Exercise",
+    "Healthy Eating",
+    "Calorie Counting",
+    "Preventative Health Screening",
+    "Yoga",
+    "Natural Herbs",
   ];
 
   return (
@@ -59,7 +59,7 @@ const Getstarted = (props) => {
               rules={[
                 {
                   required: true,
-                  message: 'Required field',
+                  message: "Required field",
                 },
               ]}
             >
@@ -81,12 +81,12 @@ const Getstarted = (props) => {
             </Form.Item>
             <Form.Item
               label="How often do you use healthcare services (see a doctor, buy medication, 
-                hospital admission, run diagnostics etc) every year?"
+                hospital admission, run diagnostics, etc) every year?"
               name="frequency"
               rules={[
                 {
                   required: true,
-                  message: 'Required field',
+                  message: "Required field",
                 },
               ]}
             >
@@ -114,7 +114,7 @@ const Getstarted = (props) => {
               rules={[
                 {
                   required: true,
-                  message: 'Required field',
+                  message: "Required field",
                 },
               ]}
             >
@@ -142,7 +142,7 @@ const Getstarted = (props) => {
               rules={[
                 {
                   required: true,
-                  message: 'Required field',
+                  message: "Required field",
                 },
               ]}
             >

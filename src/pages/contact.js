@@ -1,9 +1,10 @@
-import ContactPage from 'components/contact';
-import React from 'react';
+import PatientNav from "components/nav/patientNav";
+import ContactPage from "components/contact";
 
 const Contact = () => {
   return (
     <>
+      <PatientNav />
       <ContactPage />
     </>
   );

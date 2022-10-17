@@ -1,0 +1,86 @@
+
+.banner-form {
+    // background: $background-blue;
+  padding: 1.5rem 10rem;
+  .top-tabs {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    margin-bottom: 1rem;
+
+    .tab {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+      transition: all;
+
+
+      .img {
+        margin-bottom: 0.1rem;
+        position: relative;
+        height: 2.5rem;
+        width: 2.5rem;
+      }
+
+      p {
+        color: grey;
+        line-height: 30px;
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 0.4rem;
+        &.active {
+            color: $textblack; 
+        }
+        // @include mobile() {
+        //   display: none;
+        // }
+      }
+    }
+  }
+  .form-holder {
+    padding: 2rem 4rem 1.5rem;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 8px;
+    margin-top: -1rem;
+    position: relative;
+    &.for-dash {
+      width: 100% !important;
+      @include mobile() {
+        width: 100% !important;
+      }
+    }
+    &.smaller {
+      width: 58% !important;
+      &.for-dash {
+        width: 80% !important;
+      }
+      @include mobile() {
+        width: 100% !important;
+        padding: 1.25rem 1rem;
+      }
+    }
+    @include mobile() {
+      width: 100% !important;
+      padding: 1.25rem 1rem;
+    }
+    .go-btn {
+     color: $white;
+      width: 100%;
+      height: 55px;
+      font-weight: 600;
+      line-height: 24px;
+      font-size: 16px;
+      background: $blue;
+    }
+    .ant-row.ant-form-item {
+      @include mobile() {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

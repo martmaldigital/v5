@@ -1,14 +1,25 @@
-import Image from 'next/image';
+import Bannerform from "components/bannerform/bannerform";
+import Image from "next/image";
 
 const works = [
-  'Sign Up/Create Account',
-  'Choose Preferred Service',
-  'Enjoy Uninterrupted Healthcare',
+  "Sign Up/Create Account",
+  "Choose Preferred Service",
+  "Enjoy Uninterrupted Healthcare",
 ];
 
 const Works = () => {
   return (
     <>
+    {/* <Bannerform /> */}
+    <div className="allinone s">
+        <hr className="s"/>
+        <h1 className="title">
+          Get <span className="title work-span">Doctoora</span> Healthcare
+          Services Faster
+        </h1>
+        <Bannerform />
+      </div>
+
       <div className="allinone">
         <hr />
         <h1 className="title">The All-in-One Healthcare System for Nigeria</h1>
@@ -16,7 +27,7 @@ const Works = () => {
           Our passion is your health. All your health needs are now just one
           click away from being met for convenience and peace of mind. Become a
           member today to see how Doctoora Health can help you live healthier
-          lives and enjoy exclusive discounts!.
+          lives and enjoy exclusive discounts!
         </p>
         <div className="action-holder">
           <button className="custom-btn into-btn">Become a Member</button>

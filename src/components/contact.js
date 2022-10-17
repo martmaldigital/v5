@@ -1,8 +1,8 @@
-import React, { createRef, useState } from 'react';
-import { Row, Col, Form, Input, notification } from 'antd';
-import axios from 'axios';
+import React, { createRef, useState } from "react";
+import { Row, Col, Form, Input, notification } from "antd";
+import axios from "axios";
 
-import api from 'config/api';
+import api from "config/api";
 
 const { TextArea } = Input;
 
@@ -26,8 +26,8 @@ const ContactPage = () => {
       })
       .then((res) => {
         setLoading(false);
-        if (res.data.status === 'success') {
-          openNotificationWithIcon('success', res.data.message);
+        if (res.data.status === "success") {
+          openNotificationWithIcon("success", res.data.message);
           form.current.resetFields();
         } else {
           let getAllErrors = Object.values(res.data.data.errors);
@@ -41,12 +41,12 @@ const ContactPage = () => {
               ))}
             </div>
           );
-          openNotificationWithIcon('warning', res.data.message, desc);
+          openNotificationWithIcon("warning", res.data.message, desc);
         }
       })
       .catch((err) => {
-        console.log(err)
-        openNotificationWithIcon('error', 'Error', 'Something went wrong');
+        console.log(err);
+        openNotificationWithIcon("error", "Error", "Something went wrong");
         setLoading(false);
       });
   };
@@ -69,7 +69,7 @@ const ContactPage = () => {
                     rules={[
                       {
                         required: true,
-                        message: 'Please input your fullname',
+                        message: "Please input your fullname",
                       },
                     ]}
                   >
@@ -82,7 +82,7 @@ const ContactPage = () => {
                         rules={[
                           {
                             required: true,
-                            message: 'Please input your phone number',
+                            message: "Please input your phone number",
                           },
                         ]}
                       >
@@ -94,12 +94,12 @@ const ContactPage = () => {
                         name="email"
                         rules={[
                           {
-                            type: 'email',
-                            message: 'The input is not valid email',
+                            type: "email",
+                            message: "The input is not valid email",
                           },
                           {
                             required: true,
-                            message: 'Please input your email',
+                            message: "Please input your email",
                           },
                         ]}
                       >
@@ -113,7 +113,7 @@ const ContactPage = () => {
                     rules={[
                       {
                         required: true,
-                        message: 'Please input your subject',
+                        message: "Please input your subject",
                       },
                     ]}
                   >
@@ -124,30 +124,26 @@ const ContactPage = () => {
                     rules={[
                       {
                         required: true,
-                        message: 'Required field',
+                        message: "Required field",
                       },
                     ]}
                   >
                     <TextArea
                       style={{
-                        resize: 'none',
-                        height: '100%',
+                        resize: "none",
+                        height: "100%",
                       }}
                       rows={6}
                       className="book-input"
                       placeholder="Type in your message"
                     />
                   </Form.Item>
-                  <div className="action-holder">                 
-                    {
-                    loading ? <div className="loader"></div>
-                    :
-                    <button
-                      className='custom-btn into-btn'
-                    >Send mail
-                    </button>
-                    
-                    }             
+                  <div className="action-holder">
+                    {loading ? (
+                      <div className="loader"></div>
+                    ) : (
+                      <button className="custom-btn into-btn">Send mail</button>
+                    )}
                   </div>
                 </Form>
               </div>

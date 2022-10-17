@@ -1,57 +1,57 @@
-import { useRef } from 'react';
-import { Carousel } from 'antd';
-import Image from 'next/image';
-import { useMediaQuery } from 'components/useWidth';
+import { useRef } from "react";
+import { Carousel } from "antd";
+import Image from "next/image";
+import { useMediaQuery } from "components/useWidth";
 
 const tested = [
-  'naveen',
-  'mypharmacy',
-  'nes25',
-  'tef',
-  'brainware',
-  'AML',
-  'marquee',
-  'smilewithme',
-  'tsl',
-  'ACA',
-  'africanfashion',
-  'stratosphere',
-  'cchub',
-  'firmcare',
-  'wwvc',
-  'sla',
+  "naveen",
+  "mypharmacy",
+  "nes25",
+  "tef",
+  "brainware",
+  "AML",
+  "marquee",
+  "smilewithme",
+  "tsl",
+  "ACA",
+  "africanfashion",
+  "stratosphere",
+  "cchub",
+  "firmcare",
+  "wwvc",
+  "sla",
 ];
 
 const services = [
   {
-    title: 'Home Care',
-    link: '/',
-    img: '/services/home.svg',
+    title: "Home Care",
+    link: "/",
+    img: "/services/home.svg",
   },
   {
-    title: 'Consultation',
-    link: '/',
-    img: '/services/consultation.svg',
+    title: "Consultation",
+    link: "/",
+    img: "/services/consultation.svg",
   },
   {
-    title: 'Online Pharmacy',
-    link: '/',
-    img: '/services/pharmacy.svg',
+    title: "Online Pharmacy",
+    link: "/",
+    img: "/services/pharmacy.svg",
   },
   {
-    title: 'In-Patient Care',
-    link: '/',
-    img: '/services/inpatient.svg',
+    title: "In-Patient Care",
+    link: "/",
+    img: "/services/inpatient.svg",
   },
   {
-    title: 'Diagnostics',
-    link: '/',
-    img: '/services/diagnostics.svg',
+    title: "Diagnostics",
+    link: "/",
+    img: "/services/diagnostics.svg",
   },
   {
-    title: 'Telemedicine',
-    link: '/',
-    img: '/services/consultation.svg',
+    title: "Telemedicine",
+    link: "/",
+    img: "/services/consultation.svg",
   },
 ];
 
@@ -80,7 +80,7 @@ const Offer = () => {
 
       <div className="services">
         <hr />
-        <h1 className="title">Services we Offer</h1>
+        <h1 className="title">Services We Offer</h1>
         <p className="footnote">
           We have an array of healthcare services to ensure that you and your
           loved ones are in perfect condition

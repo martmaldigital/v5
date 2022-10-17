@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import { Collapse } from 'antd';
+import Image from "next/image";
+import { Collapse } from "antd";
 
-import { FAQ, testimonies } from 'pages/api/hello';
+import { FAQ, testimonies } from "pages/api/hello";
 
 const { Panel } = Collapse;
 

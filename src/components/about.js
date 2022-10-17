@@ -1,10 +1,10 @@
-import dynamic from 'next/dynamic';
-import Image from 'next/image';
-import { Row, Col, Carousel } from 'antd';
-import { useMediaQuery } from 'components/useWidth';
+import dynamic from "next/dynamic";
+import Image from "next/image";
+import { Row, Col, Carousel } from "antd";
+import { useMediaQuery } from "components/useWidth";
 
-import { team, impact, keyOfferings } from 'pages/api/hello';
-const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
+import { team, impact, keyOfferings } from "pages/api/hello";
+const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
 const AboutPage = () => {
   return (
@@ -31,7 +31,7 @@ const AboutPage = () => {
                 overarching objective is the provision of accessible healthcare
                 services for Africans, starting with Nigeria. We aim to fulfill
                 the tenets of inclusive access to health by eliminating;
-                geographical,financial and sociocultural barriers.
+                geographical, financial and sociocultural barriers.
               </p>
               <div className="action-holder">
                 <button className="custom-btn into-btn">Get Started</button>

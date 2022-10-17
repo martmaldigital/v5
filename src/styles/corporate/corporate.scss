@@ -9,7 +9,6 @@
       grid-template-columns: 45% 46%;
       grid-column-gap: 6rem;
     }
-    
 
     // @include mobile() {
     //   grid-template-columns: 100%;
@@ -96,7 +95,6 @@
       }
       &.feat {
         background: $background-blue;
-
       }
       .info-title {
         font-size: 24px;

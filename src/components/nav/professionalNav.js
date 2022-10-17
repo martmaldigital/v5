@@ -1,34 +1,34 @@
-import { useState } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import Image from 'next/image';
+import { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import Image from "next/image";
 
-import Logo from 'assets/logo/logo.webp';
+import Logo from "assets/logo/logo.webp";
 
 const links = [
   {
-    path: 'Home',
-    label: '/professional',
+    path: "Home",
+    label: "/professional",
   },
   {
-    path: 'About',
-    label: '/professional-about',
+    path: "About",
+    label: "/professional-about",
   },
   {
-    path: 'Membership',
-    label: '/professional-membership',
+    path: "Membership",
+    label: "/professional-membership",
   },
   {
-    path: 'Services',
-    label: '/professional-services',
+    path: "Services",
+    label: "/professional-services",
   },
   {
-    path: 'Corporate',
-    label: '/professional-corporate',
+    path: "Corporate",
+    label: "/professional-corporate",
   },
   {
-    path: 'Contact us',
-    label: '/professional-contact',
+    path: "Contact us",
+    label: "/professional-contact",
   },
 ];
 
@@ -58,7 +58,7 @@ const ProfessionalNav = () => {
                 <Link href={link.label}>
                   <a
                     className={
-                      router.pathname == `${link.label}` ? 'active' : ''
+                      router.pathname == `${link.label}` ? "active" : ""
                     }
                   >
                     {link.path}
@@ -86,7 +86,7 @@ const ProfessionalNav = () => {
           </ul>
         </div>
         <div
-          className={`nav-mobile ${menuToggleIcon ? 'change' : ''}`}
+          className={`nav-mobile ${menuToggleIcon ? "change" : ""}`}
           onClick={() => toggleMenuIcon()}
         >
           <div className="bar1"></div>
@@ -105,7 +105,7 @@ const ProfessionalNav = () => {
                   <Link href={link.label}>
                     <a
                       className={
-                        router.pathname == `${link.label}` ? 'active' : ''
+                        router.pathname == `${link.label}` ? "active" : ""
                       }
                     >
                       {link.path}

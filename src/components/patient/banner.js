@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import Image from 'next/image';
+import { useState } from "react";
+import Image from "next/image";
 
-import Getstarted from 'components/modal/getstarted';
-import BannerImage from 'assets/patient/patient.svg';
+import Getstarted from "components/modal/getstarted";
+import BannerImage from "assets/patient/patient.svg";
 
 const Banner = () => {
   const [visible, setVisible] = useState(false);

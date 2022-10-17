@@ -1,15 +1,15 @@
-import { useState } from 'react';
-import { Row, Col } from 'antd';
-import Image from 'next/image';
-import Link from 'next/link';
+import { useState } from "react";
+import { Row, Col } from "antd";
+import Image from "next/image";
+import Link from "next/link";
 
-import Instagram from 'assets/logo/instagram.svg';
-import Twitter from 'assets/logo/twitter.svg';
-import Whatsapp from 'assets/logo/whatsapp.svg';
-import LinkedIn from 'assets/logo/linkedin.svg';
+import Instagram from "assets/logo/instagram.svg";
+import Twitter from "assets/logo/twitter.svg";
+import Whatsapp from "assets/logo/whatsapp.svg";
+import LinkedIn from "assets/logo/linkedin.svg";
 
 const Footer = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [error, setError] = useState(false);
 
   const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
@@ -20,8 +20,8 @@ const Footer = () => {
       setError(true);
     }
     if (email.length > 0 && regex.test(email)) {
-      console.log('email submitted successfully', email);
-      setEmail('');
+      console.log("email submitted successfully", email);
+      setEmail("");
       setError(false);
     }
   };
@@ -121,7 +121,7 @@ const Footer = () => {
               ) : error && !regex.test(email) ? (
                 <p className="error">Please enter a valid email address</p>
               ) : (
-                ''
+                ""
               )}
             </ul>
           </Col>

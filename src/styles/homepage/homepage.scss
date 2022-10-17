@@ -357,6 +357,10 @@
       padding: 1.5rem 3rem;
       position: relative;
       height: 35rem;
+      &.s {
+      height: 10rem;
+
+      }
 
       &.d {
         @include tablandscape() {
@@ -589,6 +593,9 @@
     .allinone {
       padding: 4rem 6rem;
       background: $white;
+      &.s {
+        background: $background-blue;
+      }
 
       @include tablet() {
         padding: 4rem 1rem;
@@ -599,6 +606,10 @@
         background-color: $blue;
         width: 8%;
         height: 4px;
+        &.s {
+          background-color: $orange;
+
+        }
       }
 
       @include mobile() {

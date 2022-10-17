@@ -1,7 +1,7 @@
 module.exports = {
-  siteUrl: 'https://localhost:3000',
+  siteUrl: "https://localhost:3000",
   generateRobotsTxt: true,
   priority: 1.0,
-  changefreq: 'monthly',
+  changefreq: "monthly",
   generateIndexSitemap: false,
 };

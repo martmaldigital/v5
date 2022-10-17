@@ -1,31 +1,43 @@
-import { useEffect } from 'react';
-import { Router } from 'next/router';
-import { initGA, logPageView } from 'analytics';
+import App from "next/app";
 
-import PatientNav from 'components/nav/patientNav';
-import Footer from 'components/footer';
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
+import { store, persistor } from "../core/store";
+import { createWrapper } from "next-redux-wrapper";
 
-import '../styles/styles.scss';
-import 'antd/dist/antd.css';
+import Footer from "components/footer";
 
-function MyApp({ Component, pageProps }) {
-  useEffect(() => {
-    initGA();
-    logPageView();
-    Router.events.on('routeChangeComplete', logPageView);
-  }, []);
+import "../styles/styles.scss";
+import "antd/dist/antd.css";
 
-  if (Component.getLayout) {
-    return Component.getLayout(<Component {...pageProps} />);
+class MyApp extends App {
+  static async getInitialProps({ Component, ctx }) {
+    const pageProps = Component.getInitialProps
+      ? await Component.getInitialProps(ctx)
+      : {};
+
+    //Anything returned here can be access by the client
+    return { pageProps: pageProps };
   }
 
-  return (
-    <>
-      <PatientNav />
-      <Component {...pageProps} />
-      <Footer />
-    </>
-  );
+  render() {
+    //Information that was returned  from 'getInitialProps' are stored in the props i.e. pageProps
+    const { Component, pageProps } = this.props;
+
+    return (
+      <Provider store={store}>
+        <PersistGate persistor={persistor}>
+          <Component {...pageProps} />
+          <Footer />
+        </PersistGate>
+      </Provider>
+    );
+  }
 }
 
-export default MyApp;
+//makeStore function that returns a new store for every request
+const makeStore = () => store;
+const wrapper = createWrapper(makeStore);
+
+//withRedux wrapper that passes the store to the App Component
+export default wrapper.withRedux(MyApp);

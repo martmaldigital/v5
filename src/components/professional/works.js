@@ -1,26 +1,26 @@
-import Image from 'next/image';
-import { Reasons } from 'pages/api/hello';
+import Image from "next/image";
+import { Reasons } from "pages/api/hello";
 
 const works = [
   {
-    btn: 'Sign up',
-    text: 'Sign up as a professional',
-    img: '/img/new.svg',
+    btn: "Sign up",
+    text: "Sign up as a professional",
+    img: "/img/new.svg",
   },
   {
-    btn: 'Setup your profile',
-    text: 'Tell us what service you would be providing.',
-    img: '/img/profile.svg',
+    btn: "Setup your profile",
+    text: "Tell us what service you would be providing.",
+    img: "/img/profile.svg",
   },
   {
-    btn: 'Submit your pricing',
-    text: 'Submit pricing and credentials for Verification.',
-    img: '/img/pricing.svg',
+    btn: "Submit your pricing",
+    text: "Submit pricing and credentials for Verification.",
+    img: "/img/pricing.svg",
   },
   {
-    btn: 'Setup Availability',
-    text: 'Setup your availability structure so patients can find you.',
-    img: '/img/timing.svg',
+    btn: "Setup Availability",
+    text: "Setup your availability structure so patients can find you.",
+    img: "/img/timing.svg",
   },
 ];
 
