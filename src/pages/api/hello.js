@@ -238,7 +238,7 @@ export const team = [
     post: "Co-Founder",
   },
   {
-    img: "/about/Dammy.png",
+    img: "/about/dammy.png",
     name: "Damilola Adelekan",
     post: "Product Manager",
   },
@@ -268,7 +268,7 @@ export const team2 = [
   {
     img: "/about/DrDarl.png",
     name: "Dr. Darlington Amadi",
-    post: "Medical Officer(Surulere)",
+    post: "Medical Officer (Surulere)",
   },
   {
     img: "/about/Peculiar.png",
