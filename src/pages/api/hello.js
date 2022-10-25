@@ -388,6 +388,21 @@ export const servPortal = [
   },
 ];
 
+export const proServPortal = [
+  {
+    title: "Scheduling Tool",
+    note: "We provide computerized administration processes such as scheduling systems to assist professionals in managing their calendars and increasing productivity.",
+  },
+  {
+    title: "Billing",
+    note: "Earning money has never been easier thanks to our billing system. Professionals can use our platform to receive payments from their patients, set fixed rates, offer discount vouchers to select patients, and enjoy seamless transactions with our payment gateways.",
+  },
+  {
+    title: "Locum Placement",
+    note: "Take advantage of our extensive network of healthcare providers across the country to achieve a flexible work-life balance. Gain access to our available roles, specializations, and locations.",
+  },
+];
+
 export const pricing = [
   {
     title: "Post-Paid",

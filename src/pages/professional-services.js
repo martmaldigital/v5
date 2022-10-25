@@ -1,5 +1,7 @@
 import Image from "next/image";
 import ProfessionalNav from "components/nav/professionalNav";
+import {Row, Col} from "antd"
+import { proServPortal } from "./api/hello";
 
 const Index = () => {
   return (
@@ -90,6 +92,23 @@ const Index = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="corporate">
+      <div className="services portal">
+            <div className="team-holder">
+              <Row gutter={20}>
+                {proServPortal.map((item, index) => (
+                  <Col lg={8} sm={12} xs={24} key={index}>
+                    <div className="card-holder portal">
+                      <h3 className="info-title">{item.title}</h3>
+                      <p className="note">{item.note}</p>
+                    </div>
+                  </Col>
+                ))}
+              </Row>
+            </div>
+          </div>
       </div>
     </>
   );
