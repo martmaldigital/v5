@@ -20,6 +20,9 @@
   @include biggerscreen() {
     padding: 3rem 6rem;
   }
+  @include laptop () {
+    padding: 3rem 4rem;
+  }
   ul {
     list-style: none;
     padding-left: 0;

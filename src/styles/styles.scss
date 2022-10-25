@@ -72,11 +72,29 @@
   font-size: 40px;
   line-height: 56px;
   text-align: center;
-  margin-top: 2.5rem;
-  &.membership {
+  margin-top: 1.5rem;
+  &.services {
+    margin-top: 0.2rem;
+
+  }
+  &.member {
     margin-top: 0rem;
+ 
+  }
+  @include tablandscape() {
+    font-size: 35px;
+  }
+  @include tablet () {
+    font-size: 30px;
+
+  }
+  @include mobile() {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  &.membership {
     padding-bottom: 8rem;
-    padding-right: 3rem;
+      // padding-right: 3rem;
     @include mobile() {
       padding-bottom: 0rem;
       padding-right: 0rem;
@@ -104,10 +122,6 @@
       color: #2d9cdb;
     }
   }
-  @include mobile() {
-    font-size: 30px;
-    line-height: 36px;
-  }
 
   &.feat {
     text-align: left;
@@ -116,9 +130,6 @@
   &.work-span {
     color: $blue;
 
-    @include tablandscape() {
-      font-size: 30px;
-    }
   }
 }
 
@@ -128,26 +139,33 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 30px;
-  padding: 0rem 6rem;
-  @include tablet() {
-    padding: 0rem 2rem;
-  }
+  // padding: 0rem 10rem;
+  // @include tablet() {
+  //   padding: 0rem 2rem;
+  // }
   @include tablandscape() {
-    padding: 0rem 1rem;
+    padding: 0rem 6rem;
   }
   @include mobile() {
-    padding: 0;
+    //  padding: 0rem 0.5rem;
+    font-size: 14px;
   }
 
   &.d {
     font-size: 24px;
     font-weight: 400;
     font-family: $title;
+    @include mobile() {
+      font-size: 18px;
+    }
+    @include tablet() {
+      font-size: 20px;
+    }
   }
 
-  @include laptop() {
-    padding: 0rem 6rem;
-  }
+  // @include laptop() {
+  //   padding: 0rem 6rem;
+  // }
 }
 
 .ant-carousel .slick-dots li button {
@@ -166,7 +184,7 @@
   cursor: pointer;
   opacity: 2 !important;
   // transition: all 0.5s;
-  margin-top: 1rem;
+  margin-top: 1.3rem;
 }
 .ant-carousel .slick-dots li.slick-active button {
   background: $orange !important;
@@ -245,9 +263,12 @@
     color: black !important;
   }
 }
+.ant-collapse > .ant-collapse-item {
+  border-bottom: 0 !important;
+}
 
 .ant-collapse > .ant-collapse-item > .ant-collapse-header {
-  margin-bottom: 5px !important;
+  margin-bottom: 4px !important;
   color: rgba(0, 0, 0, 0.85);
   border: 0.8px solid $orange !important;
 }
@@ -256,6 +277,22 @@
   color: $red;
   // display: none;
 }
+.service-btn {
+  outline: none;
+  border: 0px;
+  color: $white;
+   width: 100%;
+   height: 55px;
+   font-weight: 600;
+   line-height: 24px;
+   font-size: 16px;
+   background: $blue;
+   cursor: pointer;
+   &:hover,
+   &:active {
+    background: grey;
+   }
+ }
 
 .custom-btn {
   outline: none;
@@ -275,16 +312,16 @@
     color: $white;
     background: $blue;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 14px;
     @include tablandscape() {
       font-size: 14px;
     }
     @include mobile() {
       width: 100%;
     }
-    @include tablet() {
-      width: 100%;
-    }
+    // @include tablet() {
+    //   width: 100%;
+    // }
   }
   &.sub {
     color: $white;
@@ -385,6 +422,11 @@
   height: 55px !important;
   padding: 0.7rem !important;
 }
+
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-search-input {
+  height: 50px !important;
+}
+
 
 .slick-list {
   margin: 0 -7px !important;
@@ -664,3 +706,6 @@
 @import "./search/bannerform.scss";
 @import "./search/doctor.scss";
 @import "./search/search.scss";
+@import "./search/serviceSearch.scss";
+
+@import "./test.scss";

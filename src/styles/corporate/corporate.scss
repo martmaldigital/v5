@@ -4,50 +4,100 @@
     display: grid;
     grid-template-columns: 50% 50%;
     grid-column-gap: 3rem;
+    @include mobile() {
+      grid-template-columns: 100%;
+      padding: 2.5rem 2rem 0rem 1.5rem;
+    }
+    @include tablet() {
+      padding: 2.5rem 2rem 0rem 2rem;
+      grid-template-columns: 100%;
+    }
+    @include biggerscreen() {
+      padding: 10rem 6rem 1rem 6rem;
+    }
+    @include laptop() {
+      padding: 6rem 4rem;
+    }
     &.impact {
-      padding: 1rem 3rem;
+       padding: 0rem 3rem 2rem 3rem;
       grid-template-columns: 45% 46%;
       grid-column-gap: 6rem;
+      @include biggerscreen() {
+        padding: 0rem 6rem 2rem 6rem;
+      }
+      @include tablandscape() {
+        padding: 0rem 6rem 2rem 3rem;
+      }   @include mobile() {
+        grid-template-columns: 100%;
+        padding: 2.5rem 2rem 0rem 1.5rem;
+      }
+      @include tablet() {
+        padding: 0rem 2rem;
+        grid-template-columns: 100%;
+      }
+      @include laptop() {
+        padding: 0rem 6rem 2rem 4rem;
+      }
     }
-
-    // @include mobile() {
-    //   grid-template-columns: 100%;
-    //   padding: 2.5rem 2rem 0rem 1.5rem;
-    // }
-    // @include tablet() {
-    //   padding: 2.5rem 2rem 0rem 2rem;
-    //   grid-template-columns: 100%;
-    // }
-    // @include biggerscreen() {
-    //   padding: 4rem 6rem;
-    // }
-    // @include laptop() {
-    //   padding: 4rem 4rem;
-    // }
     .info-text {
       &.impact {
         margin-top: 4rem;
+        @include tablet() {
+          margin-top: 0rem;
+        }
+        @include mobile() {
+          margin-top: 0rem;
+        }
       }
       .info-title {
-        padding-top: 3rem;
+        padding-top: 2rem;
         font-family: $title;
         line-height: 56px;
         font-weight: 600;
-        font-size: 35px;
+        font-size: 40px;
         &.portal {
-          padding: 2rem 1rem 0rem 1rem;
+          @include tablet() {
+            // text-align: center;
+            font-size: 30px;
+          }
+          @include mobile () {
+            padding-top: 1rem;
+            font-size: 28px;
+            line-height: 35px;
+          }
+        }
+        &.impact {
+          
+          @include tablet() {
+            // text-align: center;
+            font-size: 30px;
+          }
+          @include mobile () {
+            padding-top: 0;
+            font-size: 28px;
+            line-height: 40px;
+            // text-align: center;
+          }
+          @include tablandscape () {
+            padding-top: 0;
+            text-align: center;
+          }
+
         }
 
-        // @include mobile() {
-        //   font-size: 30px;
-        //   line-height: 38.95px;
-        // }
+        @include tablandscape() {
+          font-size: 33px;
+          line-height: 38.95px;
+        }
       }
       .text {
         line-height: 30px;
         font-weight: 400;
         font-size: 16px;
         color: $textblack;
+        &.c {
+          padding: 1rem;
+        }
       }
     }
     .action-holder {
@@ -56,45 +106,97 @@
 
     .img-holder {
       position: relative;
-      height: 24rem;
-      width: 100%;
-      //   @include mobile() {
-      //     height: 16rem;
-      //   }
-      //   @include tablet() {
-      //     height: 20rem;
-      //   }
+      // padding: 2rem;
+      // height: 24rem;
+      // width: 100%;
+        // @include mobile() {
+        //   height: 16rem;
+        // }
+        // @include tablet() {
+        //   height: 16rem;
+        // }
       &.portal {
-        height: 30rem;
-        width: 33rem;
+      padding-top: 5rem; 
+      @include mobile () {
+        padding-top: 0rem;
       }
+    
+    }
     }
   }
 
   .services {
     background: $background-blue;
-    padding: 1rem 3rem;
+    padding: 3rem 3rem;
+    @include biggerscreen() {
+      padding: 3rem 6rem;
+    }
+    @include laptop() {
+      padding: 3rem 4rem;
+    }
+    @include tablet() {
+      padding: 3rem 2rem;
+    }
+    @include mobile() {
+      padding: 3rem 1.5rem;
+    }
     &.portal {
       background: $white;
-      padding: 0rem 3rem 3rem 3rem;
     }
     &.feat {
       background: $white;
+    }
+    .feature {
+      background: $background-blue;
+      border-radius: 8px;
+      color: $white;
+      margin-top: 1.5rem;
+
+      .info-title {
+        font-size: 24px;
+        text-align: center;
+        color: $textblack;
+        font-family: $title;
+        line-height: 32px;
+        font-weight: 600;
+        padding: 1rem;
+      }
     }
     .card-holder {
       background: $orange;
       padding: 1rem;
       border-radius: 8px;
       color: $white;
-      height: 17rem;
+      margin-top: 1.5rem;
+      @include laptop() {
+        height: 20rem;
+      }
+      @include tablandscape() {
+        height: 19rem;
+      }
+      @include tablet() {
+        height: 20rem;
+      }
+      @include desktop() {
+        height: 17rem;
+      }
+      @include biggerscreen() {
+        height: 17rem;
+      }
       &.portal {
         background: $blue;
       }
       &.pricing {
         height: 20rem;
-      }
-      &.feat {
-        background: $background-blue;
+        @include laptop () {
+          height: 24rem;
+        }
+        @include tablet () {
+          height: 24rem;
+        }
+        @include mobile () {
+          height: 24rem;
+        }
       }
       .info-title {
         font-size: 24px;
@@ -106,19 +208,27 @@
         &.feat {
           color: $textblack;
           font-family: $title;
-          line-height: 52px;
+          line-height: 32px;
+          font-weight: 600;
+          //  line-height: 52px;
         }
       }
       .note {
         font-size: 16px;
         line-height: 30px;
+        // @include laptop () {
+        //   font-size: 14px;
+        // }
+        @include mobile () {
+          font-size: 15px;
+        }
       }
     }
   }
 
   .aboutcontent {
     background: $background-blue;
-    padding: 0rem 3rem;
+    padding: 3rem 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -126,34 +236,32 @@
       background: $white;
     }
 
-    // @include mobile() {
-    //   padding: 2.625rem 1.5rem;
-    //   flex-direction: column-reverse;
-    // }
-    // @include tablet() {
-    //   padding: 2.625rem 2rem;
-    //   flex-direction: column-reverse;
-    // }
-    // @include laptop() {
-    //   padding: 4rem 4rem;
-    // }
-    // @include biggerscreen() {
-    //   padding: 4rem 6rem;
-    // }
+    @include mobile() {
+      padding: 2.625rem 1.5rem;
+      flex-direction: column-reverse;
+    }
+    @include tablet() {
+      padding: 2.625rem 2rem;
+      flex-direction: column-reverse;
+    }
+    @include laptop() {
+      padding: 4rem 4rem;
+    }
+    @include biggerscreen() {
+      padding: 4rem 6rem;
+    }
 
     .img-holder {
       width: 45%;
       position: relative;
-      height: 28rem;
+      // height: 28rem;
 
-      //   @include mobile() {
-      //     width: 100%;
-      //     height: 20rem;
-      //   }
-      //   @include tablet() {
-      //     width: 100%;
-      //     height: 25rem;
-      //   }
+        @include mobile() {
+          width: 100%;
+        }
+        @include tablet() {
+          width: 100%;
+        }
       //   @include laptop() {
       //     height: 30rem;
       //   }
@@ -163,7 +271,7 @@
     }
 
     .info-text {
-      width: 47%;
+      width: 45%;
       @include mobile() {
         width: 100%;
       }
@@ -171,13 +279,18 @@
         width: 100%;
       }
       .info-title {
+        margin-top: 1rem;
         font-family: $title;
         line-height: 48.95px;
         font-weight: 600;
         font-size: 33px;
         @include mobile() {
           font-size: 28px;
-          line-height: 38.95px;
+          line-height: 40px;
+          margin-top: 1rem;
+        }
+        @include tablet() {
+          font-size: 30px;
         }
       }
       .text {

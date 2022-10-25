@@ -2,9 +2,13 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import { Row, Col, Carousel } from "antd";
 import { useMediaQuery } from "components/useWidth";
+import ReactPlayer from 'react-player/youtube'
+import YouTube from 'react-youtube';
 
-import { team, impact, keyOfferings } from "pages/api/hello";
-const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
+
+
+import { team, team2, team3, impact, keyOfferings } from "pages/api/hello";
+// const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
 const AboutPage = () => {
   return (
@@ -38,15 +42,15 @@ const AboutPage = () => {
               </div>
             </div>
             <div className="img-holder">
-              <Image src="/about/about.svg" alt="" layout="fill" />
+              <Image src="/about/about.svg" alt="" layout="fill"  />
             </div>
           </div>
           <div className="aboutcontent">
             <div className="img-holder">
-              <Image src="/about/clusterdeck-1 (1).webp" alt="" layout="fill" />
+              <Image src="/about/clusterdeck-1 (1).webp" alt="" layout="responsive" width={636} height={656}/>
             </div>
             <div className="info-text">
-              <h1 className="info-title">Who Are We</h1>
+              <h1 className="info-title">Who Are We?</h1>
               <p className="text bolder">Our Vision</p>
               <p className="text">
                 To become Africa’s foremost private integrated healthcare
@@ -75,13 +79,13 @@ const AboutPage = () => {
           <div className="ourteam">
             <h1 className="title">Meet the Doctoora Team.</h1>
             <br />
-            <div className="team-holder">
+            <div className="team-holder t1">
               <Row gutter={20}>
                 {team.map((user) => (
-                  <Col lg={6} sm={12} xs={24} key={user.name}>
+                  <Col lg={6} sm={8} key={user.name}>
                     <div className="teamcard">
                       <div className="img-holder">
-                        <img src={user.img} alt="" />
+                        <Image src={user.img} alt="" layout="responsive" width={294} height={227}/>
                       </div>
                       <div className="card-text-holder">
                         <h3 className="name">{user.name}</h3>
@@ -91,11 +95,117 @@ const AboutPage = () => {
                   </Col>
                 ))}
               </Row>
+              <Row gutter={20} justify="center">
+                {team2.map((user) => (
+                  <Col lg={6} sm={8} key={user.name}>
+                    <div className="teamcard">
+                      <div className="img-holder">
+                        <Image src={user.img} alt="" layout="responsive" width={294} height={227}/>
+                      </div>
+                      <div className="card-text-holder">
+                        <h3 className="name">{user.name}</h3>
+                        <p className="post">{user.post}</p>
+                      </div>
+                    </div>
+                  </Col>
+                ))}
+              </Row>
+              <Row gutter={20} justify="center">
+                {team3.map((user) => (
+                  <Col lg={6} sm={8} key={user.name}>
+                    <div className="teamcard">
+                      <div className="img-holder">
+                        <Image src={user.img} alt="" layout="responsive" width={294} height={227}/>
+                      </div>
+                      <div className="card-text-holder">
+                        <h3 className="name">{user.name}</h3>
+                        <p className="post">{user.post}</p>
+                      </div>
+                    </div>
+                  </Col>
+                ))}
+              </Row>
+              </div>
+              <div className="team-holder t2">
+                {useMediaQuery(400) ? (
+                  <Carousel autoplay dots={true} slidesToShow={1}>
+                  {team.map((item, index) => (
+                    <div className="teamcard" key={[index]}>
+                      <div className="img-holder">
+                      <Image src={item.img} alt="" layout="responsive" width={294} height={227}/>
+                      </div>
+                      <div className="card-text-holder">
+                        <h3 className="name">{item.name}</h3>
+                        <p className="post">{item.post}</p>
+                      </div>
+                    </div>
+                  ))}
+                   {team2.map((item, index) => (
+                    <div className="teamcard" key={[index]}>
+                      <div className="img-holder">
+                      <Image src={item.img} alt="" layout="responsive" width={294} height={227}/>
+                      </div>
+                      <div className="card-text-holder">
+                        <h3 className="name">{item.name}</h3>
+                        <p className="post">{item.post}</p>
+                      </div>
+                    </div>
+                  ))}
+                   {team3.map((item, index) => (
+                    <div className="teamcard" key={[index]}>
+                      <div className="img-holder">
+                      <Image src={item.img} alt="" layout="responsive" width={294} height={227}/>
+                      </div>
+                      <div className="card-text-holder">
+                        <h3 className="name">{item.name}</h3>
+                        <p className="post">{item.post}</p>
+                      </div>
+                    </div>
+                  ))}
+                </Carousel>
+                ):
+                (
+                  <Carousel autoplay dots={true} slidesToShow={1.6}>
+                  {team.map((item, index) => (
+                    <div className="teamcard" key={[index]}>
+                      <div className="img-holder">
+                      <Image src={item.img} alt="" layout="responsive" width={294} height={227}/>
+                      </div>
+                      <div className="card-text-holder">
+                        <h3 className="name">{item.name}</h3>
+                        <p className="post">{item.post}</p>
+                      </div>
+                    </div>
+                  ))}
+                   {team2.map((item, index) => (
+                    <div className="teamcard" key={[index]}>
+                      <div className="img-holder">
+                      <Image src={item.img} alt="" layout="responsive" width={294} height={227}/>
+                      </div>
+                      <div className="card-text-holder">
+                        <h3 className="name">{item.name}</h3>
+                        <p className="post">{item.post}</p>
+                      </div>
+                    </div>
+                  ))}
+                   {team3.map((item, index) => (
+                    <div className="teamcard" key={[index]}>
+                      <div className="img-holder">
+                      <Image src={item.img} alt="" layout="responsive" width={294} height={227}/>
+                      </div>
+                      <div className="card-text-holder">
+                        <h3 className="name">{item.name}</h3>
+                        <p className="post">{item.post}</p>
+                      </div>
+                    </div>
+                  ))}
+                </Carousel>
+                )
+                }
             </div>
           </div>
           <div className="video">
             <h3 className="v-title">Hear from Doctoora’s CEO.</h3>
-
             <div className="videolink">
               <ReactPlayer
                 url="https://www.youtube.com/watch?v=fCZmyXKcngw"
@@ -113,7 +223,7 @@ const AboutPage = () => {
                   {impact.map((item, index) => (
                     <div className="teamcard" key={[index]}>
                       <div className="img-holder">
-                        <img src={item.img} alt="" />
+                      <Image src={item.img} alt="" layout="responsive" width={294} height={227}/>
                       </div>
                       <div className="card-text-holder">
                         <h3 className="name">{item.name}</h3>
@@ -127,7 +237,7 @@ const AboutPage = () => {
                   {impact.map((item, index) => (
                     <div className="teamcard" key={index}>
                       <div className="img-holder">
-                        <img src={item.img} alt="" />
+                      <Image src={item.img} alt="" layout="responsive" width={294} height={227}/>
                       </div>
                       <div className="card-text-holder">
                         <h3 className="name">{item.name}</h3>
@@ -140,11 +250,11 @@ const AboutPage = () => {
             </div>
             <div className="team-holder impact">
               {useMediaQuery(1024) ? (
-                <Carousel autoplay dots={true} slidesToShow={2}>
+                <Carousel autoplay dots={true} slidesToShow={2.6}>
                   {impact.map((item, index) => (
                     <div className="teamcard" key={index}>
                       <div className="img-holder">
-                        <img src={item.img} alt="" />
+                      <Image src={item.img} alt="" layout="responsive" width={294} height={227}/>
                       </div>
                       <div className="card-text-holder">
                         <h3 className="name">{item.name}</h3>
@@ -158,7 +268,7 @@ const AboutPage = () => {
                   {impact.map((item, index) => (
                     <div className="teamcard" key={index}>
                       <div className="img-holder">
-                        <img src={item.img} alt="" />
+                      <Image src={item.img} alt="" layout="responsive" width={294} height={227}/>
                       </div>
                       <div className="card-text-holder">
                         <h3 className="name">{item.name}</h3>

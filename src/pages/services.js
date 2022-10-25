@@ -1,11 +1,20 @@
 import PatientNav from "components/nav/patientNav";
 import Image from "next/image";
-import { Row, Col } from "antd";
+import { Row, Col, Form, Select} from "antd";
+import { useRouter } from "next/router";
+import { useState } from "react";
 
-import { comServices } from "pages/api/hello";
-import Bannerform from "components/bannerform/bannerform";
+import { comServices, servicesList } from "pages/api/hello";
 
 const Services = () => {
+  const loading = useState(false);
+  const router = useRouter();
+
+  const onFinish = (values) => {
+    const { service } = values
+    router.push(`/services/${service}`)
+  }
+
   return (
     <>
       <PatientNav />
@@ -17,12 +26,45 @@ const Services = () => {
               Healthcare in One Place - Book Doctors, Pharmacy, Tests Online{" "}
             </p>
             <div className="action-holder">
-              {/* <button className="custom-btn into-btn">Get Started</button> */}
-            <Bannerform />
+            <Form className="search-form"
+        onFinish={onFinish}
+      >
+        <Row gutter={0}>
+          <Col lg={16} xs={24}>
+            <Form.Item
+              name="service"
+              rules={[
+                {
+                  required: true,
+                  message: 'Required field',
+                },
+              ]}
+            >
+              <Select
+                placeholder="Search for Healthcare Services"
+                allowClear
+                showSearch
+              >
+                  {
+                        servicesList.map((item) => (
+                          <Option value={item.slug} key={item.slug}>{item.title}</Option>
+                        ))
+                      }
+              </Select>
+            </Form.Item>
+          </Col>
+
+          <Col lg={6} xs={24}>
+          <button htmlType="submit" className="service-btn">
+                    Search
+                  </button>
+          </Col>
+        </Row>
+      </Form>
             </div>
           </div>
           <div className="img-holder">
-            <Image src="/services/banner.svg" alt="" layout="fill" />
+            <Image src="/services/banner.svg" alt="" layout="responsive" width={506} height={336} />
           </div>
         </div>
 
@@ -40,15 +82,15 @@ const Services = () => {
               </p>
             </div>
             <div className="img-holder">
-              <Image src="/services/telemedcine.svg" alt="" layout="fill" />
+              <Image src="/services/telemedcine.svg" alt="" layout="responsive" width={506} height={336} />
             </div>
           </div>
         </div>
 
         <div>
           <div className="banner impact">
-            <div className="img-holder">
-              <Image src="/services/homecare.svg" alt="" layout="fill" />
+            <div className="img-holder portal">
+              <Image src="/services/homecare.svg" alt="" layout="responsive" width={506} height={336} />
             </div>
             <div className="info-text impact">
               <h1 className="info-title">Homecare</h1>
@@ -76,15 +118,15 @@ const Services = () => {
               </p>
             </div>
             <div className="img-holder">
-              <Image src="/services/diag.svg" alt="" layout="fill" />
+              <Image src="/services/diag.svg" alt="" layout="responsive" width={506} height={336} />
             </div>
           </div>
         </div>
 
         <div>
           <div className="banner impact">
-            <div className="img-holder">
-              <Image src="/services/inpat.svg" alt="" layout="fill" />
+            <div className="img-holder portal">
+              <Image src="/services/inpat.svg" alt="" layout="responsive" width={506} height={336}  />
             </div>
             <div className="info-text impact">
               <h1 className="info-title">In-Patient Care</h1>
@@ -114,7 +156,7 @@ const Services = () => {
               </p>
             </div>
             <div className="img-holder">
-              <Image src="/services/onlinepharm.svg" alt="" layout="fill" />
+              <Image src="/services/onlinepharm.svg" alt="" layout="responsive" width={506} height={336}  />
             </div>
           </div>
         </div>
@@ -126,7 +168,7 @@ const Services = () => {
             <Row gutter={20}>
               {comServices.map((item, index) => (
                 <Col lg={6} sm={12} xs={24} key={index}>
-                  <div className="card-holder feat">
+                  <div className="feature">
                     <div>
                       <Image
                         src={item.img}
@@ -136,8 +178,7 @@ const Services = () => {
                         layout="responsive"
                       />
                     </div>
-                    <h3 className="info-title feat">{item.name}</h3>
-                    <p className="note">{item.note}</p>
+                    <h3 className="info-title">{item.name}</h3>
                   </div>
                 </Col>
               ))}

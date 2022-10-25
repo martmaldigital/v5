@@ -28,7 +28,6 @@ const Footer = () => {
 
   return (
     <>
-    <div className="spaces"></div>
       <div className="footer-container">
         <Row gutter={32}>
           <Col lg={6} sm={12} xs={24}>

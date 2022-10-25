@@ -15,17 +15,51 @@
       // background: $white;
       // display: none;
       width: 100%;
-      background: url("/about/banner.png");
-      height: 10rem;
+      background: url("/about/banner2.png");
+      height: 12rem;
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
       position: relative;
 
       &.profServ {
-        background: url("/services/profbanner.png");
-        background-position: 50px;
-        background-size: 95% 100%;
+        background-image: linear-gradient(to right, #ffffff, #ffffff);
+        height: 10rem;
+        position: relative;
+        @include tablandscape () {
+          height: 8rem;       
+        }
+  
+        .banner-img {
+          position: absolute;
+          top: 0.5rem;
+          right: 5rem;
+          height: 95%;
+          @include mobile() {
+            display: none;
+          }
+          @include tablet() {
+            display: none;
+          }
+          @include tablandscape() {
+            right: 2rem;
+             }
+        }
+        .banner-img2 {
+          position: absolute;
+          top: 0.5rem;
+          left: 5rem;
+          height: 95%;
+          @include mobile() {
+            display: none;
+          }
+          @include tablandscape() {
+            left: 2rem;
+          }
+          @include tablet() {
+            display: none;
+          }
+        }
       }
       &.membership {
         background: $white;
@@ -38,7 +72,7 @@
       .banner-holder {
         background: linear-gradient(
           91.06deg,
-          rgba(15, 61, 87, 0.8) 0.43%,
+          rgba(15, 61, 87, 0.7) 0.43%,
           rgba(15, 61, 87, 0.08) 100%
         );
         width: 100%;
@@ -62,7 +96,7 @@
           padding: 5rem 2rem;
         }
         @include biggerscreen() {
-          padding: 4rem 6rem;
+          padding: 5rem 6rem;
         }
         @include laptop() {
           padding: 4rem 4rem;
@@ -94,13 +128,27 @@
       padding: 3rem 3rem;
       display: grid;
       grid-template-columns: 50% 50%;
-      grid-column-gap: 2rem;
+      grid-column-gap: 3rem;
 
       &.profServ {
         grid-template-columns: 50% 50%;
         background: $background-blue;
         padding: 1rem 3rem;
         grid-column-gap: 3rem;
+        @include biggerscreen() {
+          padding: 2rem 6rem;
+        }
+        @include laptop() {
+          padding: 2rem 4rem;
+        }
+        @include mobile() {
+          grid-template-columns: 100%;
+          padding: 1rem 1.5rem;
+        }
+        @include tablet() {
+          grid-template-columns: 100%;
+          padding: 1rem 2rem;
+        }
       }
 
       @include mobile() {
@@ -119,7 +167,13 @@
       }
       .info-text {
         &.profServ {
-          padding: 5rem 0rem;
+            padding: 5rem 0rem;
+            @include tablet () {
+              padding: 1rem 0rem;            
+           }
+           @include mobile () {
+            padding: 1rem 0rem;            
+         }
           // ul {
           //   list-style: none;
           // }
@@ -141,7 +195,7 @@
           font-size: 35px;
 
           @include mobile() {
-            font-size: 30px;
+            font-size: 28px;
             line-height: 38.95px;
           }
         }
@@ -150,6 +204,10 @@
           font-weight: 400;
           font-size: 16px;
           color: $textblack;
+          @include mobile() {
+            font-size: 14px;
+ 
+          }
         }
       }
       .action-holder {
@@ -158,13 +216,10 @@
 
       .img-holder {
         position: relative;
-        height: 24rem;
-        width: 100%;
+         height: 24rem;
+         width: 100%;
         @include mobile() {
-          height: 16rem;
-        }
-        @include tablet() {
-          height: 20rem;
+          height: 18rem;
         }
       }
     }
@@ -179,6 +234,18 @@
       &.profServ {
         background: $white;
         padding: 1rem 3rem;
+        @include biggerscreen() {
+          padding: 2rem 6rem;
+        }
+        @include laptop() {
+          padding: 2rem 4rem;
+        }
+        @include mobile() {
+          padding: 2rem 1.5rem;
+        }
+        @include tablet() {
+          padding: 2rem 2rem;
+        }
       }
       &.limited {
         background: $background-blue;
@@ -241,18 +308,18 @@
           display: block;
         }
       }
-      &.large {
-        background: #eaf7fb80;
-        align-items: normal;
-        @include mobile() {
-          padding: 2.625rem 1.5rem;
-          display: block;
-        }
-        @include tablet() {
-          padding: 2.625rem 2rem;
-          display: block;
-        }
-      }
+      // &.large {
+      //   background: #eaf7fb80;
+      //   align-items: normal;
+      //   @include mobile() {
+      //     padding: 2.625rem 1.5rem;
+      //     display: block;
+      //   }
+      //   @include tablet() {
+      //     padding: 2.625rem 2rem;
+      //     display: block;
+      //   }
+      // }
 
       @include mobile() {
         padding: 2.625rem 1.5rem;
@@ -272,15 +339,24 @@
       .img-holder {
         width: 48%;
         position: relative;
-        height: 35rem;
+        //  height: 35rem;
         &.profServ {
           width: 45%;
+          @include tablet () {
+            width: 100%;
+          }
+          @include mobile () {
+            width: 100%;
+          }
         }
         &.membership {
-          width: 20%;
-          // padding: 6rem;
-          height: 6rem;
-          color: #196980;
+          width: 14%;
+          @include tablandscape () {
+            width: 18%;
+          }
+          //  padding: 1rem;
+          // height: 6rem;
+          // color: #196980;
 
           &.l {
             color: #196980;
@@ -289,18 +365,13 @@
 
         @include mobile() {
           width: 100%;
-          height: 20rem;
         }
         @include tablet() {
           width: 100%;
-          height: 25rem;
         }
-        @include laptop() {
-          height: 30rem;
-        }
-        @include tablandscape() {
-          height: 22rem;
-        }
+        // @include laptop() {
+        //   height: 30rem;
+        // }
       }
 
       .info-text {
@@ -327,9 +398,10 @@
           width: 100%;
           ul {
             font-size: 16px;
-            padding: 1rem;
+            padding: 0rem 0rem 2rem 1rem;
             list-style: none;
             color: #891010;
+            line-height: 30px;
           }
           ul li::before {
             content: "\2022";
@@ -345,7 +417,8 @@
           width: 100%;
           ul {
             font-size: 16px;
-            padding: 1rem;
+            line-height: 30px;
+            padding: 0rem 0rem 2rem 1rem;
             list-style: none;
             color: #5816b6;
           }
@@ -363,9 +436,10 @@
           width: 100%;
           ul {
             font-size: 16px;
-            padding: 1rem;
+            padding: 0rem 0rem 2rem 1rem;
             list-style: none;
             color: #998100;
+            line-height: 30px;
           }
           ul li::before {
             content: "\2022";
@@ -381,10 +455,12 @@
           width: 100%;
           ul {
             font-size: 16px;
-            padding: 1rem;
+             padding: 0rem 0rem 2rem 1rem;
             list-style: none;
             color: #504949;
-          }
+            line-height: 30px;
+           
+          }       
           ul li::before {
             content: "\2022";
             color: #898080;
@@ -398,10 +474,12 @@
         &.limited {
           width: 100%;
           ul {
+            color: #124968;
             font-size: 16px;
-            padding: 1rem;
+            font-weight: 300;
+            padding: 0rem 0rem 2rem 1rem;
             list-style: none;
-            color: #0f3d57;
+            line-height: 30px;
           }
           ul li::before {
             content: "\2022";
@@ -430,18 +508,36 @@
           }
           &.lp {
             color: #0f3d57;
+            padding-bottom: 1rem;
+            span {
+               font-family: $title;
+              font-size: 24px;
+            }
           }
           &.gp {
             color: #504949;
+            padding-bottom: 1rem;
+            span {
+              font-family: $title;
+             font-size: 24px;
+           }
           }
           &.sp {
             color: #998100;
           }
           &.s {
             color: #5816b6;
+            span {
+              font-family: $title;
+             font-size: 24px;
+           }
           }
           &.m {
             color: #891010;
+            span {
+              font-family: $title;
+             font-size: 24px;
+           }
           }
           &.l {
             color: #2aafd5;
@@ -452,6 +548,9 @@
           font-weight: 400;
           font-size: 16px;
           color: $fontgrey;
+          @include mobile() {
+            font-size: 14px;
+          }
           &.bolder {
             font-family: $title;
             color: $orange;
@@ -463,8 +562,25 @@
     }
 
     .txt {
+      font-weight: 600;
       font-size: 18px;
-      margin-top: 1rem;
+      font-family: $title;
+      line-height: 2px;
+      &.b {
+        color: #124968;
+      }
+      &.s {
+        color: #504949;
+      }
+      &.g{
+        color: #998100;
+      }
+      &.p {
+        color: #5816B6;
+      }
+      &.f {
+        color: #891010;
+      }
     }
 
     .ourteam {
@@ -473,10 +589,10 @@
       // margin-bottom: 7rem;
 
       @include mobile() {
-        padding: 0rem 1.5rem;
+        padding: 1rem 1.5rem 2rem 1.5rem;
       }
       @include tablet() {
-        padding: 0rem 2rem;
+        padding: 1rem 2.5rem 2rem 2.5rem;
       }
       @include laptop() {
         padding: 1rem 4rem;
@@ -487,6 +603,7 @@
 
       .title {
         font-family: $title;
+        color: $textblack;
         line-height: 48.95px;
         font-weight: 900;
         font-size: 33px;
@@ -498,6 +615,28 @@
       }
 
       .team-holder {
+        &.t1{
+          @include tablet() {
+            display: none;
+          }
+          @include mobile() {
+            display: none;
+          }
+        }
+        &.t2{
+          @include biggerscreen() {
+            display: none;
+          }
+          @include desktop() {
+            display: none;
+          }
+          @include laptop() {
+            display: none;
+          }
+          @include tablandscape() {
+            display: none;
+          }
+        }
         &.impact {
           @include tablet() {
             display: none;
@@ -526,16 +665,18 @@
           // }
 
           .img-holder {
-            background: $orange;
+            background: grey;
             border-radius: 8px 8px 0px 0px;
+            // width: 100%;
+                          // height: 10rem;
+
+            object-fit: cover;
+            @include mobile() {
+              // height: 12rem;
+            }
             img {
               border-radius: 8px 8px 0px 0px;
               // height: 10rem;
-              width: 100%;
-              object-fit: cover;
-              @include mobile() {
-                height: 12rem;
-              }
             }
           }
           .img-key {
@@ -574,16 +715,28 @@
             font-family: $title;
             text-align: center;
             font-weight: 700;
-            font-size: 24px;
+            font-size: 20px;
             margin-bottom: 0.3rem;
             @include laptop() {
-              font-size: 20px;
+              font-size: 18px;
+            }
+            @include mobile() {
+              font-size: 18px;
+            }
+            @include tablandscape() {
+              font-size: 18px;
+            }
+            @include biggerscreen() {
+              font-size: 24px;
             }
 
             &.k {
               text-align: left;
               font-size: 24px;
               padding: 1rem 0rem 0.5rem 1.5rem;
+              @include mobile() {
+                font-size: 20px;
+              }
             }
           }
 
@@ -593,11 +746,18 @@
             line-height: 15px;
             font-size: 16px;
             margin-bottom: 0;
+            margin-top: 0;
+            @include mobile() {
+              font-size: 14px;
+            }
 
             &.k {
               font-size: 16px;
               line-height: 24px;
               text-align: left;
+              @include mobile() {
+                font-size: 14px;
+              }
             }
           }
         }
@@ -606,9 +766,12 @@
 
     .video {
       background: $background-blue;
-      padding: 4rem 8rem;
+      padding: 4rem 14rem;
       @include tablandscape() {
         padding: 2.625rem 3rem;
+      }
+      @include laptop() {
+        padding: 4rem 8rem;
       }
       @include tablet() {
         padding: 2.625rem 0rem;

@@ -16,9 +16,9 @@ const openNotificationWithIcon = (type, msg, desc) => {
 };
 
 const forDash = false;
-const predefinedSpeciality = null;
+// const predefinedSpeciality = null;
 
-const Bannerform = () => {
+const Bannerform = (props) => {
   const [requesting, setRequesting] = useState(false);
   const [bannerButtons, setBannerButtons] = useState([
     {
@@ -167,36 +167,36 @@ const Bannerform = () => {
               ? ""
               : "smaller-big"
             : ""
-        } ${forDash ? "for-dash" : ""} `}
+        }`}
       >
         {bannerButtons[1].active && (
           <Facilityvisit
-            forDash={forDash}
+            // forDash={forDash}
             loading={requesting}
             updateRequesting={updateRequesting}
             specialization={specialization}
             locations={locations}
-            predefinedSpeciality={predefinedSpeciality}
+            predefinedSpeciality={props.predefinedSpeciality}
           />
         )}
         {bannerButtons[2].active && (
           <Homevisit
-            forDash={forDash}
+            // forDash={forDash}
             loading={requesting}
             updateRequesting={updateRequesting}
             specialization={specialization}
             locations={coverage}
-            predefinedSpeciality={predefinedSpeciality}
+            predefinedSpeciality={props.predefinedSpeciality}
           />
         )}
         {bannerButtons[0].active && (
           <Videovisit
-            forDash={forDash}
+            // forDash={forDash}
             loading={requesting}
             updateRequesting={updateRequesting}
             specialization={specialization}
             locations={locations}
-            predefinedSpeciality={predefinedSpeciality}
+            predefinedSpeciality={props.predefinedSpeciality}
           />
         )}
       </div>

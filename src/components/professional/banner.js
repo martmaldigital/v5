@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import DocBanner from "assets/doctor/doc_banner.svg";
+import Link from "next/link";
 
 const Banner = () => {
   return (
@@ -13,15 +14,14 @@ const Banner = () => {
             <span> Doctoora</span> Instantly.
           </h1>
           <p className="banner-footnote">
-            Get unlimited access to <span>Medical Facilities & Equipment </span>
-            to see your patients on Doctoora from &#8358;15,000 per month. We also
-            bring patients to you and take care of the location of
-            consultancy if need be.
+          At <span className="d">Doctoora</span>, licensed healthcare professionals can provide care to patients in our <span>digital private clinic.</span> We also offer <span>rentable medical facilities </span>for physical consultations, starting from &#8358;35,000 monthly.
           </p>
           <div className="action-holder">
+            <Link href="http://">
             <button className="custom-btn into-btn">
               Become a Professional
             </button>
+            </Link>
           </div>
         </div>
         <div className="img-holder">

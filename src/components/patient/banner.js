@@ -6,6 +6,7 @@ import BannerImage from "assets/patient/patient.svg";
 
 const Banner = () => {
   const [visible, setVisible] = useState(false);
+
   const openModal = () => {
     setVisible(true);
   };
@@ -39,7 +40,7 @@ const Banner = () => {
           </div>
         </div>
         <div className="img-holder">
-          <Image src={BannerImage} alt="bannerImg" />
+          <Image src={BannerImage} alt="bannerImg"/>
         </div>
       </div>
       <Getstarted onOk={closeModal} onCancel={closeModal} open={visible} />

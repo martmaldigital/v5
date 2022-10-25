@@ -15,6 +15,7 @@ const Home = () => {
         <Offer />
         <Works />
         <Faq />
+        <div className="spaces"></div>
       </div>
     </div>
   );

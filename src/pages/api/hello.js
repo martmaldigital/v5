@@ -35,10 +35,15 @@ export const testimonies = [
     social: "@Stears Business",
   },
   {
-    name: "Femi",
-    text: `Doctoora health Is doing great stuff in the private space. The government should be focusing on the affordability of these services for Nigerians. We're lightyears behind on that.`,
-    img: "/img/femi.svg",
-    social: "Obaluaye_",
+    name: "Moe",
+    text: `There’s a Nigerian startup I am so excited about. 
+    It is called Doctoora. They use a co-working 
+    approach to provide equipment etc to medical 
+    professionals so they can provide quality health 
+    care services for a fraction of the overhead 
+    costs. Can’t wait to see how they grow!`,
+    img: "/img/moe.svg",
+    social: "@Mochievous",
   },
   {
     name: "Guaranty Trust",
@@ -46,6 +51,82 @@ export const testimonies = [
     img: "/img/gtb.svg",
     social: "@gtbank",
   },
+  {
+    name: "Moalsalafi",
+    text: `I used Doctoora two weeks ago when I got 
+    really sick. It is very convenient and 
+    customer-centric. Great service - I would do 
+    it again!`,
+    img: "/img/moal.svg",
+    social: "@Moalsalafi",
+  },
+  {
+    name: "Femi",
+    text: `Doctoora health Is doing great stuff in the private space. The government should be focusing on the affordability of these services for Nigerians. We're lightyears behind on that.`,
+    img: "/img/femi.svg",
+    social: "Obaluaye_",
+  },
+  {
+    name: "Deo volente Dux",
+    text: `Amazing stuff you guys are doing at "Doctoora".
+    This platform for ease in private medical 
+    practice is commendable 👍👏.
+    We're hoping that soon there'd be facilities in other part of the country. Kudos`,
+    img: "/img/deo.svg",
+    social: "@DikeNY_MD",
+  },
+  
+];
+
+export const proTestimonies = [
+  {
+    name: "Dr. Shakirat Gold Olufadi",
+    text: `“ I have believed in the Doctoora mission and vision right from the very start and I was one of the first consultants to sign up on the platform. Doctoora has not only met my expectations, they have even surpassed it. In Nigeria, specialists (especially for a sanctuary specialty like dermatology) are not readily available. With Doctoora, you can get to see any specialist that you need. Whether you're looking to see a specialist physically or virtually, Doctoora has you covered. For a visual specialty like Dermatology, I have found the virtual bookings convenient for both the patient and doctor and the results are comparable to a physical consultation. Their customer service is also topnotch- giving all the support to the specialists in good time. I call Doctoora the brand that tailors healthcare to your needs because that's the best way to describe the brand!” `,
+    img: "/img/DrShakirat.svg",
+    social: "",
+  },
+  {
+    name: "Dr Kafayah Ogunsola ",
+    text: `“ For any Clinician who is deeply invested in building a sustainable private practice, I would recommend contacting the Doctoora team. Since 2019, when I started utilizing their very conducive out-patient facility, I have successfully and proudly built a private practice that continues to deliver global scale mental health care services to my local and international clients.”`,
+    img: "/img/DrKafaya.svg",
+    social: "MBBS; FWACP (psych.)",
+    social2: "MD, EmpathySpace Therapy Hub, Lagos"
+  },
+  {
+    name: "Dr. Ayodele Akenzua",
+    text: `“ Doctoora, Doctoora, Doctoora! Where do I even start from?
+    The Doctoora platform is a lifesaver, especially at a time like this when businesses are struggling to stay afloat in the present economy.
+    It reduces the headache of startup costs and overheads and allows you as a medical entrepreneur to do your business and still make time for other things.
+    Did I forget to mention that the environment is friendly and cozy? It literally takes away the scary feeling some patients have of visiting the hospital to see a healthcare provider.
+    Honestly, I can go on and on about how Doctoora has helped my private practice, but I will leave it to you to give it a try. You will be happy you did.”`,
+    img: "/img/drayodele.svg",
+    social: "",
+  },
+  {
+    name: "Nurse Peace Emem Jonathan",
+    text: `“ Ever since I discovered Doctoora, I have believed in excellent medical practice. You have swift response to health care needs. Excellent staffing, quick delivery and wonderful results. I am happy to have chosen you for my care delivery services.”`,
+    img: "/img/noimage.png",
+    social: "",
+  },
+  {
+    name: "Dr. Hakeem Olaosebikan",
+    text: `“ Doctoora Health has revolutionized private clinical practice in Lagos, it is a very laudable innovation where many doctors can come together to use a facility and it actually reduces proliferation of hospitals and allows a focused clinical practice which is what we need as a nation. It helps some doctors who don’t want to go through the hassle of setting up a facility for their practice by making use of the facility. Another aspect is that a patient can book online which allows the patients’ medical records to be uploaded online during the consultation and their telemedicine aspect of it is another beautiful innovation. It is my prayer that Doctoora Health continues to grow.” `,
+    img: "/img/DrHakeem.svg",
+    social: "Consultant Rheumatologist.",
+  },
+  {
+    name: "Dr. Njoku Golden",
+    text: `“ It was a fantastic experience really, saw a couple of patients. The ability to attend to patients in the comfort of their homes was key.” `,
+    img: "/img/noimage.png",
+    social: "",
+  },
+  {
+    name: "Dr. Nwanekezie Obiechina Alexis",
+    text: `“ Doctoora Health has been seamless in connecting me with patients, especially during these times when the basic salary of one job isn’t enough. Communication when setting up home visits and online consultations has been excellent so far.” `,
+    img: "/img/DrAlexis.svg",
+    social: "",
+  },
+  
 ];
 
 export const Reasons = [
@@ -89,7 +170,7 @@ export const facilityList = [
     facility: "Surulere",
     location: "Surulere, Lagos.",
     available: ["Consultation room", "Ultrasound Scan", "Phlebotomy"],
-    img: "/facilities/Opebi.svg",
+    img: "/facilities/Surulere.svg",
   },
   {
     facility: "Lekki Phase 1",
@@ -101,22 +182,16 @@ export const facilityList = [
       "Surgical Theatre",
       "Haematology Lab",
     ],
-    img: "/facilities/Onipanu.svg",
-  },
-  {
-    facility: "Doctoora Lekki",
-    location: "Lekki, Lagos.",
-    available: ["Consultation room", "Ultrasound Scan"],
     img: "/facilities/Lekki.svg",
   },
   {
-    facility: "Doctoora Surulere",
-    location: "Surulere, Lagos.",
+    facility: "Alaba",
+    location: "Ojo, Lagos.",
     available: ["Consultation room", "Ultrasound Scan"],
-    img: "/facilities/Surulere.svg",
+    img: "/facilities/Alaba.svg",
   },
   {
-    facility: "Doctoora Banana Island",
+    facility: "Banana Island",
     location: "Ikoyi, Lagos.",
     available: [
       "Consultation room",
@@ -128,7 +203,7 @@ export const facilityList = [
     img: "/facilities/Banana.svg",
   },
   {
-    facility: "Doctoora Dolphin Estate",
+    facility: "Dolphin Estate",
     location: "Ikoyi, Lagos.",
     available: [
       "Consultation room",
@@ -137,7 +212,7 @@ export const facilityList = [
       "Dance/Yoga Studio",
       "Physiotheraphy Bay",
     ],
-    img: "/facilities/Banana.svg",
+    img: "/facilities/Dolphin.svg",
   },
 ];
 
@@ -162,7 +237,58 @@ export const team = [
     name: "Aleccia Esson",
     post: "Co-Founder",
   },
+  {
+    img: "/about/Dammy.png",
+    name: "Damilola Adelekan",
+    post: "Product Manager",
+  },
+  {
+    img: "/about/Ayoola.png",
+    name: "Adagunodo Ayoola",
+    post: "CTO",
+  },
+  {
+    img: "/about/Matthew.png",
+    name: "Matthew Aloba",
+    post: "Frontend Engineer",
+  },
+  {
+    img: "/about/Nathan.png",
+    name: "Nathaniel Nelson-Omueti",
+    post: "UX Designer",
+  }, 
 ];
+
+export const team2 = [
+  {
+    img: "/about/Amara.png",
+    name: "Amarachi Peace N.",
+    post: "Executive Assistant | Chief of Staff",
+  },
+  {
+    img: "/about/DrDarl.png",
+    name: "Dr. Darlington Amadi",
+    post: "Medical Officer(Surulere)",
+  },
+  {
+    img: "/about/Peculiar.png",
+    name: "Peculiar Umensofor",
+    post: "Quality Assurance Nurse (Surulere)",
+  },
+];
+
+export const team3 = [
+  {
+    img: "/about/Omotoyosi.png",
+    name: "Omotoyosi Awosusi",
+    post: "Provider Liaison Lead",
+  },
+  {
+    img: "/about/Gloria.png",
+    name: "Umeadi Gloria Adaora",
+    post: "Business Manager",
+  }
+]
 
 export const impact = [
   {
@@ -192,7 +318,7 @@ export const keyOfferings = [
     name: "Facility",
     img: "/about/keyoff1.svg",
     list: [
-      "Healthcare Facility Rentals & Management Rentals.",
+      "Healthcare Facility Rentals.",
       "Facility Management.",
       "Interior Decoration / Healthcare Architecture & Design.",
     ],
@@ -222,7 +348,7 @@ export const corporateServices = [
     note: "Our services stand out because we focus on efficiency. Coupled with a passionate quality assurance team that work on steroids! Quality is guaranteed.",
   },
   {
-    title: "Intergration",
+    title: "Integration",
     note: "We have integrated over 6000 healthcare service access points in Nigeria. Top doctors, clinics, hospitals, labs, gyms & pharmacies into one platform, for you.",
   },
   {
@@ -279,27 +405,66 @@ export const comServices = [
     img: "/services/mentalcare.svg",
   },
 ];
-
-export const bannerButtons = [
+export const servicesList = [
   {
-    active: true,
-    name: "Telemedicine",
-    pos: "one",
-    image: "search/Tele1.svg",
-    image2: "search/Tele2.svg",
+    title: 'Skin & Body Care',
+    slug: '/skin-body-care'
   },
   {
-    active: false,
-    name: "Facility Visit",
-    pos: "two",
-    image: "/search/Facility.svg",
-    image2: "/search/Facility2.svg",
+    title: 'Dermatology',
+    slug: '/dermatology'
   },
   {
-    active: false,
-    name: "Home Visit",
-    pos: "three",
-    image: "/search/home.svg",
-    image2: "/search/home2.svg",
+    title: 'Plastic Surgery',
+    slug: '/plastic-surgery'
   },
+  {
+    title: 'Aesthetic Medicine',
+    slug: '/aesthetic-medicine'
+  },
+  {
+    title: 'Bone Muscle',
+    slug: '/bone-muscle'
+  },
+  {
+    title: 'Orthopedic Surgery',
+    slug: '/orthopaedic-surgery'
+  },
+  {
+    title: 'Rheumatology',
+    slug: '/rheumatology'
+  },
+  {
+    title: 'Physiotherapy',
+    slug: '/physiotherapy'
+  },
+  {
+    title: 'Podiatry',
+    slug: '/podiatry'
+  },
+  {
+    title: 'Occupational Therapy',
+    slug: '/occupational-therapy'
+  },
+  {
+    title: 'Brains & Nerves',
+    slug: '/brain-nerves'
+  },
+  {
+    title: 'Neurology',
+    slug: '/neurology'
+  },
+  {
+    title: 'Neurosurgery',
+    slug: '/neurosurgery'
+  },
+  {
+    title: 'Spine Surgery',
+    slug: '/spine-surgery'
+  },
+  {
+    title: 'Speech Therapy',
+    slug: '/speech-therapy'
+  }
 ];
+

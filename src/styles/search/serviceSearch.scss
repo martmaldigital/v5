@@ -1,0 +1,583 @@
+// .neurosurgery {
+//     background: $white;
+  
+    .neurosurgery-main {
+      padding-top: 4rem;
+  
+      .banner {
+        padding: 2rem 4rem 3rem;
+        position: relative;
+        @include biggerscreen() {
+            padding: 4rem 0 4rem 6rem;
+        }
+        @include laptop() {
+            padding: 1rem 4rem;
+        }
+        @include tablandscape() {
+            padding: 0rem 3rem;
+          }
+        @include mobile() {
+          padding: 1rem 1.5rem;
+          background-image: linear-gradient(to right, #59cde9, #0a2a88);
+        }
+        @include tablet() {
+            padding: 1rem 2rem;
+            background-image: linear-gradient(to right, #59cde9, #0a2a88);
+          }
+  
+        .banner-img {
+         width: 50%;
+          position: absolute;
+          right: 0;
+          top: 0;
+  
+          @include mobile() {
+            display: none;
+          }
+          @include tablet() {
+            display: none;
+          }
+        }
+  
+        .text-info {
+          width: 45%;
+          padding-top: 5rem;
+  
+          @include mobile() {
+            width: 100%;
+            padding-top: 1rem;
+          }
+          @include tablet() {
+            width: 100%;
+          }
+          @include tablandscape() {
+            width: 50%;
+        }
+  
+          .banner-title {
+            font-family: $title;
+            line-height: 46.95px;
+            font-weight: 900;
+            font-size: 40px;
+            margin-bottom: 2.5rem;
+  
+            @include mobile() {
+              color: $white;
+            }
+              @include tablandscape() {
+                font-size: 30px;
+            }
+          }
+          .banner-footnote {
+            line-height: 24.95px;
+            font-weight: 400;
+            font-size: 16px;
+            @include mobile() {
+              color: $white;
+            }
+          }
+          button {
+            margin-top: 2rem;
+            font-size: 20px;
+  
+            @include mobile() {
+              width: 100%;
+              background: $orange;
+            }
+          }
+        }
+      }
+  
+        .team-holder {
+            padding: 4rem 3rem;
+        
+        @include biggerscreen () {
+            padding: 4rem 6rem;
+        }
+        @include laptop () {
+            padding: 4rem 4rem;
+        }
+        @include tablandscape () {
+            padding: 1rem 3.5rem;
+        }
+        @include tablet () {
+            padding: 1rem 2.5rem;
+        }
+        @include mobile () {
+            padding: 1rem 1.5rem;
+        }
+
+        &.impact1 {
+            @include biggerscreen() {
+                display: none;
+              }  
+              @include desktop() {
+                display: none;
+              }
+              @include laptop() {
+                display: none;
+              }
+              @include tablandscape() {
+                display: none;
+              }
+        }
+
+          &.impact2 {
+            @include tablet() {
+              display: none;
+            }
+            @include mobile() {
+              display: none;
+            }
+          }
+          .teamcard {
+            cursor: pointer;
+            // @include mobile() {
+            //   margin-bottom: 2rem;
+            // }
+  
+            .img-holder {
+              background: grey;
+              border-radius: 8px 8px 0px 0px;
+              img {
+                border-radius: 8px 8px 0px 0px;
+                height: 15rem;
+                width: 100%;
+                object-fit: cover;
+              }
+            }
+  
+            .card-text-holder {
+               height: 4rem;
+              margin-bottom: 1.5rem;
+              box-shadow: 0px 5px 5px rgba(45, 156, 219, 0.7);
+              background: $blue;
+              border-radius: 0px 0px 8px 8px;
+              padding: 1rem;
+            }
+  
+            .name {
+              color: $white;
+              font-family: $title;
+              text-align: center;
+              font-weight: 700;
+              font-size: 24px;
+              margin-bottom: 0.3rem;
+              @include laptop() {
+                font-size: 20px;
+              }
+              @include mobile() {
+                font-size: 18px;
+              }
+              @include tablandscape() {
+                font-size: 20px;
+              }
+              @include biggerscreen() {
+                font-size: 24px;
+              }
+
+            }
+          }
+        }
+      
+
+      .division {
+        padding: 4rem 3rem;
+  
+        @include mobile() {
+          padding: 4rem 1.5rem;
+        }
+        @include laptop() {
+            padding: 4rem 4rem;
+          }
+          @include biggerscreen() {
+            padding: 4rem 6rem;
+          }
+          @include tablet() {
+            padding: 4rem 2rem;
+          }
+  
+  
+        .title {
+          font-family: $title;
+          line-height: 46.95px;
+          font-weight: 900;
+          font-size: 36px;
+          margin-bottom: 2rem;
+          text-align: center;
+        }
+  
+        .division-holder {
+          display: flex;
+          justify-content: space-between;
+  
+          @include mobile() {
+            flex-direction: column;
+          }
+  
+          .division-item {
+            width: 29%;
+            cursor: pointer;
+  
+            @include mobile() {
+              width: 100%;
+              margin-bottom: 1rem;
+            }
+  
+            img {
+              height: 18rem;
+              width: 100%;
+              object-fit: cover;
+              border-top-left-radius: 10px;
+              border-top-right-radius: 10px;
+            }
+  
+            .item-text {
+              font-size: 22px;
+              line-height: 24px;
+              font-weight: 500;
+              margin-bottom: 0.5rem;
+              text-align: center;
+              box-shadow: 0px 10px 25px rgba(45, 156, 219, 0.7);
+              background: $blue;
+              padding: 1rem;
+              color: $white;
+              border-bottom-left-radius: 10px;
+              border-bottom-right-radius: 10px;
+              @include tablandscape() {
+                font-size: 16px;
+                padding: 0.5rem;
+            }
+            @include tablet() {
+                font-size: 16px;
+                padding: 0.5rem;
+            }
+            @include mobile() {
+                font-size: 18px;
+                padding: 0.5rem;
+            }
+            }
+          }
+        }
+      }
+  
+      .booking {
+        padding: 4rem 3rem;
+        background: $background-blue;
+        margin-top: 10rem;
+        position: relative;
+  
+        @include mobile() {
+          padding: 1rem 1.5rem;
+          margin-top: 2rem;
+        }
+        @include biggerscreen() {
+            padding: 4rem 6.0625rem 4rem;
+            margin-top: 10rem;
+          }
+          @include laptop() {
+            padding: 4rem 4rem;
+            margin-top: 8rem;
+          }
+          @include tablandscape() {
+            padding: 4rem 3rem;
+            margin-top: 8rem;
+          }
+          @include tablet() {
+            padding: 1rem 2rem;
+            margin-top: 3rem;
+          }
+  
+        .booking-img {
+          position: absolute;
+          right: 6rem;
+          top: -3rem;
+  
+          @include mobile() {
+            display: none;
+          }
+          @include tablet() {
+            display: none;
+          }
+          @include tablandscape() {
+            right: 2rem;
+            width: 20rem;
+          }
+        }
+  
+        .text-info {
+          width: 50%;
+  
+          @include mobile() {
+            width: 100%;
+          }
+          @include tablet() {
+            width: 100%;
+          }
+  
+          .booking-title {
+            font-family: $title;
+            line-height: 46.95px;
+            font-weight: 900;
+            font-size: 36px;
+            margin-bottom: 2rem;
+          }
+          .booking-footnote {
+            line-height: 24.95px;
+            font-weight: 400;
+            font-size: 16px;
+          }
+        }
+      }
+  
+      .search-holder {
+        padding: 6rem 14rem;
+  
+        @include mobile() {
+          padding: 1rem 0rem;
+        }
+        @include tablandscape() {
+            padding: 6rem 6rem;
+          }
+          @include tablet() {
+            padding: 1rem 1rem;
+          }
+          @include biggerscreen() {
+            padding: 4rem 20rem;
+          }
+      }
+  
+      .why-choose {
+        padding: 4rem 3rem;
+  
+        @include mobile() {
+          padding: 1.5rem 1.5rem;
+        }
+        @include biggerscreen() {
+            padding: 4rem 6rem;
+          }
+          @include laptop() {
+            padding: 4rem 4rem;
+          }
+          @include tablet() {
+            padding: 4rem 2rem;
+          }
+  
+        .why-title {
+          font-family: $title;
+          line-height: 46.95px;
+          font-weight: 900;
+          font-size: 36px;
+          margin-bottom: 2rem;
+          text-align: center;
+        }
+  
+        .why-holder {
+          display: flex;
+          justify-content: space-between;
+  
+          @include mobile() {
+            flex-direction: column;
+          }
+          @include tablet() {
+            flex-direction: column;
+          }
+  
+          .why-item {
+            background: $white;
+            box-shadow: 0px 4px 15px #e6e6e6;
+            padding: 2rem;
+            width: 30%;
+  
+            @include mobile() {
+              width: 100%;
+              margin-bottom: 1rem;
+            }
+            @include tablet() {
+                width: 100%;
+                margin-bottom: 1rem;
+              }
+  
+            img {
+              height: 2rem;
+              width: 2rem;
+              margin-bottom: 0.5rem;
+            }
+            .why-text {
+              font-size: 22px;
+              line-height: 24px;
+              font-weight: 500;
+              margin-bottom: 0.5rem;
+            }
+            .why-footnoote {
+              font-size: 21px;
+              line-height: 21px;
+              font-weight: 500;
+              color: $fontgrey;
+            }
+          }
+        }
+      }
+  
+      .message {
+        padding: 4rem 3rem;
+  
+        @include mobile() {
+          padding: 1rem 1.5rem;
+        }
+        @include biggerscreen() {
+            padding: 4rem 6rem;
+          }
+          @include laptop() {
+            padding: 4rem 4rem;
+          }
+          @include tablet() {
+            padding: 1rem 2rem;
+          }
+        .message-title {
+          font-family: $title;
+          line-height: 46.95px;
+          font-weight: 900;
+          font-size: 36px;
+          margin-bottom: 2rem;
+          text-align: center;
+        }
+  
+        .message-holder {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-column-gap: 2rem;
+          align-items: center;
+          @include tablet() {
+            grid-template-columns:  1fr;
+          }
+          @include mobile() {
+            grid-template-columns:  1fr;
+          }
+  
+          .content {
+            .message-footnote {
+              line-height: 30.95px;
+              font-weight: 400;
+              font-size: 16px;
+              color: $fontgrey;
+            }
+          }
+  
+          .img-holder {
+            img {
+              width: 100%;
+            }
+          }
+        }
+        
+      }
+  
+      .faqs {
+        background: $background-blue;
+        padding: 4rem 3rem;
+  
+        @include mobile() {
+          padding: 1rem 1.5rem;
+        }
+        @include tablet() {
+            padding: 2rem 2rem;
+          }
+        @include biggerscreen() {
+            padding: 4rem 6.0625rem 4rem;
+        }
+        @include laptop() {
+            padding: 4rem 4rem;
+        }
+  
+        .title {
+          font-family: $title;
+          line-height: 46.95px;
+          font-weight: 500;
+          font-size: 36px;
+        }
+  
+        .faqs-holder {
+          margin-top: 3rem;
+        }
+      }
+  
+      .getstarted {
+        padding: 4rem 3rem;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid $background-blue;
+        position: relative;
+        margin-top: 13rem;
+        margin-bottom: 8rem;
+  
+        @include mobile() {
+          padding: 1rem 1.5rem;
+          margin-top: 0;
+          margin-bottom: 2rem;
+        }
+        @include tablet() {
+            padding: 4rem 2rem;
+            margin-top: 1rem;
+            margin-bottom: 3rem;
+          }
+        @include biggerscreen() {
+            padding: 4rem 6.0625rem 4rem;
+            margin-top: 10rem;
+          }
+          @include laptop() {
+            padding: 4rem 4rem;
+            margin-top: 10rem;
+          }
+  
+        .vase-img {
+          position: absolute;
+          right: 4rem;
+          top: -10.5rem;
+          @include mobile() {
+            display: none;
+          }
+          @include tablandscape() {
+            width: 18rem; 
+            top: -2.5rem;
+            right: 0rem;
+        }
+        @include tablet() {
+            display: none;
+          }
+        }
+  
+        .get-title {
+          font-family: $title;
+          line-height: 46.95px;
+          font-weight: 900;
+          font-size: 36px;
+          margin-bottom: 1.5rem;
+          @include mobile () {
+            font-size: 24px;
+
+          }
+        }
+        .get-footnote {
+          line-height: 24.95px;
+          font-weight: 400;
+          font-size: 20px;
+        }
+        button {
+          height: 3rem;
+          font-size: 16px;
+          line-height: 25px;
+          font-weight: 500;
+          width: 30%;
+          color: $white;
+          background: $orange;
+          border: 1px solid $orange;
+          border-radius: 4px;
+          @include mobile() {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+  

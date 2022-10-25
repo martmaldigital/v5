@@ -64,9 +64,6 @@ const Works = () => {
         <div className="testimonies-holder d">
           {Reasons.map((item, index) => (
             <div className="testimony d" key={`tesitimony-${index}`}>
-              {/* <p className="text">
-                    {item.text}
-                  </p> */}
               <div className="user-info">
                 <div className="img d">
                   <Image src={item.img} alt="avatar" layout="fill" />

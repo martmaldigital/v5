@@ -14,11 +14,9 @@
 
       @include mobile() {
         padding: 1.9375rem 1.5rem;
-        flex-direction: column;
-        height: 40rem;
       }
       @include tablet() {
-        padding: 6rem 2rem;
+        padding: 6rem 1rem 2rem 2rem;
       }
       @include laptop() {
         padding: 6rem 1rem 1.5rem 4rem;
@@ -53,14 +51,6 @@
               width: 100%;
             }
             @include tablet() {
-              width: 60%;
-            }
-
-            @include tablandscape() {
-              width: 60%;
-            }
-            @include desktop() {
-              margin-top: 1rem;
               width: 50%;
             }
           }
@@ -77,6 +67,7 @@
         color: $textblack;
         span {
           color: $blue;
+          font-family: $title;
         }
         @include mobile() {
           font-size: 35px;
@@ -103,9 +94,12 @@
         font-size: 16px;
         span {
           color: $orange;
+          &.d{
+            color: $blue;
+          }
         }
-        @include laptop() {
-          font-size: 16px;
+        @include mobile() {
+          font-size: 14px;
         }
         @include biggerscreen() {
           font-size: 20px;
@@ -121,10 +115,6 @@
         @include tablet() {
           display: none;
         }
-        // @include laptop() {
-        //   width: 25rem;
-        //   // height: 20rem;;
-        // }
       }
     }
 
@@ -141,8 +131,10 @@
         height: 4rem;
       }
       @include laptop() {
+        flex-direction: column;
         padding: 2rem 4rem;
-      }
+        height: 10rem;    
+        }
       @include tablet() {
         flex-direction: column;
         justify-content: center;
@@ -151,7 +143,6 @@
       }
       @include tablandscape() {
         flex-direction: column;
-        justify-content: center;
         padding: 2rem 3rem;
         height: 10rem;
       }
@@ -164,23 +155,26 @@
         width: 50%;
         color: $orange;
         font-weight: 500;
-        font-size: 16px;
-        line-height: 60px;
+        font-size: 18px;
+        line-height: 90px;
 
         @include mobile() {
           width: 100%;
+          line-height: 20px;
           font-size: 16px;
-          margin-top: 6rem;
+          margin-top: 8rem;
           text-align: center;
         }
         @include tablet() {
-          font-size: 14px;
+          line-height: 10px;
+          font-size: 16px;
         }
         @include tablandscape() {
-          font-size: 14px;
+          line-height: 10px;
+          font-size: 16px;
         }
         @include laptop() {
-          font-size: 14px;
+          line-height: 10px;
         }
       }
 
@@ -192,27 +186,31 @@
         @include tablet() {
           width: 100%;
         }
+        @include laptop() {
+          width: 100%;
+        }
         @include tablandscape() {
           width: 100%;
         }
       }
       .img-style {
         position: relative;
-        width: 94px;
-        height: 4rem;
+        height: 6rem;
         gap: 40px;
       }
     }
 
     .services {
       padding: 4rem 2rem;
+
       @include mobile() {
-        padding: 5rem 1rem;
+        padding: 8rem 1rem 3rem 1rem;
       }
 
       @include biggerscreen() {
         padding: 4rem 3rem;
       }
+      
 
       hr {
         border: none;
@@ -227,16 +225,7 @@
           width: 15%;
         }
       }
-      // @include biggerscreen() {
-      //   padding: 4rem 5rem 3rem;
-      // }
 
-      @include laptop() {
-        padding: 4rem 3rem;
-      }
-      @include tablet() {
-        padding: 0rem 0rem 3rem;
-      }
 
       .services-holder {
         padding: 0 1rem;
@@ -244,40 +233,101 @@
         align-items: center;
         margin-top: 1rem;
 
-        // @include mobile() {
-        //   display: none;
-        // }
-        // @include laptop() {
-        //   width: 100%;
-        // }
-
         .action-icon {
           position: relative;
           cursor: pointer;
-          height: 3rem;
-          width: 3rem;
+          height: 2rem;
+          width: 2rem;
+
           @include mobile() {
             display: none;
-          }
-
-          @include laptop() {
-            height: 2.5rem;
-            width: 2.5rem;
           }
           @include tablet() {
             display: none;
           }
-          @include tablandscape() {
-            height: 2rem;
-            width: 2rem;
-          }
         }
 
         .services-main {
+          &.t3 {
+            width: 95%;
+            padding: 1rem 1rem 0rem 1rem;   
+           background: $white;
+           align-items: center;
+           @include tablandscape() {
+            width: 100%;
+          padding: 0rem;
+          }
+          @include mobile() {
+            width: 100%;
+          padding: 0rem;
+          }
+          @include tablet() {
+            width: 100%;
+          padding: 0rem;
+          }
+          @include desktop() {
+            display: none;
+          }
+          @include biggerscreen() {
+            display: none;
+          }
+          }
+          &.t1 {
+            width: 95%;
+            padding: 1rem 1rem 0rem 1rem;   
+           background: $white;
+           align-items: center;
+
+           @include laptop() {
+            display: none;
+          }
+          @include desktop() {
+            display: none;
+          }
+          @include biggerscreen() {
+            display: none;
+          }
+          @include tablandscape() {
+            width: 92%;
+            padding: 1rem 1rem 0rem 2rem;   
+          }
+          @include mobile() {
+            width: 100%;
+            padding: 0rem;   
+          }
+          @include tablet() {
+            width: 100%;
+            padding: 0rem;   
+          }
+          }
+          &.t {
+            width: 95%;
+            padding: 1rem 1rem 0rem 1rem;   
+           background: $white;
+           align-items: center;
+           &.tt {
+            @include laptop() {
+              display: none;
+            }
+           }
+           @include mobile() {
+             display: none;
+           }
+           @include tablet() {
+             display: none;
+           }
+           @include tablandscape() {
+            display: none;  
+           }
+           @include laptop() {
+             width: 92%;
+             padding: 0.5rem 0.5rem;   
+         }
+          }
           &.p {
-            width: 90%;
+            width: 95%;
+             padding: 1rem 1rem 0rem 1rem;   
             background: $white;
-            padding: 1rem;
             align-items: center;
             @include mobile() {
               display: none;
@@ -285,22 +335,19 @@
             @include tablet() {
               display: none;
             }
-            @include biggerscreen() {
-              padding: 3rem;
+            @include tablandscape() {
+              width: 92%;
+              padding: 1rem 1rem 0rem 2rem;   
             }
+            @include laptop() {
+              width: 92%;
+             padding: 1rem 1rem 0rem 2rem;
+          }
           }
           &.m {
-            width: 80%;
+            width: 100%;
             background: $white;
-            padding: 1rem;
             align-items: center;
-
-            @include mobile() {
-              width: 100%;
-            }
-            @include tablet() {
-              width: 100%;
-            }
 
             @include tablandscape() {
               display: none;
@@ -316,11 +363,103 @@
             }
           }
 
+          .testimony {
+            display: flex !important;
+            height: 22rem;
+            padding: 1.5rem;
+            border-radius: 16px 16px 16px 0px;
+            border: 1px solid $blue;
+            &.testimony2 {
+              height: 30rem;
+              width: 30rem !important;
+              @include mobile () {
+                height: 38rem;
+                width: 20rem !important;
+              }
+              @include tablet () {
+                height: 38rem;
+                width: 22rem !important;
+              }
+              @include tablandscape () {
+                height: 38rem;
+                width: 28rem !important;
+              }
+              @include biggerscreen() {
+                height: 32rem;
+                width: 34rem !important;
+              }
+            }
+            @include mobile () {
+              padding: 1rem;
+            }
+
+            .text {
+              color: $textblack;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 30px;
+              text-align: left;
+              &.text2 {
+                font-size: 14px;
+                @include mobile() {
+                  font-size: 12px;
+                  line-height: 26px;
+                }
+ 
+              }
+              @include mobile () {
+                font-size: 13px;
+                line-height: 26px;
+              }
+              @include tablet () {
+                font-size: 13px;
+                line-height: 26px;
+              }
+            }
+            .user-info {
+              .img {
+                // margin-top: 4rem;
+                // position: relative;
+                border-radius: 50%;
+                height: 60px;
+                width: 60px;
+                object-fit: cover;
+                // margin-right: 2rem;
+              }
+              .user-name {
+                color: $textblack;
+                font-family: $title;
+                font-weight: 600;
+                font-size: 18px;
+                margin-bottom: 0;
+                &.name2 {
+                  @include mobile () {
+                    font-size: 14px;
+                  }
+                }
+          
+                .br {
+                  color: grey;
+                  position: relative;
+                  font-size: 14px;
+                  line-height: 10px;
+                  font-weight: 400;
+                  &.br2 {
+                    @include mobile () {
+                      font-size: 12px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
           .services-item {
             background: $blue;
-            position: relative;
+             position: relative;
             border-radius: 8px;
             padding: 32px 43.5px;
+
             @include mobile() {
               padding: 20px 20px;
             }
@@ -334,18 +473,11 @@
 
             p {
               font-weight: 600;
-              font-size: 18px;
+              font-size: 16px;
               line-height: 32px;
               color: $white;
               margin-bottom: 0;
               text-align: center;
-
-              @include laptop() {
-                font-size: 14px;
-              }
-              @include mobile() {
-                font-size: 14px;
-              }
             }
           }
         }
@@ -356,17 +488,31 @@
       background: $background-blue;
       padding: 1.5rem 3rem;
       position: relative;
-      height: 35rem;
-      &.s {
-      height: 10rem;
-
+      @include laptop () {
+        padding: 1.5rem 4rem;
       }
+      @include mobile() {
+        padding: 1.5rem 1.5rem;
+      }
+      @include tablet() {
+        padding: 1.5rem 2rem;
+      }
+      @include biggerscreen() {
+        padding: 1.5rem 6rem;
+      }
+      &.w {
+         height: 34rem;
+      }
+      // &.s {
+      // height: 10rem;
+      // }
 
       &.d {
-        @include tablandscape() {
+        height: 34rem;
+        @include tablandscape () {
           height: 50rem;
         }
-        @include tablet() {
+        @include tablet () {
           height: 70rem;
         }
         @include mobile() {
@@ -374,30 +520,25 @@
         }
       }
 
-      &.faq {
-        height: 20rem;
-      }
+      // &.faq {
+      //   //  height: 140rem;
+      //   // padding: 1rem;
+        
+      // }
 
-      @include mobile() {
-        padding: 1.5rem 1.5rem;
-        height: 38rem;
-      }
-      @include laptop() {
-        padding: 1.5rem 4rem;
-      }
-      @include tablet() {
-        padding: 1.5rem 2rem;
-        height: 38rem;
-      }
-      @include biggerscreen() {
-        padding: 1.5rem 6rem;
-      }
+
 
       hr {
         border: none;
         background-color: $orange;
         width: 8%;
         height: 4px;
+        @include mobile() {
+          width: 20%;
+        }
+        @include tablet() {
+          width: 15%;
+        }
       }
 
       // @include laptop() {
@@ -409,37 +550,38 @@
         top: 14.5rem;
 
         &.p {
-          height: 17rem;
-          width: 56%;
+          height: 15rem;
+          width: 55%;
           left: 18rem;
-          top: 14.5rem;
+          top: 14.4rem;
 
           @include tablandscape() {
-            left: 10rem;
-            top: 14rem;
+            left: 12rem;
+             top: 15.4rem;
           }
           @include laptop() {
-            left: 14rem;
+            // left: 14rem;
+            height: 14.5rem;
           }
           @include biggerscreen() {
-            height: 18rem;
+            height: 16rem;
           }
         }
         &.d {
-          height: 17.5rem;
+          height: 16.2rem;
           width: 65%;
           left: 12rem;
 
           @include laptop() {
-            display: none;
+            // display: none;
           }
           @include tablandscape() {
             display: none;
           }
           @include biggerscreen() {
-            height: 18.2rem;
-            width: 68%;
-            left: 12rem;
+            height: 16.5rem;
+            width: 66%;
+            left: 14rem;
           }
         }
 
@@ -499,12 +641,12 @@
           }
           @include tablet() {
             grid-template-columns: 1fr;
-            grid-gap: 5.5rem;
+            grid-gap: 8rem;
             margin-top: 1.5rem;
           }
           @include mobile() {
             grid-template-columns: 1fr;
-            grid-gap: 5.5rem;
+            grid-gap: 7.5rem;
             margin-top: 1.5rem;
           }
         }
@@ -557,17 +699,22 @@
           }
 
           &.d {
-            padding: 0.5rem 0rem;
+            padding: 0.9rem 0rem;
             font-size: 16px;
-            height: 45px;
+            height: 54px;
             @include laptop() {
               line-height: 30px;
             }
             @include tablandscape() {
               line-height: 10px;
               height: 55px;
-
               padding: 1.4rem 0.5rem;
+              font-size: 14px;
+            }
+            @include mobile() {
+              line-height: 10px;
+              height: 40px;
+              padding: 1rem 0.5rem;
               font-size: 14px;
             }
           }
@@ -583,6 +730,7 @@
           color: $blue;
           font-size: 14px;
           text-align: center;
+           margin-top: 1.5rem;
           @include biggerscreen() {
             margin-top: 2.5rem;
           }
@@ -608,7 +756,12 @@
         height: 4px;
         &.s {
           background-color: $orange;
-
+        }
+        @include mobile() {
+          width: 20%;
+        }
+        @include tablet() {
+          width: 15%;
         }
       }
 
@@ -617,8 +770,21 @@
       }
 
       .search-holder{
-        padding: 1.5rem 10rem;
+        padding: 1.5rem 20rem;
 
+        @include laptop() {
+          padding: 1.5rem 14rem;
+        }
+
+        @include tablandscape() {
+          padding: 1.5rem 6rem;
+        }
+        @include tablet() {
+          padding: 1.5rem 3rem;
+        }
+        @include mobile() {
+          padding: 0rem 0rem;
+        }
       }
 
       .action-holder {
@@ -630,6 +796,28 @@
 
     .testimonies {
       padding: 3rem 3rem;
+
+      .holder {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        // .col {
+        //   justify-content: center;
+        //   text-align: center;
+        //   // width: 10rem;
+        //   // height: 20rem;
+        //   padding: 1rem;
+        //   border-radius: 16px 16px 16px 0px;
+        //   border: 1px solid $blue;   
+        //   flex-direction: column;  
+        //   p{
+        //     padding: 2rem;
+        //   }     
+        // }
+      }
+      .holder > * {
+        flex: 1 1 4px;
+      }
 
       &.p {
         @include tablet() {
@@ -644,6 +832,9 @@
         height: 4px;
         @include mobile() {
           width: 20%;
+        }
+        @include tablet() {
+          width: 15%;
         }
       }
 
@@ -733,9 +924,12 @@
                 width: 100px;
                 padding: 2.5rem;
                 @include mobile() {
-                  padding: 1.5rem;
+                  padding: 1.2rem;
                   width: 50px;
                   height: 50px;
+                  margin-right: 1rem;
+                  border: 10px solid $orange;
+
                 }
               }
             }
@@ -748,11 +942,9 @@
               margin-bottom: 0;
 
               &.d {
-                padding: 10px;
-                width: 65%;
                 font-size: 24px;
                 @include mobile() {
-                  font-size: 16px;
+                  font-size: 18px;
                   // width: 70%;
                   padding: 1px;
                   line-height: 20px;
@@ -763,8 +955,8 @@
               }
 
               .br {
-                color: #4a4a4a;
-                font-size: 14px;
+                color: $textblack;
+                font-size: 16px;
                 line-height: 10px;
                 font-weight: 400;
 
@@ -774,9 +966,10 @@
                   color: $textblack;
                   @include mobile() {
                     line-height: 20px;
+                    font-size: 14px;
+
                   }
                   @include laptop() {
-                    font-size: 18px;
                     line-height: 40px;
                   }
                 }
@@ -790,9 +983,7 @@
     .facilities {
       background: $background-blue;
       padding: 3rem 3rem;
-      @include biggerscreen() {
-        padding: 3rem 6rem;
-      }
+      
       @include tablet() {
         padding: 3rem 2rem;
       }
@@ -805,6 +996,12 @@
         background-color: $orange;
         width: 8%;
         height: 4px;
+        @include mobile() {
+          width: 20%;
+        }
+        @include tablet() {
+          width: 15%;
+        }
       }
 
       .facility-holder {
@@ -815,14 +1012,18 @@
           position: relative;
           // display: flex;
           cursor: pointer;
-          height: 3rem;
-          width: 3rem;
+          height: 2rem;
+          width: 2rem;
           @include mobile() {
+            display: none;
+          }
+          @include tablet() {
             display: none;
           }
         }
         .facility-main {
-          width: 90%;
+          width: 95%;
+          padding: 0rem 1rem;
           align-items: center;
 
           &.p {
@@ -836,13 +1037,13 @@
               display: none;
             }
             @include tablandscape() {
-              display: none;
+              width: 100%;
             }
             @include mobile() {
               width: 100%;
             }
             @include tablet() {
-              width: 80%;
+              width: 100%;
             }
           }
           &.m {
@@ -852,24 +1053,27 @@
             @include tablet() {
               display: none;
             }
+            @include tablandscape() {
+            display: none;    
+            }
             @include mobile() {
               display: none;
             }
-            @include laptop() {
-              width: 90%;
-              align-items: center;
-            }
+            // @include laptop() {
+            //   width: 90%;
+            //   align-items: center;
+            // }
           }
 
           .facility-card {
             .img-holder {
-              position: relative;
-              height: 12rem;
-              width: 100%;
+              // position: relative;
+              // height: 12rem;
+              // width: 100%;
 
               img {
                 border-radius: 8px 8px 0px 0px;
-                width: 100%;
+                // width: 100%;
                 object-fit: cover;
               }
             }
@@ -877,7 +1081,13 @@
               margin-bottom: 2rem;
               background: $white;
               padding: 0.5rem 0rem;
-              height: 22rem;
+               height: 22rem;
+               @include mobile() {
+                height: 19rem;
+               }
+               @include tablet() {
+                height: 19rem;
+               }
             }
 
             img {
@@ -896,6 +1106,9 @@
               @include mobile() {
                 font-size: 18px;
               }
+              @include tablet() {
+                font-size: 18px;
+              }
             }
             .name2 {
               font-family: $title;
@@ -905,7 +1118,11 @@
               padding: 2rem 0rem 0.5rem 3rem;
               @include mobile() {
                 font-size: 18px;
-                padding: 2rem 0rem 0.5rem 0.1rem;
+                padding: 2rem 0rem 0.5rem 1.5rem;
+              }
+              @include tablet() {
+                font-size: 18px;
+                padding: 2rem 0rem 0.5rem 1.5rem;
               }
             }
             .fac {
@@ -915,8 +1132,11 @@
               font-weight: 400;
               font-size: 16px;
               @include mobile() {
-                font-size: 18px;
-                padding: 0rem 0.1rem;
+                padding: 0rem 1.5rem;
+                font-size: 14px;
+              }
+              @include tablet() {
+                padding: 0rem 1.5rem;
                 font-size: 14px;
               }
             }

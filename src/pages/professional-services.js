@@ -1,6 +1,5 @@
 import Image from "next/image";
 import ProfessionalNav from "components/nav/professionalNav";
-import Footer from "components/footer";
 
 const Index = () => {
   return (
@@ -9,9 +8,11 @@ const Index = () => {
       <div className="about">
         <div className="about-main">
           <div className="banner profServ">
+          <img src="/img/background-right.svg" alt="" className="banner-img" />
+            <img src="/img/background-left.svg" alt="" className="banner-img2" />
             <div className="banner-holder profServ">
               <div className="info-text">
-                <h3 className="title">Our Services </h3>
+                <h3 className="title services">Our Services </h3>
               </div>
             </div>
           </div>

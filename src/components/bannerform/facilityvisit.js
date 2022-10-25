@@ -119,7 +119,7 @@ const Facilityvisit = ({
         }}
       >
         <Row gutter={0}>
-          <Col lg={9} xs={24}>
+          <Col lg={9} sm={12} xs={24}>
             <Form.Item
               name="specialization"
               rules={[
@@ -142,7 +142,7 @@ const Facilityvisit = ({
               </Select>
             </Form.Item>
           </Col>
-          <Col lg={9} xs={24}>
+          <Col lg={9} sm={12} xs={24}>
             <Form.Item
               name="location"
               // rules={[

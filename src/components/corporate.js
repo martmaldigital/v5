@@ -20,7 +20,7 @@ const CorporatePage = () => {
             </div>
           </div>
           <div className="img-holder">
-            <Image src="/corporate/banner.svg" alt="" layout="fill" />
+            <Image src="/corporate/banner.svg" alt="" layout="responsive" width={612} height={401} />
           </div>
         </div>
 
@@ -43,14 +43,14 @@ const CorporatePage = () => {
             </Row>
           </div>
         </div>
-        <div>
+        <div className="">
           <h1 className="title">Double your Impact</h1>
           <div className="banner impact">
             <div className="img-holder">
-              <Image src="/corporate/impact.svg" alt="" layout="fill" />
+              <Image src="/corporate/impact.svg" alt="" layout="responsive" width={506} height={336}/>
             </div>
             <div className="info-text impact">
-              <h1 className="info-title">Improve Employee Health</h1>
+              <h1 className="info-title impact">Improve Employee Health</h1>
               <p className="text">
                 Increase your employees&#39; morale by giving them access to our
                 wide range of patient-centric services, which can be assessed at
@@ -70,22 +70,21 @@ const CorporatePage = () => {
             </p>
           </div>
           <div className="img-holder">
-            <Image src="/corporate/support.svg" alt="" layout="fill" />
+            <Image src="/corporate/support.svg" alt="" layout="responsive" width={506} height={336}/>
           </div>
         </div>
 
         <div>
           <h1 className="title">Our Corporate Membership Services</h1>
-
           <div className="banner impact">
             <div className="img-holder portal">
-              <Image src="/corporate/adminportal.svg" alt="" layout="fill" />
+              <Image src="/corporate/adminportal.svg" alt="" layout="responsive" width={612} height={479}/>
             </div>
             <div className="info-text">
               <h1 className="info-title portal">
                 Admin Portal Built For Savvy HR Teams
               </h1>
-              <ul className="text">
+              <ul className="text c">
                 <li>
                   Add up to 10,000 employees with our bulk upload feature.
                 </li>
@@ -124,7 +123,7 @@ const CorporatePage = () => {
               </ul>
             </div>
             <div className="img-holder">
-              <Image src="/corporate/personalportal.svg" alt="" layout="fill" />
+              <Image src="/corporate/personalportal.svg" alt="" layout="responsive" width={612} height={479}/>
             </div>
           </div>
           <div className="services portal">
