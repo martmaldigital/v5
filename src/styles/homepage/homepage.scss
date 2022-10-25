@@ -364,9 +364,11 @@
           }
 
           .testimony {
-            display: flex !important;
+             display: flex !important;
+             flex-wrap: wrap;
             height: 22rem;
             padding: 1.5rem;
+            align-items: center;
             border-radius: 16px 16px 16px 0px;
             border: 1px solid $blue;
             &.testimony2 {
@@ -417,16 +419,18 @@
               }
             }
             .user-info {
+              display:flex;
+
               .img {
-                // margin-top: 4rem;
-                // position: relative;
+                position: relative;
                 border-radius: 50%;
                 height: 60px;
                 width: 60px;
-                object-fit: cover;
-                // margin-right: 2rem;
+                // object-fit: cover;
+                 margin-right: 2rem;
               }
               .user-name {
+                 position: relative;
                 color: $textblack;
                 font-family: $title;
                 font-weight: 600;
