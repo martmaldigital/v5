@@ -23,7 +23,7 @@ const Banner = () => {
             Live Healthier, Live Better With <span>Doctoora</span>
           </h1>
           <p className="banner-footnote">
-            Obtain <span>Accessible Healthcare </span>Anytime, Anywhere. You no
+            Obtain <span>affordable Healthcare </span>Anytime, Anywhere. You no
             longer have to wait in line to be attended to for your health
             requirements, either <span>virtually or physically, </span>thanks to
             the range of healthcare specialists operating on our platform.
