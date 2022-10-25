@@ -7,7 +7,7 @@ import YouTube from 'react-youtube';
 
 
 
-import { team, team2, team3, impact, keyOfferings } from "pages/api/hello";
+import { team, team3, impact, keyOfferings } from "pages/api/hello";
 // const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
 const AboutPage = () => {
@@ -96,21 +96,6 @@ const AboutPage = () => {
                 ))}
               </Row>
               <Row gutter={20} justify="center">
-                {team2.map((user) => (
-                  <Col lg={6} sm={8} key={user.name}>
-                    <div className="teamcard">
-                      <div className="img-holder">
-                        <Image src={user.img} alt="" layout="responsive" width={294} height={227}/>
-                      </div>
-                      <div className="card-text-holder">
-                        <h3 className="name">{user.name}</h3>
-                        <p className="post">{user.post}</p>
-                      </div>
-                    </div>
-                  </Col>
-                ))}
-              </Row>
-              <Row gutter={20} justify="center">
                 {team3.map((user) => (
                   <Col lg={6} sm={8} key={user.name}>
                     <div className="teamcard">
@@ -140,17 +125,6 @@ const AboutPage = () => {
                       </div>
                     </div>
                   ))}
-                   {team2.map((item, index) => (
-                    <div className="teamcard" key={[index]}>
-                      <div className="img-holder">
-                      <Image src={item.img} alt="" layout="responsive" width={294} height={227}/>
-                      </div>
-                      <div className="card-text-holder">
-                        <h3 className="name">{item.name}</h3>
-                        <p className="post">{item.post}</p>
-                      </div>
-                    </div>
-                  ))}
                    {team3.map((item, index) => (
                     <div className="teamcard" key={[index]}>
                       <div className="img-holder">
@@ -167,17 +141,6 @@ const AboutPage = () => {
                 (
                   <Carousel autoplay dots={true} slidesToShow={1.6}>
                   {team.map((item, index) => (
-                    <div className="teamcard" key={[index]}>
-                      <div className="img-holder">
-                      <Image src={item.img} alt="" layout="responsive" width={294} height={227}/>
-                      </div>
-                      <div className="card-text-holder">
-                        <h3 className="name">{item.name}</h3>
-                        <p className="post">{item.post}</p>
-                      </div>
-                    </div>
-                  ))}
-                   {team2.map((item, index) => (
                     <div className="teamcard" key={[index]}>
                       <div className="img-holder">
                       <Image src={item.img} alt="" layout="responsive" width={294} height={227}/>

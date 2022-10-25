@@ -220,23 +220,23 @@ export const team = [
   {
     img: "/about/DrDebo.svg",
     name: "Dr Debo Odulana",
-    post: "Co-Founder/CEO",
+    post: "Founder/CEO",
   },
-  {
-    img: "/about/Beatrix.svg",
-    name: "Beatrix Wu",
-    post: "Co-Founder",
-  },
-  {
-    img: "/about/DrShakira.svg",
-    name: "Dr Shakirah Saliu",
-    post: "Co-Founder",
-  },
-  {
-    img: "/about/Alecia.svg",
-    name: "Aleccia Esson",
-    post: "Co-Founder",
-  },
+  // {
+  //   img: "/about/Beatrix.svg",
+  //   name: "Beatrix Wu",
+  //   post: "Co-Founder",
+  // },
+  // {
+  //   img: "/about/DrShakira.svg",
+  //   name: "Dr Shakirah Saliu",
+  //   post: "Co-Founder",
+  // },
+  // {
+  //   img: "/about/Alecia.svg",
+  //   name: "Aleccia Esson",
+  //   post: "Co-Founder",
+  // },
   {
     img: "/about/dammy.png",
     name: "Damilola Adelekan",
@@ -257,9 +257,6 @@ export const team = [
     name: "Nathaniel Nelson-Omueti",
     post: "UX Designer",
   }, 
-];
-
-export const team2 = [
   {
     img: "/about/Amara.png",
     name: "Amarachi Peace N.",
@@ -276,6 +273,24 @@ export const team2 = [
     post: "Quality Assurance Nurse (Surulere)",
   },
 ];
+
+// export const team2 = [
+//   {
+//     img: "/about/Amara.png",
+//     name: "Amarachi Peace N.",
+//     post: "Executive Assistant | Chief of Staff",
+//   },
+//   {
+//     img: "/about/DrDarl.png",
+//     name: "Dr. Darlington Amadi",
+//     post: "Medical Officer (Surulere)",
+//   },
+//   {
+//     img: "/about/Peculiar.png",
+//     name: "Peculiar Umensofor",
+//     post: "Quality Assurance Nurse (Surulere)",
+//   },
+// ];
 
 export const team3 = [
   {
@@ -330,7 +345,8 @@ export const keyOfferings = [
       "Healthcare Professional Bookings.",
       "Healthcare Management & Financial Risk Protection.",
       "Healthcare Management Consulting & Investments.",
-      "Healthcare Service Integration & Delivery Maternal & Child Health.",
+      "Healthcare Service Integration.",
+      "Delivery, Maternal & Child Health.",
       "Mental Health, Elderly Care, Home Care & Emergency & Ambulatory Care.",
       "Food and Nutrition.",
     ],
