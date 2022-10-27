@@ -1,19 +1,64 @@
 import PatientNav from "components/nav/patientNav";
+import {Row, Col} from "antd"
 
+
+const serv = [
+  {
+    title: "Register",
+    note: "Register and create an account, buy a membership starter pack starting from ₦21,500."    
+  },
+  {
+    title: "Doctoora Credits",
+    note: "The equivalent Doctoora credits are deposited into your account. Rollover unused credits with every top up."    
+  },
+  {
+    title: "Pay for Healthcare with Credit",
+    note: "Purchase available Doctoora plans or pay for healthcare services with the Doctoora credits directly."    
+  },
+]
 const Index = () => {
   return (
     <>
       <PatientNav />
       <div className="about">
         <div className="about-main">
-          <div className="banner membership">
-            <div className="banner-holder profServ">
-              <div className="info-text">
-                <h3 className="title member">Become a Member </h3>
-              </div>
+        <div className="corporate">
+      <div className="services portal">
+        <div className="head">
+          <h1 className="title">Never Deal With HMO Palaver Ever Again
+          </h1>
+          <p className="footnote">Join Nigeria’s first members-only healthcare network and enjoy 24/7 access to the best medical<br />
+services at affordable rates
+</p>
+<ul>
+  <li>
+  No approvals ✅
+  </li>
+  <li>No waiting period ✅</li>
+  <li>No pre-existing conditions excluded ✅</li>
+  <li>No age-groups excluded ✅</li>
+</ul>
+
+        </div>
+
+<h1 className="title pro">How Doctoora Membership Works</h1>
+
+            <div className="team-holder">
+              <Row gutter={20}>
+                {serv.map((item, index) => (
+                  <Col lg={8} sm={24} xs={24} key={index}>
+                    <div className="card-holder portal">
+                      <h3 className="info-title">{item.title}</h3>
+                      <p className="note">{item.note}</p>
+                    </div>
+                  </Col>
+                ))}
+              </Row>
             </div>
           </div>
+      </div>
 
+                <h3 className="title member">Become a Member </h3>
           {/* Basic membership */}
           <div className="aboutcontent limited">
             <div className="info-text limited">

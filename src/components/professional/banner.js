@@ -19,7 +19,7 @@ const Banner = () => {
           <div className="action-holder">
             <Link href="http://">
             <button className="custom-btn into-btn">
-              Become a Professional
+              Become a Partner
             </button>
             </Link>
           </div>

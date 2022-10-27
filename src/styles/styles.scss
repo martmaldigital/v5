@@ -75,7 +75,9 @@
   margin-top: 1.5rem;
   &.services {
     margin-top: 0.2rem;
-
+  }
+  &.pro {
+    margin-top: 3rem;
   }
   &.member {
     margin-top: 0rem;
@@ -237,13 +239,13 @@
       }
     }
   }
-  .ant-checkbox-checked .ant-checkbox-inner {
-    background-color: $orange;
-    border-color: $orange;
-  }
-  .ant-checkbox-inner {
-    border: 1px solid $orange !important;
-  }
+}
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: $orange !important;
+  border-color: $orange !important;
+}
+.ant-checkbox-inner {
+  border: 1px solid $orange !important;
 }
 
 .ant-collapse {
@@ -695,6 +697,7 @@
     }
   }
 }
+
 
 
 @import "./nav/nav.scss";

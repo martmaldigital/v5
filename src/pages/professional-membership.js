@@ -1,5 +1,23 @@
 import ProfessionalNav from "components/nav/professionalNav";
 import Footer from "components/footer";
+import { proServPortal } from "./api/hello";
+import {Row, Col} from "antd"
+
+
+const serv = [
+  {
+    title: "Register",
+    note: "Register and create an account, subscribe to membership starting from ₦35,000 per month."
+  },
+  {
+    title: "Eligibility",
+    note: "This provides access to our eligible services for a validity period of 1 month, with unlimited access to facility rentals."
+  },
+  {
+    title: "Provide Care",
+    note: "Receive appointments from Doctoora patients nationwide through telemedicine, homecare, and facility visits."
+  },
+]
 
 const Index = () => {
   return (
@@ -7,14 +25,33 @@ const Index = () => {
       <ProfessionalNav />
       <div className="about">
         <div className="about-main">
-          <div className="banner membership">
-            <div className="banner-holder profServ">
-              <div className="info-text">
-                <h3 className="title member">Become a Member </h3>
-              </div>
+        <div className="corporate">
+      <div className="services portal">
+          <h1 className="title">Enjoy Access to Doctoora Resources When You Become a Partner</h1>
+          <p className="footnote">Our memberships allows you to work more efficiently by providing you with access to more<br />
+facilities, equipment, and tools that will help you get the most out of your practice.</p>
+<h1 className="title pro">How Doctoora Membership Works</h1>
+
+            <div className="team-holder">
+              <Row gutter={20}>
+                {serv.map((item, index) => (
+                  <Col lg={8} sm={24} xs={24} key={index}>
+                    <div className="card-holder portal">
+                      <h3 className="info-title">{item.title}</h3>
+                      <p className="note">{item.note}</p>
+                    </div>
+                  </Col>
+                ))}
+              </Row>
             </div>
           </div>
+      </div>
 
+            <div className="banner-holder profServ">
+              <div className="">
+                <h3 className="title member">Choose a Starter Pack </h3>
+              </div>
+            </div>
           {/* Limited Partner membership */}
           <div className="aboutcontent limited">
             <div className="info-text limited">

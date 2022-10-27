@@ -25,15 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/professional-corporate": [
+    "/corporate": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/professional-corporate.js"
-    ],
-    "/professional-services": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/professional-services.js"
+      "static/chunks/pages/corporate.js"
     ]
   },
   "ampFirstPages": []

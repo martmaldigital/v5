@@ -2,6 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/professional-services": "pages/professional-services.js",
-  "/professional-corporate": "pages/professional-corporate.js"
+  "/corporate": "pages/corporate.js"
 }
