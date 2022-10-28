@@ -1,11 +1,6 @@
 import dayjs from 'dayjs';
 
 
-const handleClick = () => {
-  if (process.isClient){
-    window.location.href = `http://localhost:3000/blog/${blog.slug}`
-  }
-}
 
 const Blogcard = ({blog}) => {
 
@@ -17,7 +12,7 @@ const Blogcard = ({blog}) => {
             {blog.title}
           </h1>
           <div>
-          <a href = {`http://localhost:3000/blog/${blog.slug}`} >
+          <a href = {`https://v5-1.vercel.app/blog/${blog.slug}`} >
           <p className="desc" dangerouslySetInnerHTML={{ __html: `${blog.content.substring(0, 200)}...<em>Read more</em>`}}></p>
           </a>
           </div>
