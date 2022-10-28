@@ -1,0 +1,384 @@
+.blog {
+    background: $white;
+    .blog-main {
+      padding-top: 7rem;
+      @include mobile() {
+        padding-top: 4rem;
+      }
+      @include tablet() {
+        padding-top: 4rem;
+      }
+
+      .blogs-holder {
+
+        position: relative;
+        // @include mobile() {
+        //   padding: 2rem 1rem;
+        // }
+        .check-bacnk {
+          color: $fontgrey;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 23.44px;
+          margin-bottom: 0.2rem !important;
+          text-align: center;
+        }
+        .blogcard {
+         padding: 2rem 3rem;
+         @include biggerscreen() {
+            padding: 2rem 6rem;
+         }
+         @include tablet() {
+            padding: 2rem 2rem;
+         }
+         @include laptop() {
+            padding: 2rem 4rem;
+         }
+              @include mobile() {
+          padding: 2rem 1.5rem;
+        }
+         background: $background-blue;
+          box-shadow: 0px 2px 20px 4px rgba(51, 51, 51, 0.05);
+          display: grid;
+          grid-template-columns: 50% 50%;
+          margin-bottom: 2rem;
+          align-items: center;
+          @include tablet() {
+            display: flex;
+            flex-direction: column-reverse; 
+          }
+          @include mobile() {
+            display: flex;
+            flex-direction: column-reverse;
+          }
+          .blogcard-details {
+            padding: 0rem 6rem 0rem 0rem;
+            @include tablet() {
+            padding: 1rem 0rem;
+            }
+            @include mobile() {
+              padding: 1rem 0rem;
+            }
+            .details-title {
+              font-family: $title;
+              line-height: 56px;
+              font-weight: 600;
+              font-size: 32px;
+            }
+            .desc {
+              color: $textblack;
+              line-height: 23.75px;
+              font-weight: 400;
+              font-size: 16px;
+              em {
+                color: #c3c3c3;
+                cursor: pointer;
+                &:hover {
+                color: $textblack;
+                }
+              }
+            }
+            .person {
+              display: flex;
+              align-items: center;
+              margin-top: 3rem;
+  
+              .img-holder {
+                margin-right: 1.5rem;
+  
+                img {
+                  height: 3.8rem;
+                  width: 3.8rem;
+                  object-fit: cover;
+                  border-radius: 50%;
+                }
+              }
+  
+              .person-name {
+                .name {
+                font-family: $title;
+                  font-weight: 400;
+                  font-size: 20px;
+                  margin-bottom: 0;
+                  color: $textblack;
+                }
+                .person-timing {
+                  margin-bottom: 0;
+                  color: #4A4A4A;
+                  font-weight: 400;
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+          .img-holder {
+              // height: 100%;
+              img {
+                border-radius: 10px;
+              // height: 100%;
+              object-fit: cover;
+              width: 100%;
+              height: 20rem;
+              @include mobile() {
+                border-top-right-radius: 8px;
+                border-top-left-radius: 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+
+  .blogpost {
+    background: $white;
+    .blogpost-main {
+      padding-top: 7rem;
+      .back-holder {
+        padding: 1rem 3rem;
+        @include biggerscreen() {
+        padding: 1rem 6rem;  
+        }
+        @include laptop(){
+            padding: 1rem 4rem;  
+        }
+        @include tablet(){
+            padding: 0rem 2rem;  
+        } 
+        @include mobile() {
+          padding: 0 1rem;
+        } 
+        a {
+          font-weight: 400;
+          line-height: 23.44px;
+          font-size: 20px;
+          color: $black;
+  
+          img {
+            margin-right: 0.5rem;
+          }
+        }
+      }
+  
+      .blogpost-top {
+        background: $white;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-bottom: 1rem;
+        padding: 3rem 3rem 2rem 3rem;
+        box-shadow: 0 8px 6px -6px rgba($color: #000000, $alpha: 0.1);
+        // align-items: center;
+        margin-bottom: 2rem;
+        @include biggerscreen() {
+            padding: 2rem 6rem;  
+        }
+        @include laptop(){
+            padding: 1rem 4rem;  
+        }
+        @include tablet() {
+            grid-template-columns: 100%;
+            padding: 1rem 2rem;
+          }
+        @include mobile() {
+          grid-template-columns: 100%;
+          padding: 0 1rem 2rem;
+        }
+        .blogcard-details {
+          padding: 2rem 3rem 4rem 0rem;
+          @include laptop(){
+            padding: 1rem 1rem 2rem 0rem; 
+        }
+        @include tablet(){
+            padding: 0rem 1rem 2rem 0rem; 
+        }
+        @include mobile(){
+            padding: 2rem 1rem 2rem 0rem; 
+        }
+          .details-title {
+            font-family: $title;
+            // line-height: 82.95px;
+            font-weight: 500;
+            font-size: 38px;
+            margin-bottom: 4rem;
+            @include tablet() {
+                font-size: 30px;
+                margin-bottom: 2rem;
+                line-height: 42.95px;
+              }
+            @include mobile() {
+              font-size: 30px;
+              margin-bottom: 1rem;
+              line-height: 42.95px;
+            }
+          }
+          .person {
+            display: flex;
+            align-items: center;
+            @include mobile() {
+              margin-bottom: 1rem;
+            }
+  
+            .img-holder {
+              margin-right: 0.7rem;
+  
+              img {
+                height: 3.8rem;
+                width: 3.8rem;
+                object-fit: cover;
+                border-radius: 50%;
+              }
+            }
+  
+            .person-name {
+              .name {
+                line-height: 18.75px;
+                font-weight: 400;
+                font-size: 20px;
+                color: $textblack;
+                font-family: $title;
+              }
+              .person-timing {
+                margin-bottom: 0;
+                color: $fontgrey;
+                line-height: 18.75px;
+                font-weight: 400;
+                font-size: 16px;
+              }
+            }
+          }
+        }
+        .img-holder {
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 20rem;
+            border-radius: 8px;
+          }
+        }
+      }
+      .blogpost-middle {
+        padding: 0 3rem;
+        @include biggerscreen() {
+            padding: 1rem 6rem;  
+        }
+        @include laptop() {
+            padding: 1rem 4rem;  
+        }
+        @include tablet() {
+            padding: 1rem 2rem;  
+        }  
+        @include mobile() {
+          padding: 0 1.5rem;
+        }
+        p {
+          line-height: 35.95px;
+          font-weight: 400;
+          font-size: 16px;
+          color: $textblack;
+        }
+      }
+      .blogpost-footer {
+        margin-top: 2rem;
+        padding: 3rem 3rem;
+        @include biggerscreen() {
+            padding: 1rem 6rem;  
+        }
+        @include laptop() {
+            padding: 1rem 4rem;  
+        }
+        @include tablet() {
+            padding: 1rem 2rem;  
+        }
+        @include mobile() {
+          padding: 1rem 1.5rem;
+        }
+        .blogpost-footer-top {
+          display: flex;
+          justify-content: space-between;
+          p {
+            color: $textblack;
+            font-family: $title;
+            line-height: 18.75px;
+            font-weight: 400;
+            font-size: 24px;
+          }
+        }
+    
+            .blogcard {
+                border-radius: 8px;
+                box-shadow: 0px 2px 20px 4px rgba(51, 51, 51, 0.05);
+                background: $background-blue;
+                display: flex;
+                flex-direction: column-reverse;
+                margin-bottom: 1rem;
+                align-items: center;
+                .blogcard-details {
+                  width: 100%;
+                  padding: 1rem;
+                  .details-title {
+                    font-family: $title;
+                    line-height: 41.95px;
+                    font-weight: 500;
+                    font-size: 20px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  }
+                  .desc {
+                    color: $fontgrey;
+                    line-height: 23.75px;
+                    font-weight: 400;
+                    font-size: 14px;
+                  }
+                  .person {
+                    display: flex;
+                    align-items: center;
+        
+                    .img-holder {
+                      margin-right: 0.7rem;
+        
+                      img {
+                        height: 3.8rem;
+                        width: 3.8rem;
+                        object-fit: cover;
+                        border-radius: 50%;
+                      }
+                    }
+        
+                    .person-name {
+                      .name {
+                        font-family: $title;
+                        font-weight: 400;
+                        font-size: 16px;
+                        margin-bottom: 0;
+                        color: $textblack;
+                      }
+                      .person-timing {
+                        margin-bottom: 0;
+                        color: $fontgrey;
+                        line-height: 18.75px;
+                        font-weight: 400;
+                        font-size: 14px;
+                      }
+                    }
+                  }
+                }
+                .img-holder {
+                  &.main-img {
+                    width: 100% !important;
+                    padding: 1.2rem;
+                  }
+                  img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 12rem;
+                    border-radius: 8px;
+                  }
+                }
+              }
+      }
+    }
+  }
+  

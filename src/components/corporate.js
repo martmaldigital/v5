@@ -59,7 +59,7 @@ const CorporatePage = () => {
         <div className="banner">
           <div className="info-text">
             <h1 className="info-title">
-              The Best Healthcare For Your Team To Work Effectively
+              The Best Healthcare For Your Team to Work Effectively
             </h1>
             <p className="text">
             Increase your productivity with out 24-hour telemedicine, home visits and efficient community-based services.
@@ -178,7 +178,7 @@ const CorporatePage = () => {
                       },
                     ]}
                     >
-                    <Select placeholder="Do yo want a Demo" >
+                    <Select placeholder="Do you want a Demo" >
                       <Option value = "Yes">Yes</Option>
                       <Option value = "No">No</Option>
                     </Select>

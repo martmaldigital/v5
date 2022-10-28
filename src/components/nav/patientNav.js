@@ -28,6 +28,10 @@ const links = [
     label: "/corporate",
   },
   {
+    path: "Blog",
+    label: "/blog",
+  },
+  {
     path: "Contact us",
     label: "/contact",
   },

@@ -27,6 +27,10 @@ const links = [
     label: "/professional-corporate",
   },
   {
+    path: "Blog",
+    label: "/blog",
+  },
+  {
     path: "Contact us",
     label: "/professional-contact",
   },

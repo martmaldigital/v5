@@ -91,12 +91,12 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <Link href="/" passHref>
+                <a href="https://bit.ly/doctoorachat" passHref>
                   <div className="logo-img">
                     <Image src={Whatsapp} alt="logo" layout="fill" />
                     <span className="logo-text">Whatsapp&nbsp;Bot</span>
                   </div>
-                </Link>
+                </a>
               </li>
             </ul>
             {/* <Subcribe /> */}
