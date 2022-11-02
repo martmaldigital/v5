@@ -512,437 +512,821 @@ const Search = () => {
       </div>
 
       {currentDoctor !== null && (
+        // <Drawer
+        //   title={null}
+        //   placement="left"
+        //   onClose={onClose}
+        //   open={drawerVisible}
+        //   className="book-drawer"
+        //   footer={
+        //     <Row gutter={16}>
+        //       <Col lg={12} xs={12}>
+        //         <Button
+        //           block
+        //           className="go-btn"
+        //           disabled={validating || processing || visible}
+        //           loading={validating || processing}
+        //           onClick={() => {
+        //             formRef.current.submit();
+        //           }}
+        //         >
+        //           {processing ? "Processing..." : "Proceed"}
+        //         </Button>
+        //       </Col>
+        //       <Col lg={12} xs={12}>
+        //         <Button
+        //           block
+        //           className="cancel-btn"
+        //           disabled={validating || processing || visible}
+        //           loading={validating || processing}
+        //           onClick={() => {
+        //             onClose();
+        //           }}
+        //         >
+        //           Cancel
+        //         </Button>
+        //       </Col>
+        //     </Row>
+        //   }
+        // >
+        //     {!visible &&
+        //     (
+        //       <>
+        //   <h1 className="heading">
+        //     Hi, I’m {currentDoctor?.firstname} {currentDoctor?.lastname}
+        //     <br />
+        //     Why would you like to see me?
+        //   </h1>
+
+        //   <p className="footnote">
+        //     Please fill the information box below to complete booking
+        //   </p>
+
+        //   <div className="form-holder">
+        //     <h1 className="heading hidctor">
+        //       Hi, Dr {currentDoctor?.firstname}
+        //     </h1>
+
+        //     <Form
+        //       layout="vertical"
+        //       ref={formRef}
+        //       onFinish={onFinish}
+        //       initialValues={{
+        //         date:
+        //           search !== undefined &&
+        //           search.searchObj !== null &&
+        //           search.searchObj.date !== undefined
+        //             ? moment(new Date(search.searchObj.date), "DD-MM-YYYY")
+        //             : null,
+        //         // type: visitTypeChoosen,
+        //         // location: locationChoosen,
+        //         // time: search.slotsChoosen
+        //       }}
+        //     >
+        //       <Row gutter={8}>
+        //         <Col lg={24} xs={24}>
+        //           <Form.Item
+        //             name="title"
+        //             rules={[
+        //               {
+        //                 required: true,
+        //                 message: "Input required",
+        //               },
+        //             ]}
+        //           >
+        //             <Select
+        //               className="book-select"
+        //               placeholder="Title"
+        //               style={{
+        //                 width: "100%",
+        //               }}
+        //             >
+        //               {titles.map((item) => (
+        //                 <Option value={item} key={item}>
+        //                   {item}
+        //                 </Option>
+        //               ))}
+        //             </Select>
+        //           </Form.Item>
+        //         </Col>
+        //         <Col lg={12} xs={24}>
+        //           <Form.Item
+        //             name="firstname"
+        //             rules={[
+        //               {
+        //                 required: true,
+        //                 message: "Input required",
+        //               },
+        //             ]}
+        //           >
+        //             <Input placeholder="First Name" className="book-input" />
+        //           </Form.Item>
+        //         </Col>
+        //         <Col lg={12} xs={24}>
+        //           <Form.Item
+        //             name="lastname"
+        //             rules={[
+        //               {
+        //                 required: true,
+        //                 message: "Input required",
+        //               },
+        //             ]}
+        //           >
+        //             <Input placeholder="Last Name" className="book-input" />
+        //           </Form.Item>
+        //         </Col>
+        //         <Col lg={12} xs={24}>
+        //           <Form.Item
+        //             name="email"
+        //             rules={[
+        //               {
+        //                 type: "email",
+        //                 message: "The input is not valid email",
+        //               },
+        //               {
+        //                 required: true,
+        //                 message: "Input required",
+        //               },
+        //             ]}
+        //           >
+        //             <Input placeholder="Email" className="book-input" />
+        //           </Form.Item>
+        //         </Col>
+        //         <Col lg={12} xs={24}>
+        //           <Form.Item
+        //             name="phone"
+        //             rules={[
+        //               {
+        //                 required: true,
+        //                 message: "Input required",
+        //               },
+        //             ]}
+        //           >
+        //             <Input placeholder="Phone" className="book-input" />
+        //           </Form.Item>
+        //         </Col>
+        //         <Col lg={12} xs={24}>
+        //           <Form.Item
+        //             name="type"
+        //             rules={[
+        //               {
+        //                 required: true,
+        //                 message: "Input required",
+        //               },
+        //             ]}
+        //           >
+        //             <Select
+        //               className="book-select"
+        //               placeholder="Visit Type"
+        //               style={{
+        //                 width: "100%",
+        //               }}
+        //               onChange={(e) => checkVisitTypeChange(e)}
+        //             >
+        //               {visitTypes.map((visit) => (
+        //                 <Option value={visit} key={visit}>
+        //                   {visit}
+        //                 </Option>
+        //               ))}
+        //             </Select>
+        //           </Form.Item>
+        //         </Col>
+        //         {visitTypeChoosen !== "Video Consultation" && (
+        //           <Col lg={12} xs={24}>
+        //             <Form.Item
+        //               name="location"
+        //               rules={[
+        //                 {
+        //                   required: true,
+        //                   message: "Input required",
+        //                 },
+        //               ]}
+        //             >
+        //               <Select
+        //                 onChange={(e) => locationChange(e)}
+        //                 // disabled={search === undefined || search.searchObj === null ? false : true}
+        //                 className="book-select"
+        //                 placeholder="Location (e.Lekki)"
+        //                 showSearch
+        //                 style={{
+        //                   width: "100%",
+        //                 }}
+        //               >
+        //                 {locations.map((item) => (
+        //                   <Option value={item.landmark} key={item.landmark}>
+        //                     {item.landmark}
+        //                   </Option>
+        //                 ))}
+        //               </Select>
+        //             </Form.Item>
+        //           </Col>
+        //         )}
+        //         <Col lg={24} xs={24}>
+        //           <Form.Item
+        //             name="reason"
+        //             rules={[
+        //               {
+        //                 required: true,
+        //                 message: "Input required",
+        //               },
+        //             ]}
+        //           >
+        //             <Select
+        //               className="book-select"
+        //               placeholder="Reason"
+        //               style={{
+        //                 width: "100%",
+        //               }}
+        //             >
+        //               {reasons.map((reason) => (
+        //                 <Option value={reason} key={reason}>
+        //                   {reason}
+        //                 </Option>
+        //               ))}
+        //             </Select>
+        //           </Form.Item>
+        //         </Col>
+        //       </Row>
+        //       <Form.Item
+        //         name="complaint"
+        //         rules={[
+        //           {
+        //             required: true,
+        //             message: "Input required",
+        //           },
+        //         ]}
+        //       >
+        //         <Input.TextArea rows={4}
+        //         style={{
+        //           resize: "none",
+        //           height:"100%"
+        //         }}
+        //           className="book-input"
+        //           placeholder="Reason for Visit/Complaint"
+        //         />
+        //       </Form.Item>
+        //       <Form.Item
+        //         name="date"
+        //         rules={[
+        //           {
+        //             required: true,
+        //             message: "Input required",
+        //           },
+        //         ]}
+        //       >
+        //         <DatePicker
+        //           dateRender={(current) => {
+        //             const style = {};
+        //             getNumberForDay(availableDays).map((item) => {
+        //               if (moment(current).day() === item) {
+        //                 style.border = '1px solid #1890ff';
+        //                 style.borderRadius = '50%';
+        //               }
+        //             });
+        //             return (
+        //               <div className="ant-picker-cell-inner" style={style}>
+        //                 {current.date()}
+        //               </div>
+        //             );
+        //           }}
+        //           onChange={triggerChange}
+        //           disabledDate={disabledDate}
+        //           className="book-date"
+        //           format="YYYY-MM-DD"
+        //         />
+        //       </Form.Item>
+        //         <Form.Item
+        //           name="time"
+        //           label="Time (Pick a suitable time)"
+        //           className="book-check"
+        //           rules={[
+        //             {
+        //               required: true,
+        //               message: "Input field",
+        //             },
+        //           ]}
+        //         >
+        //           <Checkbox.Group onChange={calculatePrice}>
+        //             <Row
+        //               gutter={32}
+        //               className={`slots-holder  ${
+        //                 loadingSlot ? "loading" : ""
+        //               }`}
+        //             >
+        //               {loadingSlot ? (
+        //                 <div className="x-loader">
+        //                  <div className="loader"></div>
+        //                 </div>
+        //               ) : (
+        //                 <>
+        //                   {slots.length > 0 ? (
+        //                     slots.map((slot, index) => (
+        //                       <Col
+        //                         key={index}
+        //                         sm={12}
+        //                         xs={24}
+        //                         className="book-check"
+        //                       >
+        //                         <Checkbox value={slot}>{slot.time}</Checkbox>
+        //                       </Col>
+        //                     ))
+        //                   ) : (
+        //                     <p className="none-found">
+        //                       There are no slots availble
+        //                     </p>
+        //                   )}
+        //                 </>
+        //               )}
+        //             </Row>
+        //           </Checkbox.Group>
+        //         </Form.Item>
+        //       <Form.Item
+        //         name="health_condition"
+        //         rules={[
+        //           {
+        //             required: true,
+        //             message: "Input required",
+        //           },
+        //         ]}
+        //       >
+        //         <Select
+        //           placeholder="Existing Conditions (Pick as suitable)"
+        //           allowClear
+        //           mode="tags"
+        //           tokenSeparators={[","]}
+        //           className="book-select"
+        //         >
+        //           {conditions.map((item) => (
+        //             <Option value={item.name} key={item.name}>
+        //               {item.name}
+        //             </Option>
+        //           ))}
+        //         </Select>
+        //       </Form.Item>
+        //     </Form>
+
+        //     <div className="pricing">
+        //       <h1 className="heading hidctor">Cost</h1>
+        //       <div className="cost-numbers">
+        //         {couponData !== null && (
+        //           <h1
+        //             className={`heading amount ${
+        //               couponData !== null ? "former-price" : ""
+        //             }`}
+        //           >
+        //             ₦
+        //             {numeral(
+        //               price === 0
+        //                 ? getPrice(formRef.current.getFieldValue("time"))
+        //                 : price + couponData.value
+        //             ).format("0,0")}
+        //           </h1>
+        //         )}
+        //         <h1 className="heading amount">
+        //           ₦{numeral(price).format("0,0")}
+        //         </h1>
+        //       </div>
+        //       <p className="footnote">
+        //         ( 2.5% CSR fund, 5% booking fees and 1.8% payment charges incl.)
+        //       </p>
+        //     </div>
+
+        //     <Form layout="vertical" className="coupon-form">
+        //       <Form.Item
+        //         label="Coupon 
+        //         (Optional)"
+        //       >
+        //         <Input
+        //           value={coupon}
+        //           name="coupon"
+        //           onChange={handleCouponChange}
+        //           placeholder="Coupon"
+        //         />
+        //       </Form.Item>
+        //     </Form>
+        //   </div>
+        //   </>
+        //     )}
+        // { visible && (
+
+        //  <div className="payment-main">
+        //   <h1 className="heading hidctor">Total booking amount</h1>
+        //   <div className="cost-btn">
+        //     <div className="cost-numbers">
+        //       {couponData !== null && (
+        //         <h1
+        //           className={`heading amount ${
+        //             couponData !== null ? "former-price" : ""
+        //           }`}
+        //         >
+        //           ₦
+        //           {numeral(
+        //             price === 0
+        //               ? getPrice(formRef.current.getFieldValue("time"))
+        //               : price + couponData.value
+        //           ).format("0,0")}
+        //         </h1>
+        //       )}
+        //       <h1 className="heading amount">
+        //         ₦{numeral(price).format("0,0")}
+        //       </h1>
+        //     </div>
+        //     <PaystackButton
+        //       className={`custom-btn paystack-btn`}
+        //       {...componentProps}
+        //     />
+        //   </div>
+        //   <p className="text">Please proceed to complete your payment.</p>
+        // </div>)}
+        // </Drawer>
         <Drawer
-          title={null}
-          placement="left"
-          onClose={onClose}
-          open={drawerVisible}
-          className="book-drawer"
-          footer={
-            <Row gutter={16}>
-              <Col lg={12} xs={12}>
-                <Button
-                  block
-                  className="go-btn"
-                  disabled={validating || processing || visible}
-                  loading={validating || processing}
-                  onClick={() => {
-                    formRef.current.submit();
-                  }}
-                >
-                  {processing ? "Processing..." : "Proceed"}
-                </Button>
-              </Col>
-              <Col lg={12} xs={12}>
-                <Button
-                  block
-                  className="cancel-btn"
-                  disabled={validating || processing || visible}
-                  loading={validating || processing}
-                  onClick={() => {
-                    onClose();
-                  }}
-                >
-                  Cancel
-                </Button>
-              </Col>
-            </Row>
-          }
-        >
-            {!visible &&
-            (
-              <>
-          <h1 className="heading">
-            Hi, I’m {currentDoctor?.firstname} {currentDoctor?.lastname}
-            <br />
-            Why would you like to see me?
+        title={null}
+        placement="left"
+        onClose={onClose}
+        visible={drawerVisible}
+        className="book-drawer"
+        footer={
+          <Row gutter={16}>
+            <Col lg={12} xs={12}>
+              <Button
+                block
+                className="go-btn"
+                disabled={validating || processing}
+                loading={validating || processing}
+                onClick={() => {
+                  formRef.current.submit()
+                }}
+              >
+                {
+                  processing ? 'Processing...' : 'Proceed'
+                }
+              </Button>
+            </Col>
+            <Col lg={12} xs={12}>
+              <Button
+                block
+                className="cancel-btn"
+                disabled={validating || processing}
+                loading={validating || processing}
+                onClick={() => {
+                  onClose()
+                }}
+              >
+                Cancel
+              </Button>
+            </Col>
+          </Row>
+        }
+      >
+        <h1 className="heading">
+          Hi, I’m {currentDoctor?.firstname} {currentDoctor?.lastname}
+          <br />
+         Why would you like to see me?
+       </h1>
+
+        <p className="footnote">
+          Please fill the information box below to complete booking
+        </p>
+
+        <div className="form-holder">
+          <h1 className="heading hidctor">
+            Hi, Dr {currentDoctor?.firstname}
           </h1>
 
-          <p className="footnote">
-            Please fill the information box below to complete booking
-          </p>
+          <Form
+            layout="vertical"
+            ref={formRef}
+            onFinish={onFinish}
+            initialValues={{
+              date: search !== undefined && search.searchObj !== null && search.searchObj.date !== undefined ? moment(new Date(search.searchObj.date), 'DD-MM-YYYY') : null,
+              // type: visitTypeChoosen,
+              // location: locationChoosen,
+              // time: search.slotsChoosen
+            }}
+          >
 
-          <div className="form-holder">
-            <h1 className="heading hidctor">
-              Hi, Dr {currentDoctor?.firstname}
-            </h1>
-
-            <Form
-              layout="vertical"
-              ref={formRef}
-              onFinish={onFinish}
-              initialValues={{
-                date:
-                  search !== undefined &&
-                  search.searchObj !== null &&
-                  search.searchObj.date !== undefined
-                    ? moment(new Date(search.searchObj.date), "DD-MM-YYYY")
-                    : null,
-                // type: visitTypeChoosen,
-                // location: locationChoosen,
-                // time: search.slotsChoosen
-              }}
-            >
-              <Row gutter={8}>
-                <Col lg={24} xs={24}>
-                  <Form.Item
-                    name="title"
-                    rules={[
-                      {
-                        required: true,
-                        message: "Input required",
-                      },
-                    ]}
-                  >
-                    <Select
-                      className="book-select"
-                      placeholder="Title"
-                      style={{
-                        width: "100%",
-                      }}
-                    >
-                      {titles.map((item) => (
-                        <Option value={item} key={item}>
-                          {item}
-                        </Option>
-                      ))}
-                    </Select>
-                  </Form.Item>
-                </Col>
-                <Col lg={12} xs={24}>
-                  <Form.Item
-                    name="firstname"
-                    rules={[
-                      {
-                        required: true,
-                        message: "Input required",
-                      },
-                    ]}
-                  >
-                    <Input placeholder="First Name" className="book-input" />
-                  </Form.Item>
-                </Col>
-                <Col lg={12} xs={24}>
-                  <Form.Item
-                    name="lastname"
-                    rules={[
-                      {
-                        required: true,
-                        message: "Input required",
-                      },
-                    ]}
-                  >
-                    <Input placeholder="Last Name" className="book-input" />
-                  </Form.Item>
-                </Col>
-                <Col lg={12} xs={24}>
-                  <Form.Item
-                    name="email"
-                    rules={[
-                      {
-                        type: "email",
-                        message: "The input is not valid email",
-                      },
-                      {
-                        required: true,
-                        message: "Input required",
-                      },
-                    ]}
-                  >
-                    <Input placeholder="Email" className="book-input" />
-                  </Form.Item>
-                </Col>
-                <Col lg={12} xs={24}>
-                  <Form.Item
-                    name="phone"
-                    rules={[
-                      {
-                        required: true,
-                        message: "Input required",
-                      },
-                    ]}
-                  >
-                    <Input placeholder="Phone" className="book-input" />
-                  </Form.Item>
-                </Col>
-                <Col lg={12} xs={24}>
-                  <Form.Item
-                    name="type"
-                    rules={[
-                      {
-                        required: true,
-                        message: "Input required",
-                      },
-                    ]}
-                  >
-                    <Select
-                      className="book-select"
-                      placeholder="Visit Type"
-                      style={{
-                        width: "100%",
-                      }}
-                      onChange={(e) => checkVisitTypeChange(e)}
-                    >
-                      {visitTypes.map((visit) => (
-                        <Option value={visit} key={visit}>
-                          {visit}
-                        </Option>
-                      ))}
-                    </Select>
-                  </Form.Item>
-                </Col>
-                {visitTypeChoosen !== "Video Consultation" && (
-                  <Col lg={12} xs={24}>
-                    <Form.Item
-                      name="location"
-                      rules={[
-                        {
-                          required: true,
-                          message: "Input required",
-                        },
-                      ]}
-                    >
-                      <Select
-                        onChange={(e) => locationChange(e)}
-                        // disabled={search === undefined || search.searchObj === null ? false : true}
-                        className="book-select"
-                        placeholder="Location (e.Lekki)"
-                        showSearch
-                        style={{
-                          width: "100%",
-                        }}
-                      >
-                        {locations.map((item) => (
-                          <Option value={item.landmark} key={item.landmark}>
-                            {item.landmark}
-                          </Option>
-                        ))}
-                      </Select>
-                    </Form.Item>
-                  </Col>
-                )}
-                <Col lg={24} xs={24}>
-                  <Form.Item
-                    name="reason"
-                    rules={[
-                      {
-                        required: true,
-                        message: "Input required",
-                      },
-                    ]}
-                  >
-                    <Select
-                      className="book-select"
-                      placeholder="Reason"
-                      style={{
-                        width: "100%",
-                      }}
-                    >
-                      {reasons.map((reason) => (
-                        <Option value={reason} key={reason}>
-                          {reason}
-                        </Option>
-                      ))}
-                    </Select>
-                  </Form.Item>
-                </Col>
-              </Row>
-              <Form.Item
-                name="complaint"
-                rules={[
-                  {
-                    required: true,
-                    message: "Input required",
-                  },
-                ]}
-              >
-                <Input.TextArea rows={4}
-                style={{
-                  resize: "none",
-                  height:"100%"
-                }}
-                  className="book-input"
-                  placeholder="Reason for Visit/Complaint"
-                />
-              </Form.Item>
-              <Form.Item
-                name="date"
-                rules={[
-                  {
-                    required: true,
-                    message: "Input required",
-                  },
-                ]}
-              >
-                <DatePicker
-                  dateRender={(current) => {
-                    const style = {};
-                    getNumberForDay(availableDays).map((item) => {
-                      if (moment(current).day() === item) {
-                        style.border = '1px solid #1890ff';
-                        style.borderRadius = '50%';
-                      }
-                    });
-                    return (
-                      <div className="ant-picker-cell-inner" style={style}>
-                        {current.date()}
-                      </div>
-                    );
-                  }}
-                  onChange={triggerChange}
-                  disabledDate={disabledDate}
-                  className="book-date"
-                  format="YYYY-MM-DD"
-                />
-              </Form.Item>
+            <Row gutter={8}>
+              <Col lg={24} xs={24}>
                 <Form.Item
-                  name="time"
-                  label="Time (Pick a suitable time)"
-                  className="book-check"
+                  name="title"
                   rules={[
                     {
                       required: true,
-                      message: "Input field",
+                      message: 'Input required',
                     },
                   ]}
                 >
-                  <Checkbox.Group onChange={calculatePrice}>
-                    <Row
-                      gutter={32}
-                      className={`slots-holder  ${
-                        loadingSlot ? "loading" : ""
-                      }`}
+                  <Select
+                    className="book-select"
+                    placeholder="Title"
+                    style={{
+                      width: '100%'
+                    }}
+                  >
+                    {
+                      titles.map((item) => (
+                        <Option value={item} key={item}>{item}</Option>
+                      ))
+                    }
+                  </Select>
+                </Form.Item>
+              </Col>
+              <Col lg={12} xs={24}>
+                <Form.Item
+                  name="firstname"
+                  rules={[
+                    {
+                      required: true,
+                      message: 'Input required',
+                    },
+                  ]}
+                >
+                  <Input placeholder="First Name" className="book-input" />
+                </Form.Item>
+              </Col>
+              <Col lg={12} xs={24}>
+                <Form.Item
+                  name="lastname"
+                  rules={[
+                    {
+                      required: true,
+                      message: 'Input required',
+                    },
+                  ]}
+                >
+                  <Input placeholder="Last Name"
+                    className="book-input" />
+                </Form.Item>
+              </Col>
+              <Col lg={12} xs={24}>
+                <Form.Item
+                  name="email"
+                  rules={[
+                    {
+                      type: 'email',
+                      message: 'The input is not valid email',
+                    },
+                    {
+                      required: true,
+                      message: 'Input required',
+                    },
+                  ]}
+                >
+                  <Input placeholder="Email" className="book-input" />
+                </Form.Item>
+              </Col>
+              <Col lg={12} xs={24}>
+                <Form.Item
+                  name="phone"
+                  rules={[
+                    {
+                      required: true,
+                      message: 'Input required',
+                    },
+                  ]}
+                >
+                  <Input placeholder="Phone" className="book-input" />
+                </Form.Item>
+              </Col>
+              <Col lg={12} xs={24}>
+                <Form.Item
+                  name="type"
+                  rules={[
+                    {
+                      required: true,
+                      message: 'Input required',
+                    },
+                  ]}
+                >
+                  <Select
+                    className="book-select"
+                    placeholder="Visit Type"
+                    style={{
+                      width: '100%'
+                    }}
+                    onChange={(e) => checkVisitTypeChange(e)}
+                  >
+                    {
+                      visitTypes.map((visit) => (
+                        <Option value={visit} key={visit}>{visit}</Option>
+                      ))
+                    }
+                  </Select>
+                </Form.Item>
+              </Col>
+              {
+                visitTypeChoosen !== 'Video Consultation' &&
+                <Col lg={12} xs={24}>
+                  <Form.Item
+                    name="location"
+                    rules={[
+                      {
+                        required: true,
+                        message: 'Input required',
+                      },
+                    ]}
+                  >
+                    <Select
+                      onChange={(e) => locationChange(e)}
+                      // disabled={search === undefined || search.searchObj === null ? false : true}
+                      className="book-select"
+                      placeholder="Location (e.Lekki)"
+                      showSearch
+                      style={{
+                        width: '100%'
+                      }}
                     >
-                      {loadingSlot ? (
-                        <div className="x-loader">
-                         <div className="loader"></div>
-                        </div>
-                      ) : (
-                        <>
-                          {slots.length > 0 ? (
+                      {
+                        locations.map((item) => (
+                          <Option value={item.landmark} key={item.landmark}>{item.landmark}</Option>
+                        ))
+                      }
+                    </Select>
+                  </Form.Item>
+                </Col>
+              }
+              <Col lg={24} xs={24}>
+                <Form.Item
+                  name="reason"
+                  rules={[
+                    {
+                      required: true,
+                      message: 'Input required',
+                    },
+                  ]}
+                >
+                  <Select
+                    className="book-select"
+                    placeholder="Reason"
+                    style={{
+                      width: '100%'
+                    }}
+                  >
+                    {
+                      reasons.map((reason) => (
+                        <Option value={reason} key={reason}>{reason}</Option>
+                      ))
+                    }
+                  </Select>
+                </Form.Item>
+              </Col>
+            </Row>
+            <Form.Item
+              name="complaint"
+              rules={[
+                {
+                  required: true,
+                  message: 'Input required',
+                },
+              ]}
+            >
+              <Input.TextArea
+                className="book-input" placeholder="Reason for Visit/Complaint" />
+            </Form.Item>
+            <Form.Item
+              name="date"
+              rules={[
+                {
+                  required: true,
+                  message: 'Input required',
+                },
+              ]}
+            >
+              <DatePicker
+                dateRender={current => {
+                  const style = {};
+                  getNumberForDay(availableDays).map((item) => {
+                    // if (moment(current).day() === item) {
+                    //   style.border = '1px solid #1890ff';
+                    //   style.borderRadius = '50%';
+                    // }
+                  })
+                  return (
+                    <div className="ant-picker-cell-inner" style={style}>
+                      {current.date()}
+                    </div>
+                  );
+                }}
+                onChange={triggerChange}
+                disabledDate={disabledDate}
+                className="book-date"
+                format="YYYY-MM-DD"
+              />
+            </Form.Item>
+            {/* <Col lg={8} xs={24}> */}
+            <Form.Item
+              name="time"
+              label="Time (Pick a suitable time)"
+              className="book-check"
+              rules={[
+                {
+                  required: true,
+                  message: 'Input field',
+                },
+              ]}
+            >
+              <Checkbox.Group
+                onChange={calculatePrice}
+              >
+                <Row
+                  gutter={32}
+                  className={`slots-holder  ${loadingSlot ? 'loading' : ''}`}>
+                  {
+                    loadingSlot ?
+                      <div className="x-loader">
+                        {/* <LoadingOutlined style={{ fontSize: 40 }} /> */}
+                      </div> :
+                      <>
+                        {
+                          slots.length > 0 ?
                             slots.map((slot, index) => (
                               <Col
                                 key={index}
-                                sm={12}
+                                lg={24}
                                 xs={24}
-                                className="book-check"
+                                className=""
                               >
-                                <Checkbox value={slot}>{slot.time}</Checkbox>
+                                <Checkbox value={slot} >
+                                  {slot.time}
+                                </Checkbox>
                               </Col>
                             ))
-                          ) : (
+                            :
                             <p className="none-found">
-                              There are no slots availble
-                            </p>
-                          )}
-                        </>
-                      )}
-                    </Row>
-                  </Checkbox.Group>
-                </Form.Item>
-              <Form.Item
-                name="health_condition"
-                rules={[
-                  {
-                    required: true,
-                    message: "Input required",
-                  },
-                ]}
+                              There are no slots availble</p>
+                        }
+                      </>
+                  }
+                </Row>
+              </Checkbox.Group>
+            </Form.Item>
+            {/* </Col> */}
+            <Form.Item
+              name="health_condition"
+              rules={[
+                {
+                  required: true,
+                  message: 'Input required',
+                },
+              ]}
+            >
+              <Select
+                placeholder="Existing Conditions (Pick as suitable)"
+                allowClear
+                mode="tags"
+                tokenSeparators={[',']}
+                className="book-select"
               >
-                <Select
-                  placeholder="Existing Conditions (Pick as suitable)"
-                  allowClear
-                  mode="tags"
-                  tokenSeparators={[","]}
-                  className="book-select"
-                >
-                  {conditions.map((item) => (
-                    <Option value={item.name} key={item.name}>
-                      {item.name}
-                    </Option>
-                  ))}
-                </Select>
-              </Form.Item>
-            </Form>
+                {
+                  conditions.map((item) => (
+                    <Option value={item.name} key={item.name}>{item.name}</Option>
+                  ))
+                }
+              </Select>
+            </Form.Item>
+          </Form>
 
-            <div className="pricing">
-              <h1 className="heading hidctor">Cost</h1>
-              <div className="cost-numbers">
-                {couponData !== null && (
-                  <h1
-                    className={`heading amount ${
-                      couponData !== null ? "former-price" : ""
-                    }`}
-                  >
-                    ₦
-                    {numeral(
-                      price === 0
-                        ? getPrice(formRef.current.getFieldValue("time"))
-                        : price + couponData.value
-                    ).format("0,0")}
-                  </h1>
-                )}
-                <h1 className="heading amount">
-                  ₦{numeral(price).format("0,0")}
-                </h1>
-              </div>
-              <p className="footnote">
-                ( 2.5% CSR fund, 5% booking fees and 1.8% payment charges incl.)
-              </p>
-            </div>
-
-            <Form layout="vertical" className="coupon-form">
-              <Form.Item
-                label="Coupon 
-                (Optional)"
-              >
-                <Input
-                  value={coupon}
-                  name="coupon"
-                  onChange={handleCouponChange}
-                  placeholder="Coupon"
-                />
-              </Form.Item>
-            </Form>
-          </div>
-          </>
-            )}
-        { visible && (
-
-         <div className="payment-main">
-          <h1 className="heading hidctor">Total booking amount</h1>
-          <div className="cost-btn">
+          <div className="pricing">
+            <h1 className="heading hidctor">
+              Cost
+            </h1>
             <div className="cost-numbers">
-              {couponData !== null && (
-                <h1
-                  className={`heading amount ${
-                    couponData !== null ? "former-price" : ""
-                  }`}
-                >
-                  ₦
-                  {numeral(
-                    price === 0
-                      ? getPrice(formRef.current.getFieldValue("time"))
-                      : price + couponData.value
-                  ).format("0,0")}
-                </h1>
-              )}
+              {
+                couponData !== null &&
+                <h1 className={`heading amount ${couponData !== null ? 'former-price' : ''}`}>₦{numeral(price === 0 ? getPrice(formRef.current.getFieldValue('time')) : price + couponData.value).format('0,0')
+                }</h1>
+              }
               <h1 className="heading amount">
-                ₦{numeral(price).format("0,0")}
+                ₦{numeral(price).format('0,0')}
               </h1>
             </div>
-            <PaystackButton
-              className={`custom-btn paystack-btn`}
-              {...componentProps}
-            />
+            <p className="footnote">
+              ( 2.5% CSR fund, 5% booking fees and 1.8% payment charges incl.)
+             </p>
           </div>
-          <p className="text">Please proceed to complete your payment.</p>
-        </div>)}
-        </Drawer>
+
+          <Form
+            layout="vertical"
+            className="coupon-form"
+          >
+            <Form.Item
+              label="Coupon 
+              (Optional)"
+            >
+              <Input
+                value={coupon}
+                name="coupon"
+                onChange={handleCouponChange}
+                placeholder="Coupon" />
+            </Form.Item>
+          </Form>
+        </div>
+      </Drawer>
+
       )}
 </div>
 
-      {/* <Modal
+      <Modal
         visible={visible}
         footer={null}
         className="paystack-modal"
@@ -977,7 +1361,7 @@ const Search = () => {
             />
           </div>
         </div>
-      </Modal> */}
+      </Modal>
       </>
   );
 };
