@@ -3,6 +3,7 @@ import Bannerform from 'components/bannerform/bannerform'
 import PatientNav from 'components/nav/patientNav'
 import { FAQ } from 'pages/api/hello'
 import { Collapse } from 'antd'
+import Headtags from 'components/seo'
 
 const { Panel } = Collapse;
 
@@ -19,6 +20,11 @@ const Index = () => {
   return (
 
 <>
+<Headtags
+        title="Doctoora - Spine Surgery - Book Trusted Spine Surgeons & Hospitals Close-by in Nigeria"
+        desc="Same day appointments with Spine Surgeons. Book home visits, clinic and online consultations in Nigeria from ₦10,000. Compare rates & patient reviews"
+        keywords="Spine surgeon in Nigeria, Spine surgeon in Lagos. Spine surgeon doctor, Spine surgery consultant, Spine surgery services, Spine surgery doctors in Nigeria, Spine surgeon at affordable price. Spine surgery doctor, Spine surgeon in Nigeria, Spine surgeons in nigeria, Spine surgeon nigeria, spine surgeon in nigeria, Spine surgery center in Nigeria, best Spine surgeons in nigeria, Spine surgery doctor in Nigerianeurosurgery doctor"
+      />
 <PatientNav />
      <div className="neurosurgery-main">
           <div className="banner">
@@ -50,13 +56,10 @@ const Index = () => {
           </div>
           </div>
 
-
-
           <div className="why-choose">
             <h1 className="why-title">
             Why Choose Doctoora Spine Surgery Service
             </h1>
-
             <div className="why-holder">
               <div className="why-item">
                 <img src="/services/medal.svg" alt="" className="why-img" />
@@ -92,7 +95,6 @@ const Index = () => {
               </div>
             </div>
           </div>
-
 
           <div className="message">
             <h1 className="message-title">

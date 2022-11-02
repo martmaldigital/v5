@@ -5,6 +5,7 @@ import { useMediaQuery } from "components/useWidth";
 import { FAQ } from 'pages/api/hello'
 import { Collapse, Carousel } from 'antd'
 import { useRouter } from "next/router";
+import Headtags from 'components/seo';
 
 
 
@@ -53,6 +54,11 @@ const Index = () => {
   return (
 
 <>
+<Headtags
+        title="Doctoora - Bone & Muscle - Book Top Doctors & Experts for Bone & Muscle Issues in Nigeria"
+        desc="Affordable bone and muscle doctors and services near you. Find physiotherapists, orthopaedic surgeons & rheumatology doctors in Lagos and other states in Nigeria"
+        keywords="Bone & Muscle doctors in Nigeria, Bone & Muscle physiotherapists in Nigeria, bone & muscle physiotherapist in Nigeria, Bone & Muscle physiotherapy clinic in Nigeria"
+      />
 <PatientNav />
      <div className="neurosurgery-main">
           <div className="banner">

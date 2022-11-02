@@ -48,7 +48,7 @@ const Doctor = ({ openDrawer, doctor }) => {
 
       {doctor === undefined ? null : (
         <Modal
-          visible={viewBio}
+          open={viewBio}
           onOk={closeShowBio}
           onCancel={closeShowBio}
           footer={null}

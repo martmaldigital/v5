@@ -697,6 +697,56 @@
     }
   }
 }
+.loading {
+  display: flex;
+  width: 100px;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10rem;
+  height: 1px;
+  width: 1px;
+}
+
+.error {
+  background: $white;
+
+  .error-main {
+    padding: 10rem 6rem 15rem;
+
+    @include mobile() {
+      padding: 5rem 2rem 5rem;
+    }
+
+    .go-back {
+      color: $blue;
+      line-height: 23.95px;
+      font-weight: 400;
+      font-size: 16px;
+      text-align: center;
+      cursor: pointer;
+      &:hover{
+        color: $orange;
+      }
+    }
+
+    .img-holder {
+      display: flex;
+      justify-content: center;
+      img {
+        @include mobile() {
+          width: 100%;
+        }
+        @include tablandscape() {
+          width: 100%;
+        }
+        @include tablet() {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
 
 
 
@@ -711,3 +761,4 @@
 @import "./search/search.scss";
 @import "./search/serviceSearch.scss";
 @import "./blog/blog.scss";
+@import "./voucher/voucher.scss";

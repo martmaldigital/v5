@@ -5,6 +5,7 @@ import { useMediaQuery } from "components/useWidth";
 import { FAQ } from 'pages/api/hello'
 import { Collapse, Carousel } from 'antd'
 import { useRouter } from "next/router";
+import Headtags from 'components/seo';
 
 
 
@@ -48,6 +49,11 @@ const Index = () => {
   return (
 
 <>
+<Headtags
+        title="Doctoora - Brain & Nerves - Book Appointment With Top Brain & Nerve Care Experts in Nigeria"
+        desc="Affordable brain and nerve doctors and services near you. Find spine surgeons, neurosurgeons & neurology doctors in Lagos and other states in Nigeria"
+        keywords="Brain & Nerves Doctor in Nigeria, Neurosurgeons in Nigeria, Neurologist in Nigeria, Best Brain & Nerves Doctor in Nigeria, Memory Clinic in Nigeria, Best Memory Clinic in Nigeria, Brain Clinic in Nigeria, Best Brain Clinic in Nigeria, Memory Improvement Clinic in Nigeria"
+      />
 <PatientNav />
      <div className="neurosurgery-main">
           <div className="banner">

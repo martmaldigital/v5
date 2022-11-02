@@ -32,7 +32,7 @@ export const testimonies = [
     name: "Stears Business",
     text: `Not every industry needs an “Uber” model, but healthcare might. This story unpacks the Doctoora business model to see how its utilizing spare capacity to provide Nigerians with affordable healthcare.`,
     img: "/img/stears.svg",
-    social: "@Stears Business",
+    social: "@stearsbusiness",
   },
   {
     name: "Moe",
@@ -64,7 +64,7 @@ export const testimonies = [
     name: "Femi",
     text: `Doctoora health Is doing great stuff in the private space. The government should be focusing on the affordability of these services for Nigerians. We're lightyears behind on that.`,
     img: "/img/femi.svg",
-    social: "Obaluaye_",
+    social: "obaluaye_",
   },
   {
     name: "Deo volente Dux",

@@ -16,7 +16,6 @@ export const updateResult = (
   alternativeResult,
   resultGroupPratice
 ) => {
-  console.log(resultGroupPratice);
   return {
     type: CONSTANTS.UPDATE_RESULT,
     result,

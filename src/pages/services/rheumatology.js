@@ -3,6 +3,7 @@ import Bannerform from 'components/bannerform/bannerform'
 import PatientNav from 'components/nav/patientNav'
 import { FAQ } from 'pages/api/hello'
 import { Collapse } from 'antd'
+import Headtags from 'components/seo';
 
 
 
@@ -22,6 +23,11 @@ const Index = () => {
   return (
 
 <>
+<Headtags
+        title="Doctoora -  Rheumatology - Book Trusted Rheumatologists & Hospitals Close-by in Nigeria"
+        desc="Same day appointments with Rheumatologists. Book home visits, clinic and online consultations in Nigeria from ₦10,000. Compare rates & patient reviews"
+        keywords="rheumatology doctor in Nigeria, rheumatologist in Nigeria, rheumatology specialist in Nigeria, rheumatology clinics in Nigeria, rheumatology hospitals in Nigeria, best rheumatology doctor in Nigeria, world-class rheumatology doctors in Nigeria, Physiotherapy"
+      />
 <PatientNav />
      <div className="neurosurgery-main">
           <div className="banner">

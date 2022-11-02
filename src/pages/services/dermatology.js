@@ -3,6 +3,7 @@ import Bannerform from 'components/bannerform/bannerform'
 import PatientNav from 'components/nav/patientNav'
 import { FAQ } from 'pages/api/hello'
 import { Collapse } from 'antd'
+import Headtags from 'components/seo'
 
 const { Panel } = Collapse;
 
@@ -19,6 +20,11 @@ const Index = () => {
   return (
 
 <>
+<Headtags
+        title="Doctoora -  Dermatology - Book Trusted Dermatology Doctors & Clinics Near You in Nigeria"
+        desc="Same day appointments with dermatology doctors. Book home visits, clinic and online consultations in Nigeria from ₦10,000. Compare rates & patient reviews"
+        keywords="dermatologist in Nigeria, Dermatologist in Lagos, Skin specialist doctor, dermatologist in Abuja, skin doctor in Nigeria, skin doctors, skin doctor in Lagos, skin specialists doctor in Nigeria, dermatology doctor in Nigeria"
+      />
 <PatientNav />
      <div className="neurosurgery-main">
           <div className="banner">
@@ -51,8 +57,6 @@ const Index = () => {
             />
           </div>
           </div>
-
-
 
           <div className="why-choose">
             <h1 className="why-title">

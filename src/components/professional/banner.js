@@ -17,7 +17,7 @@ const Banner = () => {
           At <span className="d">Doctoora</span>, licensed healthcare professionals can provide care to patients in our <span>digital private clinic.</span> We also offer <span>rentable medical facilities </span>for physical consultations, starting from &#8358;35,000 monthly.
           </p>
           <div className="action-holder">
-            <Link href="http://">
+            <Link href="https://app.doctoora.com/doctor/register">
             <button className="custom-btn into-btn">
               Become a Partner
             </button>

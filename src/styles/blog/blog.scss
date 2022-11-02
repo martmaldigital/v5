@@ -1,136 +1,3 @@
-.blog {
-    background: $white;
-    .blog-main {
-      padding-top: 7rem;
-      @include mobile() {
-        padding-top: 4rem;
-      }
-      @include tablet() {
-        padding-top: 4rem;
-      }
-
-      .blogs-holder {
-
-        position: relative;
-        // @include mobile() {
-        //   padding: 2rem 1rem;
-        // }
-        .check-bacnk {
-          color: $fontgrey;
-          font-weight: 400;
-          font-size: 18px;
-          line-height: 23.44px;
-          margin-bottom: 0.2rem !important;
-          text-align: center;
-        }
-        .blogcard {
-         padding: 2rem 3rem;
-         @include biggerscreen() {
-            padding: 2rem 6rem;
-         }
-         @include tablet() {
-            padding: 2rem 2rem;
-         }
-         @include laptop() {
-            padding: 2rem 4rem;
-         }
-              @include mobile() {
-          padding: 2rem 1.5rem;
-        }
-         background: $background-blue;
-          box-shadow: 0px 2px 20px 4px rgba(51, 51, 51, 0.05);
-          display: grid;
-          grid-template-columns: 50% 50%;
-          margin-bottom: 2rem;
-          align-items: center;
-          @include tablet() {
-            display: flex;
-            flex-direction: column-reverse; 
-          }
-          @include mobile() {
-            display: flex;
-            flex-direction: column-reverse;
-          }
-          .blogcard-details {
-            padding: 0rem 6rem 0rem 0rem;
-            @include tablet() {
-            padding: 1rem 0rem;
-            }
-            @include mobile() {
-              padding: 1rem 0rem;
-            }
-            .details-title {
-              font-family: $title;
-              line-height: 56px;
-              font-weight: 600;
-              font-size: 32px;
-            }
-            .desc {
-              color: $textblack;
-              line-height: 23.75px;
-              font-weight: 400;
-              font-size: 16px;
-              em {
-                color: #c3c3c3;
-                cursor: pointer;
-                &:hover {
-                color: $textblack;
-                }
-              }
-            }
-            .person {
-              display: flex;
-              align-items: center;
-              margin-top: 3rem;
-  
-              .img-holder {
-                margin-right: 1.5rem;
-  
-                img {
-                  height: 3.8rem;
-                  width: 3.8rem;
-                  object-fit: cover;
-                  border-radius: 50%;
-                }
-              }
-  
-              .person-name {
-                .name {
-                font-family: $title;
-                  font-weight: 400;
-                  font-size: 20px;
-                  margin-bottom: 0;
-                  color: $textblack;
-                }
-                .person-timing {
-                  margin-bottom: 0;
-                  color: #4A4A4A;
-                  font-weight: 400;
-                  font-size: 14px;
-                }
-              }
-            }
-          }
-          .img-holder {
-              // height: 100%;
-              img {
-                border-radius: 10px;
-              // height: 100%;
-              object-fit: cover;
-              width: 100%;
-              height: 20rem;
-              @include mobile() {
-                border-top-right-radius: 8px;
-                border-top-left-radius: 8px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  
-
 
   .blogpost {
     background: $white;
@@ -305,14 +172,22 @@
             font-size: 24px;
           }
         }
+
+        .check-back {
+          color: $fontgrey;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 23.44px;
+          margin-bottom: 0.2rem !important;
+          text-align: center;
+        }
     
             .blogcard {
                 border-radius: 8px;
-                box-shadow: 0px 2px 20px 4px rgba(51, 51, 51, 0.05);
                 background: $background-blue;
                 display: flex;
                 flex-direction: column-reverse;
-                margin-bottom: 1rem;
+                margin-bottom: 2rem;
                 align-items: center;
                 .blogcard-details {
                   width: 100%;
@@ -327,10 +202,17 @@
                     text-overflow: ellipsis;
                   }
                   .desc {
-                    color: $fontgrey;
+                    color: $textblack;
                     line-height: 23.75px;
                     font-weight: 400;
-                    font-size: 14px;
+                    font-size: 15px;
+                    em {
+                      color: #c3c3c3;
+                      cursor: pointer;
+                      &:hover {
+                      color: $textblack;
+                      }
+                    }
                   }
                   .person {
                     display: flex;

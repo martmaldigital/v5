@@ -299,13 +299,7 @@ const Search = () => {
     console.log(values);
     setValidating(true);
     setCouponData(null);
-    axios
-      .post(`${api}/api/guest/validate`, {
-        email: values.email,
-        phone: values.phone,
-      })
-      .then((res) => {
-        if (res.data.status === "success") {
+
           if (coupon.trim().length > 0) {
             axios
               .post(`${api}/api/coupons/validate`, {
@@ -355,27 +349,7 @@ const Search = () => {
               saveBooking(null);
             }
           }
-        } else {
-          let getAllErrors = Object.values(res.data.data.errors);
-          let errors = getAllErrors.map((trying) => {
-            return trying[0];
-          });
-          let desc = (
-            <div>
-              {errors.map((error) => (
-                <li key={error}>{error}</li>
-              ))}
-            </div>
-          );
-          openNotificationWithIcon("warning", res.data.message, desc);
-          setValidating(false);
-        }
-      })
-      .catch((err) => {
-        message.error("Validation: Something went wrong!");
-        setValidating(false);
-      });
-  };
+        };
 
   // savebooking
   const saveBooking = async (reference) => {

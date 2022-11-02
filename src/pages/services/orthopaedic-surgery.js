@@ -3,6 +3,7 @@ import Bannerform from 'components/bannerform/bannerform'
 import PatientNav from 'components/nav/patientNav'
 import { FAQ } from 'pages/api/hello'
 import { Collapse } from 'antd'
+import Headtags from 'components/seo';
 
 
 
@@ -22,6 +23,11 @@ const Index = () => {
   return (
 
 <>
+<Headtags
+        title="Doctoora -  Orthopedic Surgery - Book Top Orthopaedic Surgeons & Hospitals Close-by in Nigeria "
+        desc="Same day appointments with Orthopaedic Surgeons. Book home visits, clinic and online consultations in Nigeria from ₦10,000. Compare rates & patient reviews"
+        keywords="orthopaedic surgery doctors in Nigeria, orthopaedic surgery hospital, orthopaedic surgery hospitals in Nigeria, orthopedic hand surgeon in Nigeria, Orthopedic Hospitals in Lagos, knee replacement surgery nigeria, hand surgeons in nigeria, knee replacement hospitals in lagos, Orthopaedic Surgery in Nigeria, Orthopaedic Surgeon in Nigeria, Orthopaedic Surgeon in Lagos, Orthopaedic Surgeon in Abuja, Orthopaedic Surgeon in Ibadan, Orthopaedic Surgeon in Port Harcourt"
+      />
 <PatientNav />
      <div className="neurosurgery-main">
           <div className="banner">

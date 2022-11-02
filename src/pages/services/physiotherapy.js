@@ -3,6 +3,7 @@ import Bannerform from 'components/bannerform/bannerform'
 import PatientNav from 'components/nav/patientNav'
 import { FAQ } from 'pages/api/hello'
 import { Collapse } from 'antd'
+import Headtags from 'components/seo';
 
 
 
@@ -22,6 +23,11 @@ const Index = () => {
   return (
 
 <>
+<Headtags
+        title="Doctoora -  Physiotherapy - Book Top Physiotherapists & Physical Rehabs Close-by in Nigeria  "
+        desc="Quick appointments with Physiotherapists. Book home visits, clinic and online consultations in Nigeria from ₦10,000. Compare rates & patient reviews"
+        keywords=" physiotherapy in Nigeria, physiotherapy, physiotherapy services in Nigeria, physiotherapy centers in Nigeria, physiotherapy treatment, physiotherapy centres in Abuja, physiotherapy centres in Lagos"
+      />
 <PatientNav />
      <div className="neurosurgery-main">
           <div className="banner">

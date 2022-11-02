@@ -3,6 +3,7 @@ import Bannerform from 'components/bannerform/bannerform'
 import PatientNav from 'components/nav/patientNav'
 import { FAQ } from 'pages/api/hello'
 import { Collapse } from 'antd'
+import Headtags from 'components/seo'
 
 const { Panel } = Collapse;
 
@@ -19,6 +20,11 @@ const Index = () => {
   return (
 
 <>
+<Headtags
+        title="Doctoora - Neurology - Book Trusted Neurologist & Hospitals Close-by in Nigeria"
+        desc="Same day appointments with verified Neurologists. Book home visits, clinic and online consultations in Nigeria from ₦10,000. Compare rates & patient reviews"
+        keywords="Neurology Doctor in Nigeria, Best Neurologist in Nigeria, neurosurgeon in nigeria, neurologist in nigeria, best neurologist in nigeria, nigerian best neurosurgeon, best neurologist in Nigeria, best neurology doctor in Nigeria. neurology, neurologist, neurology doctor in Nigeria, brain tumor, stroke symptoms, stroke symptoms and treatment, neurosurgery, epilepsy surgery, headache symptoms."
+      />
 <PatientNav />
      <div className="neurosurgery-main">
           <div className="banner">

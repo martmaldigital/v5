@@ -2,21 +2,25 @@ import PatientNav from "components/nav/patientNav";
 import Image from "next/image";
 import { Row, Col, Form, Select} from "antd";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import Headtags from "components/seo";
 
 import { comServices, servicesList } from "pages/api/hello";
 
 const Services = () => {
-  const loading = useState(false);
   const router = useRouter();
 
   const onFinish = (values) => {
     const { service } = values
-    router.push(`/services/${service}`)
+    router.push(`/services${service}`)
   }
 
   return (
     <>
+    <Headtags
+        title="Doctoora - Services - Healthcare in One Place - Book Doctors, Pharmacy, Tests Online"
+        desc="Healthcare made easy and affordable. Compare prices, ratings and patients reviews. Book appointments with top and trusted experts in Nigeria on Doctoora"
+        keywords="the best healthcare services, good doctors, best doctors in nigeria, Doctors in Nigeria, Nurses in Nigeria, Healthcare services in Nigeria, healthcare near me, good doctors near me"
+      />
       <PatientNav />
       <div className="corporate">
         <div className="banner">
@@ -47,7 +51,7 @@ const Services = () => {
               >
                   {
                         servicesList.map((item) => (
-                          <Option value={item.slug} key={item.slug}>{item.title}</Option>
+                          <Select.Option value={item.slug} key={item.slug}>{item.title}</Select.Option>
                         ))
                       }
               </Select>
@@ -55,7 +59,7 @@ const Services = () => {
           </Col>
 
           <Col lg={6} xs={24}>
-          <button htmlType="submit" className="service-btn">
+          <button htmltype="submit" className="service-btn">
                     Search
                   </button>
           </Col>
@@ -64,7 +68,7 @@ const Services = () => {
             </div>
           </div>
           <div className="img-holder">
-            <Image src="/services/banner.svg" alt="" layout="responsive" width={506} height={336} />
+            <Image src="/services/banner.svg" alt="" layout="responsive" width={506} height={336} priority />
           </div>
         </div>
 

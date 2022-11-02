@@ -19,7 +19,6 @@
   "dependencies": {
     "antd": "^4.23.2",
     "axios": "^1.0.0",
-    "dayjs": "^1.11.6",
     "moment": "^2.29.1",
     "next": "12.3.1",
     "next-redux-wrapper": "^7.0.5",
@@ -31,7 +30,6 @@
     "react-paystack": "^3.0.5",
     "react-player": "^2.11.0",
     "react-redux": "^7.2.6",
-    "react-youtube": "^10.0.0",
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.4.0"
   },

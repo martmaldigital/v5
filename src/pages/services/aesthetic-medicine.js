@@ -3,6 +3,7 @@ import Bannerform from 'components/bannerform/bannerform'
 import PatientNav from 'components/nav/patientNav'
 import { FAQ } from 'pages/api/hello'
 import { Collapse } from 'antd'
+import Headtags from 'components/seo'
 
 const { Panel } = Collapse;
 
@@ -19,6 +20,11 @@ const Index = () => {
   return (
 
 <>
+<Headtags
+        title="Doctoora -  Aesthetic Medicine - Book Expert Aesthetic Medicine Doctors Near You In Nigeria "
+        desc="Same day appointments with aesthetic doctors. Book home visits, clinic and online consultations in Nigeria from ₦10,000. Compare rates & patient reviews"
+        keywords="breast implants cost, breast surgery in lagos, breast surgeons in Nigeria, breast enlargement Lagos, breast implants price Nigeria, cosmetic surgeon for breast implants in Lagos, cosmetic clinics in lagos"
+      />
 <PatientNav />
      <div className="neurosurgery-main">
           <div className="banner">

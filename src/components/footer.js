@@ -34,7 +34,7 @@ const Footer = () => {
             <ul>
               <h2>Quick links</h2>
               <li>
-                <Link href="/about" passHref>
+                <Link href="/about">
                   About Us
                 </Link>
               </li>
@@ -91,7 +91,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="https://bit.ly/doctoorachat" passHref>
+                <a href="https://bit.ly/doctoorachat">
                   <div className="logo-img">
                     <Image src={Whatsapp} alt="logo" layout="fill" />
                     <span className="logo-text">Whatsapp&nbsp;Bot</span>

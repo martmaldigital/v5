@@ -3,6 +3,7 @@ import Bannerform from 'components/bannerform/bannerform'
 import PatientNav from 'components/nav/patientNav'
 import { FAQ } from 'pages/api/hello'
 import { Collapse } from 'antd'
+import Headtags from 'components/seo'
 
 const { Panel } = Collapse;
 
@@ -19,6 +20,11 @@ const Index = () => {
   return (
 
 <>
+<Headtags
+        title="Doctoora - Skin & Body Care  - Book appointments with top skin & body care specialists in Nigeria"
+        desc="Affordable skin and body care experts and services near you. Find dermatologists, plastic surgeons and aesthetic doctors in Lagos and other states in Nigeria"
+        keywords="Skin & Body care doctors in Nigeria, best skin care doctors in Nigeria, dermatologist in Nigeria, skin care clinics in Nigeria, plastic surgeons in Nigeria, Cosmetic surgeons in Nigeria, cosmetic surgery clinics in Nigeria"
+      />
 <PatientNav />
      <div className="neurosurgery-main">
           <div className="banner">
@@ -35,7 +41,6 @@ const Index = () => {
                 </button>
             </div>
           </div>
-
 
           <div className="division">
             <h1 className="title">
@@ -63,8 +68,6 @@ const Index = () => {
               </div>
             </div>
           </div>
-
-
 
           <div className="booking" ref={book}>
             <img src="/services/booking.svg" className="booking-img" alt="" />
@@ -141,7 +144,6 @@ const Index = () => {
         </div>
             </div>
           </div>
-
 
           <div className="getstarted">
             <img src="/services/doctorvase.svg" className="vase-img" alt="" />

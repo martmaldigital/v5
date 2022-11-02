@@ -55,6 +55,11 @@ const CorporatePage = () => {
 
   return (
     <>
+         <Headtags
+        title="Doctoora - Corporate - Patient-focused digital integrated healthcare system in Nigeria"
+        desc="Doctoora is a digital integrated healthcare system for affordable care connecting patients, healthcare professionals and healthcare facilities in Lagos, Nigeria"
+        keywords="family memberships, healthcare services, unlimited access, features, benefits"
+      />
       <div className="corporate">
         <div className="banner">
           <div className="info-text">
@@ -69,7 +74,7 @@ const CorporatePage = () => {
             </div>
           </div>
           <div className="img-holder">
-            <Image src="/corporate/banner.svg" alt="" layout="responsive" width={612} height={401} />
+            <Image src="/corporate/banner.svg" alt="" layout="responsive" width={612} height={401} priority />
           </div>
         </div>
 
@@ -179,8 +184,8 @@ const CorporatePage = () => {
                     ]}
                     >
                     <Select placeholder="Do you want a Demo" >
-                      <Option value = "Yes">Yes</Option>
-                      <Option value = "No">No</Option>
+                      <Select.Option value = "Yes">Yes</Select.Option>
+                      <Select.Option value = "No">No</Select.Option>
                     </Select>
                   </Form.Item>
                   </Col>

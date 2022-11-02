@@ -3,6 +3,7 @@ import Bannerform from 'components/bannerform/bannerform'
 import PatientNav from 'components/nav/patientNav'
 import { FAQ } from 'pages/api/hello'
 import { Collapse } from 'antd'
+import Headtags from 'components/seo';
 
 
 
@@ -22,6 +23,11 @@ const Index = () => {
   return (
 
 <>
+<Headtags
+        title="Doctoora - Podiatry - Book Top Podiatrists & Foot Care Experts in Nigeria"
+        desc="Quick appointments with Podiatrists. Book home visits, clinic and online consultations in Nigeria from ₦10,000. Compare rates & patient reviews"
+        keywords="Podiatrist in Nigeria, Podiatry, Podiatry Services in Nigeria"
+      />
 <PatientNav />
      <div className="neurosurgery-main">
           <div className="banner">

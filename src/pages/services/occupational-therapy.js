@@ -3,6 +3,7 @@ import Bannerform from 'components/bannerform/bannerform'
 import PatientNav from 'components/nav/patientNav'
 import { FAQ } from 'pages/api/hello'
 import { Collapse } from 'antd'
+import Headtags from 'components/seo'
 
 
 
@@ -22,6 +23,11 @@ const Index = () => {
   return (
 
 <>
+<Headtags
+        title="Doctoora - Occupational Therapy - Book Trusted Occupational Therapy Experts Near You in Nigeria "
+        desc="Quick appointments with Occupational Therapists. Book home visits, clinic and online consultations in Nigeria from ₦10,000. Compare rates & patient reviews"
+        keywords="Occupational therapy, Occupational therapy in Nigeria, Occupational therapy jobs in Nigeria, how to become an occupational therapist, what does an occupational therapist do, what does an occupational therapist do in nigeria"
+      />
 <PatientNav />
      <div className="neurosurgery-main">
           <div className="banner">

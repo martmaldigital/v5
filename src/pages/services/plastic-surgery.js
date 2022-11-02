@@ -3,6 +3,7 @@ import Bannerform from 'components/bannerform/bannerform'
 import PatientNav from 'components/nav/patientNav'
 import { FAQ } from 'pages/api/hello'
 import { Collapse } from 'antd'
+import Headtags from 'components/seo'
 
 const { Panel } = Collapse;
 
@@ -19,6 +20,11 @@ const Index = () => {
   return (
 
 <>
+<Headtags
+        title="Doctoora -  Plastic & Reconstructive Surgery - Book Trusted Plastic Surgeons & Hospitals Near You In Nigeria "
+        desc="Same day appointments with plastic surgeons. Book home visits, clinic and online consultations in Nigeria from ₦10,000. Compare rates & patient reviews"
+        keywords="plastic surgery doctors in Nigeria, cosmetic surgery Doctors in Nigeria, Nigerian plastic surgeon, plastic surgery cost in Nigeria, breast augment in Nigeria. plastic surgery, cosmetic surgeon, plastic surgeons in Nigeria, plastic surgeons in Lagos, plastic surgery cost, plastic surgery prices in Nigeria, Nigerian plastic surgeons, best plastic surgery in Nigeria. bbl surgeons, cosmetic surgery in nigeria, bbl surgeon in Nigeria, BBL doctors in Nigeria, bbl surgeons in Nigeria, cosmetic surgery in Nigeria, bbl surgeons in lagos, cosmetic surgery lagos, rhinoplasty nigeria, best plastic surgeons in Lagos, cosmetic surgery lagos"
+      />
 <PatientNav />
      <div className="neurosurgery-main">
           <div className="banner">

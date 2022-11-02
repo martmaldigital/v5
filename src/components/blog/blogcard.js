@@ -1,4 +1,4 @@
-import dayjs from 'dayjs';
+import moment from "moment"
 
 
 
@@ -12,7 +12,7 @@ const Blogcard = ({blog}) => {
             {blog.title}
           </h1>
           <div>
-          <a href = {`https://v5-1.vercel.app/blog/${blog.slug}`} >
+          <a href = {`http://${process.env.NEXT.PUBLIC.URL}/blog/${blog.slug}`} >
           <p className="desc" dangerouslySetInnerHTML={{ __html: `${blog.content.substring(0, 200)}...<em>Read more</em>`}}></p>
           </a>
           </div>
@@ -27,7 +27,7 @@ const Blogcard = ({blog}) => {
             <div className="person-name">
               <h3 className="name">{blog.author}</h3>
               <p className="person-timing">
-                {dayjs(blog.created_at).format('DD-MM-YYYY')}
+                {moment(blog.created_at).format('DD-MM-YYYY')}
               </p>
             </div>
           </div>
@@ -35,10 +35,8 @@ const Blogcard = ({blog}) => {
         <div className="img-holder main-img">
           <img src={blog.image} alt={blog.title} />
         </div>
-
       </div>
   )
-
 }
 
 export default Blogcard

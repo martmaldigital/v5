@@ -2,10 +2,16 @@ import Image from "next/image";
 import ProfessionalNav from "components/nav/professionalNav";
 import {Row, Col} from "antd"
 import { proServPortal } from "./api/hello";
+import Headtags from "components/seo";
 
 const Index = () => {
   return (
     <>
+        <Headtags
+        title="Doctoora - Professional Services - Healthcare in One Place - Book Doctors, Pharmacy, Tests Online"
+        desc="Healthcare made easy and affordable. Compare prices, ratings and patients reviews. Book appointments with top and trusted experts in Nigeria on Doctoora"
+        keywords="the best healthcare services, good doctors, best doctors in nigeria, Doctors in Nigeria, Nurses in Nigeria, Healthcare services in Nigeria, healthcare near me, good doctors near me"
+      />
       <ProfessionalNav />
       <div className="about">
         <div className="about-main">

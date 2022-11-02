@@ -1,5 +1,6 @@
 import PatientNav from "components/nav/patientNav";
 import {Row, Col} from "antd"
+import Headtags from "components/seo";
 
 
 const serv = [
@@ -19,6 +20,11 @@ const serv = [
 const Index = () => {
   return (
     <>
+         <Headtags
+        title="Doctoora - Membership Packages - Join Africa's First Members-Only Digital Healthcare System"
+        desc="Enjoy unlimited access to affordable healthcare when you join our multilocation healthcare network in Nigeria. Get up to N1mi worthl in Health Credits"
+        keywords="family memberships, N32,500 family membership, healthcare services, unlimited access, features, benefits"
+      />
       <PatientNav />
       <div className="about">
         <div className="about-main">
@@ -58,7 +64,7 @@ services at affordable rates
           </div>
       </div>
 
-                <h3 className="title member">Become a Member </h3>
+                <h3 className="title member">Choose a Starter Pack </h3>
           {/* Basic membership */}
           <div className="aboutcontent limited">
             <div className="info-text limited">

@@ -1,7 +1,6 @@
 import ProfessionalNav from "components/nav/professionalNav";
-import Footer from "components/footer";
-import { proServPortal } from "./api/hello";
 import {Row, Col} from "antd"
+import Headtags from "components/seo";
 
 
 const serv = [
@@ -22,6 +21,11 @@ const serv = [
 const Index = () => {
   return (
     <>
+             <Headtags
+        title="Doctoora - Professional Membership Packages - Join Africa's First Members-Only Digital Healthcare System"
+        desc="Enjoy unlimited access to affordable healthcare when you join our multilocation healthcare network in Nigeria. Get up to N1mi worthl in Health Credits"
+        keywords="family memberships, N32,500 family membership, healthcare services, unlimited access, features, benefits"
+      />
       <ProfessionalNav />
       <div className="about">
         <div className="about-main">

@@ -3,6 +3,7 @@ import Bannerform from 'components/bannerform/bannerform'
 import PatientNav from 'components/nav/patientNav'
 import { FAQ } from 'pages/api/hello'
 import { Collapse } from 'antd'
+import Headtags from 'components/seo'
 
 const { Panel } = Collapse;
 
@@ -19,6 +20,11 @@ const Index = () => {
   return (
 
 <>
+<Headtags
+        title="Doctoora - Speech Therapy - Book Trusted Speech Therapists & Hospitals Close-by in Nigeria"
+        desc="Same day appointments with Speech Therapists. Book home visits, clinic and online consultations in Nigeria from ₦10,000. Compare rates & patient reviews"
+        keywords="Speech Consultant in nigeria, Speech Therapist in Nigeria, Speech Therapy Doctor in nigeria, Speach Therapists in Nigeria, The best Speech therapists in Nigeria"
+      />
 <PatientNav />
      <div className="neurosurgery-main">
           <div className="banner">

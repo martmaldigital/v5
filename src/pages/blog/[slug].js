@@ -5,7 +5,8 @@ import api from "config/api"
 import Blogcard from 'components/blog/blogcard'
 import { Row, Col, message, notification } from 'antd'
 import  { useRouter } from "next/router";
-import dayjs from 'dayjs';
+import moment from 'moment'
+import Headtags from 'components/seo'
 
 const openNotificationWithIcon = (type, msg, desc) => {
   notification[type]({
@@ -66,14 +67,13 @@ const getBlogs = () => {
 
   return (
     <>
+        <Headtags
+        title= {`Doctoora - Blog - ${blog.title}`}
+        desc="Instant and unlimited access to frequently updated health advisory content curated from our healthcare specialists and experts."
+        keywords="the best healthcare services in Nigeria, good doctors in Nigeria, Quality Healthcare You can trust, Healthcare Cover, Health Insurance, Low cost healthcare, Affordable hospitals, digital health, telemedicine"
+      />
     <PatientNav />
        <div className="blogpost">
-        {
-          loading ?
-            <div>
-            </div>
-            :
-            <>
               <div className="blogpost-main">
                 <div className="back-holder">
                   <a href="#" onClick={(e) => router.push('/blog')
@@ -82,6 +82,13 @@ const getBlogs = () => {
              Back
             </a>
                 </div>
+                {
+                  loading ? 
+                <div className="loader-container">
+                  <div className="loader"></div>
+                  </div>
+                  :
+                  <>
                 <div className="blogpost-top">
                   <div className="blogcard-details">
                     <h1 className="details-title">
@@ -98,7 +105,7 @@ const getBlogs = () => {
                       <div className="person-name">
                         <h3 className="name">{blog.author}</h3>
                         <p className="person-timing">
-                        {dayjs(blog.created_at).format('DD-MM-YYYY')}
+                        {moment(blog.created_at).format('DD-MM-YYYY')}
                         </p>
                       </div>
                     </div>
@@ -110,7 +117,6 @@ const getBlogs = () => {
                 </div>
                 <div className="blogpost-middle">
                   <p dangerouslySetInnerHTML={{ __html: blog.content }}>
-
                   </p>
                 </div>
                 <div className="blogpost-footer">
@@ -123,7 +129,7 @@ const getBlogs = () => {
                   </div>
                   <Row gutter={16}>
                     {
-                      blogs.slice(0, 4).map((blog) => (
+                      blogs.slice(0, 3).map((blog) => (
                         <Col lg={8} xs={24} key={blog.id}>
                           <Blogcard
                              key={blog.id}
@@ -134,9 +140,9 @@ const getBlogs = () => {
                     }
                   </Row>
                  </div>
+                 </>
+                 }
                 </div>
-            </>
-        }
       </div>
     </>
   )

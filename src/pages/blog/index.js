@@ -3,6 +3,8 @@ import PatientNav from 'components/nav/patientNav'
 import axios from 'axios'
 import api from "config/api"
 import Blogcard from '../../components/blog/blogcard'
+import Headtags from 'components/seo'
+import {Row, Col} from "antd"
 
 
 
@@ -20,23 +22,33 @@ const Blog = ({blogs}) => {
   
   return (
     <>
+    <Headtags
+        title="Doctoora - Blog - Find Answers To Top Health Questions By Expert Doctors in Nigeria"
+        desc="Instant and unlimited access to frequently updated health advisory content curated from our healthcare specialists and experts."
+        keywords="the best healthcare services in Nigeria, good doctors in Nigeria, Quality Healthcare You can trust, Healthcare Cover, Health Insurance, Low cost healthcare, Affordable hospitals, digital health, telemedicine"
+      />
         <PatientNav/>
-   <div className="blog">
-        <div className="blog-main">
+   <div className="blogpost">
+        <div className="blogpost-main">
           <h1 className="title">Our Blog</h1>
-          <div className="blogs-holder">
-                  {
-                    blogs.length === 0 ?
-                      <p className="check-bacnk">No blogpost available, check back later</p>
+          <div className="blogpost-footer">
+                  <p className='footnote'>A healthy lifestyle is essential to your overall well-being, check out our articles on healthy living this week. We're confident you'll love them!</p>
+                  <Row gutter={16}>
+                    {
+                      blogs.length === 0 ?
+                      <p className="check-back">No blogpost available, check back later</p>
                       :
-                     blogs.map((blog) => (
-                        <Blogcard
-                          key={blog.id}
-                          blog={blog}
-                        />
+                      blogs.map((blog) => (
+                        <Col lg={8} sm={12} xs={24} key={blog.id}>
+                          <Blogcard
+                             key={blog.id}
+                            blog={blog}
+                          />
+                        </Col>
                       ))
-                     }
-          </div>
+                    }
+                  </Row>
+                 </div>
         </div>
       </div>
     </>

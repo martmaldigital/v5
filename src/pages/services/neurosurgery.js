@@ -3,6 +3,7 @@ import Bannerform from 'components/bannerform/bannerform'
 import PatientNav from 'components/nav/patientNav'
 import { FAQ } from 'pages/api/hello'
 import { Collapse } from 'antd'
+import Headtags from 'components/seo'
 
 const { Panel } = Collapse;
 
@@ -19,6 +20,11 @@ const Index = () => {
   return (
 
 <>
+<Headtags
+        title="Doctoora - Neurosurgery - Book Trusted Neurosurgeons & Hospitals Close-by in Nigeria"
+        desc="Same day appointments with Top Neurosurgeons. Book home visits, clinic and online consultations in Nigeria from ₦10,000. Compare rates & patient reviews"
+        keywords="neurosurgeon in Nigeria, neurosurgeon in Lagos. neurosurgery doctor, neurosurgery consultant, neurosurgery services, neurosurgeon doctors in Nigeria, neurosurgeon at affordable price. neurosurgery doctor, Neurosurgeon in Nigeria, neurosurgeons in nigeria, neurosurgeon nigeria, spine surgeon in nigeria, neurosurgery center in Nigeria, best neurosurgeons in nigeria, neuro surgery doctor in Nigerianeurosurgery doctor, Neurosurgeon in Nigeria, neurosurgeons in nigeria, neurosurgeon nigeria, spine surgeon in nigeria, neurosurgery center in Nigeria, best neurosurgeons in nigeria, neuro surgery doctor in Nigeria"
+      />
 <PatientNav />
      <div className="neurosurgery-main">
           <div className="banner">
