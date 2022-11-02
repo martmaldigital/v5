@@ -12,7 +12,7 @@ const Blogcard = ({blog}) => {
             {blog.title}
           </h1>
           <div>
-          <a href = {`http://${process.env.NEXT.PUBLIC.URL}/blog/${blog.slug}`} >
+          <a href = {`http://v5-1.vercel.app/blog/${blog.slug}`} >
           <p className="desc" dangerouslySetInnerHTML={{ __html: `${blog.content.substring(0, 200)}...<em>Read more</em>`}}></p>
           </a>
           </div>
