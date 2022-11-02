@@ -1,9 +1,7 @@
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import { Row, Col, Carousel } from "antd";
 import { useMediaQuery } from "components/useWidth";
 import ReactPlayer from 'react-player/youtube'
-import YouTube from 'react-youtube';
 
 
 

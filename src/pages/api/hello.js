@@ -14,6 +14,18 @@ export const FAQ = [
     text: "We have 3 types of consultation on our platform.Teleconsultation which is done via video or audio, Facility visit which allows you to schedule a physical appointment with a healthcare provider at any of our facilities and Home visit, where you can schedule homecare.",
   },
   {
+    header: "How are Healthcare Providers on Doctoora Chosen?",
+    text: "Our pool of healthcare providers are professionals and specialists with years of proven expertise in their field. Our professionals are put through a vetting process to verify their documentations before they are approved to see patients.",
+  },
+  {
+    header: "What device do I need for teleconsulting?",
+    text: "An internet enabled laptop or smartphone is all you need.",
+  },
+  {
+    header: "Will my teleconsultation session be recorded?",
+    text: "No. We do not record audio/video consultations.",
+  },
+  {
     header: "I want a doctor to visit me at home, is it safe?",
     text: "Yes, you are in good hands. Our healthcare professionals have been vetted by us.",
   },
