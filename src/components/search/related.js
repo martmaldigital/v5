@@ -65,7 +65,7 @@ console.log(result);
             {item.city}, {item.state}.
               </span>
         </div>
-        <a href={`https://v5-1.vercel/book/${item.doctoora_id}`}>
+        <a href={`https://v5-1.vercel.app/book/${item.doctoora_id}`}>
         <Button className='custom-btn action-btn'
         >
           View Bio
