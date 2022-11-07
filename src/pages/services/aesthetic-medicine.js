@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{createRef} from 'react'
 import Bannerform from 'components/bannerform/bannerform'
 import PatientNav from 'components/nav/patientNav'
 import { FAQ } from 'pages/api/hello'
@@ -8,7 +8,7 @@ import Headtags from 'components/seo'
 const { Panel } = Collapse;
 
 const Index = () => {
-  const book = React.createRef()
+  const book = createRef()
 
   const scrollToBook = () => {
     window.scrollTo({

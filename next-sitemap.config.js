@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: "https://localhost:3000",
+  siteUrl: "https://doctoora.com",
   generateRobotsTxt: true,
   priority: 1.0,
   changefreq: "monthly",

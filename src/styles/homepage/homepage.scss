@@ -774,20 +774,12 @@
       }
 
       .search-holder{
-        padding: 1.5rem 20rem;
-
-        @include laptop() {
-          padding: 1.5rem 14rem;
-        }
-
-        @include tablandscape() {
-          padding: 1.5rem 6rem;
-        }
-        @include tablet() {
-          padding: 1.5rem 3rem;
-        }
+        // padding: 1.5rem 20rem;
+        margin: auto;
+        width: 26rem;
         @include mobile() {
-          padding: 0rem 0rem;
+          padding: 1rem 0.6rem;
+          width: fit-content;
         }
       }
 

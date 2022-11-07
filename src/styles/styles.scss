@@ -593,7 +593,7 @@
     .heading {
       font-weight: 500;
       font-size: 20px;
-      line-height: 24px;
+      line-height: 40px;
       margin-bottom: 1rem;
       &.hidctor,
       &.amount {
@@ -605,16 +605,7 @@
         &.former-price {
           text-decoration: line-through;
         }
-
-        &:last-child {
-          margin-left: 0.5rem;
-        }
       }
-    }
-
-    .footnote {
-      font-size: 16px;
-      line-height: 18px;
     }
 
     .form-holder {
@@ -638,65 +629,67 @@
       .cost-numbers {
         display: flex;
       }
-
-      .heading {
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 24px;
-        margin-bottom: 1rem;
-        &.hidctor,
-        &.amount {
-          font-weight: 700;
-        }
-        &.amount {
-          font-size: 25px;
-          margin-bottom: 0rem;
-  
-          @include mobile() {
-            margin-bottom: 1rem;
-          }
-  
-          &.former-price {
-            text-decoration: line-through;
-          }
-  
-          &:last-child {
-            margin-left: 0.5rem;
-          }
-        }
-      }
-      .cost-btn {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-  
-        @include mobile() {
-          flex-direction: column;
-        }
-      }
-  
-      .paystack-btn {
-        width: 50%;
-        background: $blue;
-        color: $white;
-        font-size: 18px;
-  
-        @include mobile() {
-          width: 100%;
-        }
-      }
-      .text {
-        margin-top: 1rem;
-        color: #e41b1b;
-        font-size: 18px;
-      }
-    }
-
-    .cost-numbers {
-      display: flex;
     }
   }
 }
+
+// paymentmodal
+.paystack-modal {
+  .payment-modal-main {
+    .cost-numbers {
+      display: flex;
+    }
+
+    .heading {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 1rem;
+      &.hidctor,
+      &.amount {
+        font-weight: 700;
+      }
+      &.amount {
+        font-size: 25px;
+        margin-bottom: 0rem;
+
+        @include mobile() {
+          margin-bottom: 1rem;
+        }
+
+        &.former-price {
+          text-decoration: line-through;
+        }
+
+        &:last-child {
+          margin-left: 0.5rem;
+        }
+      }
+    }
+
+    .cost-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include mobile() {
+        flex-direction: column;
+      }
+    }
+
+    .paystack-btn {
+      width: 30%;
+      background: $blue;
+      color: $white;
+
+      @include mobile() {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
 .loading {
   display: flex;
   width: 100px;

@@ -76,7 +76,7 @@ const getBlogs = () => {
        <div className="blogpost">
               <div className="blogpost-main">
                 <div className="back-holder">
-                  <a href="#" onClick={(e) => router.push('/blog')
+                  <a href="#" onClick={() => router.back()
 }>
                     <img src="/img/left.svg" alt="" />
              Back

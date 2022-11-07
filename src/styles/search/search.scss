@@ -4,49 +4,93 @@
   .search-main {
     position: relative;
 
+    .back {
+      padding: 6rem 0rem 1rem 2rem;
+      font-size: 20px;
+      line-height: 25px;
+      font-weight: 500;
+      &.bio {
+        padding: 8rem 0rem 1rem 3rem;
+      }
+      // margin-bottom: 2rem;
+      cursor: pointer;
+      @include biggerscreen(){
+       padding: 5rem 0rem 0rem 5rem;
+       &.bio {
+        padding: 10rem 0rem 0rem 6rem;
+
+       }
+      }
+      @include laptop(){
+        padding: 6rem 0rem 0rem 3rem;
+        &.bio {
+          padding: 8rem 0rem 0rem 4rem;
+          font-size: 16px;
+        }
+      }
+      @include tablandscape(){
+        padding: 6rem 0rem 0rem 2rem;
+        font-size: 16px;
+      }
+      @include tablet(){
+        padding: 4rem 0rem 0rem 1rem;
+        font-size: 16px;
+        &.bio {
+          padding: 5rem 0rem 0rem 2rem;
+          font-size: 16px;
+        }
+      }
+      @include mobile(){
+        padding: 5rem 0rem 0rem 0.5rem;
+        font-size: 16px;
+        &.bio {
+          padding: 6rem 0rem 0rem 1.5rem;
+          font-size: 16px;
+        }
+      }
+    }
+
     .banner {
       background: $background-blue;
-      padding: 10rem 0rem 5rem 1rem;
-      @include mobile() {
-        padding: 5rem 0rem;
-      }
+      padding: 2rem 0rem 3rem 1rem;
       .banner-form {
-       padding: 1rem 12rem;
-
-       @include biggerscreen() {
-        padding: 1rem 14rem;
-      }
-      @include laptop() {
-        padding: 1rem 10rem;
-      }
-      @include tablandscape() {
-        padding: 1rem 6rem;
-      }
-      @include tablet() {
-        padding: 1rem 2rem;
-      }
+        margin: auto;
+        width: 26rem;
        @include mobile() {
          padding: 1rem 0.6rem;
-       }
-       
-      }
-
-      .footnote {
-        font-size: 20px;
-        line-height: 25px;
-        font-weight: 500;
-        margin-bottom: 2rem;
-        cursor: pointer;
+         width: fit-content;
+       }      
       }
     }
     .search-body {
-      padding: 3rem 1.5rem;
+      padding: 0rem 3rem;
+      &.main {
+        padding: 0rem 2rem;
+      }
 
       @include biggerscreen() {
-        padding: 3rem 4rem;
+        padding: 0rem 6rem;
+        &.main {
+          padding: 0rem 4rem;
+        }
       }
       @include laptop() {
-        padding: 3rem 2.5rem;
+        padding: 0rem 4rem;
+        &.main {
+          padding: 0rem 3rem;
+        }
+      }
+      @include tablet() {
+        padding: 0rem 2rem;
+        // &.main {
+        //   padding: 0rem 0rem;
+        // }
+      }
+      @include mobile() {
+        padding: 0rem 1.5rem;
+        &.main {
+          padding: 0rem 1.5rem;
+        }
       }
 
       .doccard-holder {
@@ -63,10 +107,32 @@
         }
  
       }
+      .filter-holder {
+        @include mobile(){
+          display: none;
+        }
+        @include tablet(){
+          display: none;
+        }
+        @include tablandscape(){
+          display: none;
+        }
+        .related-searches {
+           overflow-y: scroll;
+          height: 33rem;
+          .side-title {
+            font-family: $title;
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 700;
+          }
+        }
+      }
 
       .custom-line {
         border: 1px solid #d2d2d2;
         margin-bottom: 2rem;
+        margin-top: 2rem;
       }
     }
   }
