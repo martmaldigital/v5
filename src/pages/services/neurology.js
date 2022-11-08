@@ -1,7 +1,7 @@
 import React, {createRef} from 'react'
 import Headtags from 'components/seo'
 import dynamic from 'next/dynamic'
-import PatientNav from 'components/nav/patientnav'
+import PatientNav from 'components/nav/patientNav'
 
 const FAQ = dynamic(() => import('components/faqq'))
 const Bannerform = dynamic(() =>import ('components/bannerform/bannerform'))
