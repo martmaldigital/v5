@@ -2,8 +2,9 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 
-import Getstarted from "components/modal/getstarted";
+const Getstarted = dynamic(() => import("components/modal/getstarted"))
 import Logo from "assets/logo/logo.webp";
 
 const links = [
@@ -84,7 +85,7 @@ const PatientNav = () => {
         <div className="navbar-right">
           <ul>
             <li>
-              <Link href="/professional">
+              <Link href="/professional" prefetch={false}>
                 <button className="custom-btn skel-btn far-left">
                   Professional Portal
                 </button>
@@ -94,7 +95,7 @@ const PatientNav = () => {
               <a href="https://doctoora.com/user/login">Login</a>
             </li>
             <li>
-              <button className="custom-btn nav-btn">Get Started</button>
+              <button className="custom-btn nav-btn" onClick={openModal}>Get Started</button>
             </li>
           </ul>
         </div>
@@ -137,12 +138,12 @@ const PatientNav = () => {
                 </button>
               </li>
               <li>
-                <Link href="https://app.doctoora.com">
+                <a href="https://app.doctoora.com">
                   <button className="custom-btn side-btn2">Login</button>
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="/professional">
+                <Link href="/professional" prefetch={false}>
                   <button className="custom-btn side-btn3">
                     Professional Portal
                   </button>

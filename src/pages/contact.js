@@ -1,5 +1,6 @@
 import PatientNav from "components/nav/patientNav";
 import ContactPage from "components/contact";
+import Headtags from "components/seo";
 
 const Contact = () => {
   return (

@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import PatientNav from 'components/nav/patientNav'
-import axios from 'axios'
 import api from "config/api"
-import Blogcard from '../../components/blog/blogcard'
+// import Blogcard from 'components/blog/blogcard'
 import Headtags from 'components/seo'
 import {Row, Col} from "antd"
+import dynamic from 'next/dynamic'
 
-
+const Blogcard = dynamic(() => import('components/blog/blogcard'))
 
 export async function getServerSideProps() {
-  const res = await axios.get(`${api}/api/blogs`)
-
+  const res = await fetch(`${api}/api/blogs`)
+const data = await res.json()
   return {
     props: {
-      blogs: res.data.data.posts.data,
+      blogs: data.data.posts.data,
     }
   }
 }

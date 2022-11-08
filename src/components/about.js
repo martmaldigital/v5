@@ -1,14 +1,14 @@
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import { Row, Col, Carousel } from "antd";
 import { useMediaQuery } from "components/useWidth";
-import ReactPlayer from 'react-player/youtube'
+const ReactPlayer = dynamic(() => import ('react-player/youtube'), {ssr:  false})
 
 
 
 import { team, team3, impact, keyOfferings } from "pages/api/hello";
-// const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
-const AboutPage = () => {
+const AboutPage = ({link}) => {
   return (
     <>
       <div className="about">
@@ -36,7 +36,7 @@ const AboutPage = () => {
                 geographical, financial and sociocultural barriers.
               </p>
               <div className="action-holder">
-                <button className="custom-btn into-btn">Get Started</button>
+                <button className="custom-btn into-btn" onClick={link}>Get Started</button>
               </div>
             </div>
             <div className="img-holder">

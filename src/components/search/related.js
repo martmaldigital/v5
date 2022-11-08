@@ -1,17 +1,10 @@
-import React, {useEffect, useCallback, useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import axios from 'axios';
-import { Button } from 'antd';
 import Image from 'next/image';
 import api from "config/api"
-import Link from 'next/link';
-
-
-
 
 const Related = ({relate}) => {
     const [result, setResult] = useState(null);
-
-console.log(result);
 
     useEffect(() => {
         getConditions();
@@ -46,7 +39,7 @@ console.log(result);
         <div className="img">
           <Image
             src={item.dp}
-            alt="bookdoctor"
+            alt="doctor"
             layout="fill"
           />
         </div>
@@ -57,7 +50,7 @@ console.log(result);
           <div className="eimg">
           <Image
             src="/img/location.svg"
-            alt="bookdoctor"
+            alt="address"
             layout="fill"
           />
           </div>
@@ -66,10 +59,10 @@ console.log(result);
               </span>
         </div>
         <a href={`https://v5-1.vercel.app/book/${item.doctoora_id}`}>
-        <Button className='custom-btn action-btn'
+        <button className='custom-btn action-btn'
         >
           View Bio
-        </Button>
+        </button>
         </a>
         </>
        ): null

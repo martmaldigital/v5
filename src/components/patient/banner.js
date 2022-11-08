@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 
-import Getstarted from "components/modal/getstarted";
+const Getstarted = dynamic(() => import('components/modal/getstarted'))
 import BannerImage from "assets/patient/patient.svg";
 
 const Banner = () => {

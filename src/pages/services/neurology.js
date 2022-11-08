@@ -1,14 +1,15 @@
-import React from 'react'
-import Bannerform from 'components/bannerform/bannerform'
-import PatientNav from 'components/nav/patientNav'
-import { FAQ } from 'pages/api/hello'
-import { Collapse } from 'antd'
+import React, {createRef} from 'react'
 import Headtags from 'components/seo'
+import dynamic from 'next/dynamic'
+import PatientNav from 'components/nav/patientnav'
 
-const { Panel } = Collapse;
+const FAQ = dynamic(() => import('components/faqq'))
+const Bannerform = dynamic(() =>import ('components/bannerform/bannerform'))
+
+
 
 const Index = () => {
-  const book = React.createRef()
+  const book = createRef()
 
   const scrollToBook = () => {
     window.scrollTo({
@@ -127,13 +128,7 @@ A neurologist is the most qualified doctor to diagnose and treat brain and nerve
         <h1 className="title">
           FAQs, Let us Answer Some of your Frequent Questions
         </h1>
-            <Collapse expandIconPosition='end' accordion>
-        {FAQ.map((item, index) => (
-              <Panel header={item.header} key={index}>
-                <p className="faq-text">{item.text}</p>
-              </Panel>
-        ))}
-        </Collapse>
+            <FAQ />
         </div>
             </div>
           </div>

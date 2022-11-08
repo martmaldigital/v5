@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import { notification, message } from "antd";
 import Image from "next/image";
 import axios from "axios";
-import api from "../../config/api";
+import api from "config/api";
 import Facilityvisit from "./facilityvisit";
 import Homevisit from "./homevisit";
 import Videovisit from "./videovisit";
@@ -15,8 +15,6 @@ const openNotificationWithIcon = (type, msg, desc) => {
   });
 };
 
-const forDash = false;
-// const predefinedSpeciality = null;
 
 const Bannerform = (props) => {
   const [requesting, setRequesting] = useState(false);
@@ -171,7 +169,6 @@ const Bannerform = (props) => {
       >
         {bannerButtons[1].active && (
           <Facilityvisit
-            // forDash={forDash}
             loading={requesting}
             updateRequesting={updateRequesting}
             specialization={specialization}
@@ -181,7 +178,6 @@ const Bannerform = (props) => {
         )}
         {bannerButtons[2].active && (
           <Homevisit
-            // forDash={forDash}
             loading={requesting}
             updateRequesting={updateRequesting}
             specialization={specialization}
@@ -191,7 +187,6 @@ const Bannerform = (props) => {
         )}
         {bannerButtons[0].active && (
           <Videovisit
-            // forDash={forDash}
             loading={requesting}
             updateRequesting={updateRequesting}
             specialization={specialization}

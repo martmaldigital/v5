@@ -19,11 +19,11 @@ import {
 import PatientNav from 'components/nav/patientNav';
 import Headtags from 'components/seo';
 import numeral from "numeral";
-import moment from 'moment';
 import Doctor from "components/search/doctor";
 import { disabledDate, getNumberForDay } from "utils/helper";
 import { PaystackButton } from "react-paystack";
 import Related from 'components/search/related';
+import dayjs from 'dayjs'
 
 
 const openNotificationWithIcon = (type, msg, desc) => {
@@ -132,13 +132,12 @@ const Index = () => {
  // inital submission
  const onFinish = (values) => {
   setFormValues(values);
-  console.log(values);
   setValidating(true);
   setCouponData(null);
         if (coupon.trim().length > 0) {
           axios
             .post(`${api}/api/coupons/validate`, {
-              professional_id: currentDoctor.id,
+              professional_id: doctor.id,
               coupon_code: coupon,
               service: values.type,
             })
@@ -229,7 +228,7 @@ const Index = () => {
     formRef.current.setFieldsValue({
       // time: [],
     });
-    let day = moment(e).format("dddd").toLowerCase();
+    let day = dayjs(e).format("dddd").toLowerCase();
     if (visitTypeChoosen === null) {
       openNotificationWithIcon("warning", "Select a visit type!");
       setLoadingSlot(false);
@@ -358,7 +357,7 @@ const Index = () => {
     });
     let details = {
       reference: reference,
-      booking_date: moment(formRef.current.getFieldValue("date")).format(
+      booking_date: dayjs(formRef.current.getFieldValue("date")).format(
         "YYYY-MM-DD"
       ),
       time,
@@ -433,7 +432,7 @@ const Index = () => {
               router.back()
             }}
           >
-             <img src="/img/left.svg" alt="" />
+             <img src="/img/left.svg" alt="back" />
              Back
           </p>
           <div className="search-body">
@@ -456,8 +455,7 @@ const Index = () => {
                           Available General Practitioner
                   </h1>
                         <Related 
-                        relate={doctor.doctoora_id
-                        }
+                        relate={doctor.doctoora_id}
                         />
                       </div>
                     </div>
@@ -729,7 +727,7 @@ const Index = () => {
                   dateRender={(current) => {
                     const style = {};
                     getNumberForDay(availableDays).map((item) => {
-                      if (moment(current).day() === item) {
+                      if (dayjs(current).day() === item) {
                         style.border = '1px solid #1890ff';
                         style.borderRadius = '50%';
                       }
@@ -859,7 +857,7 @@ const Index = () => {
         </Drawer>
           </div>
           <Modal
-        visible={visible}
+        open={visible}
         footer={null}
         className="paystack-modal"
         onOk={closeActuallPay}

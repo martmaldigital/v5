@@ -1,7 +1,7 @@
-import moment from "moment";
+import dayjs from "dayjs"
 
 export const disabledDate = (current) => {
-  return current && current < moment().endOf("day").subtract(1, "day");
+  return current && current < dayjs().endOf("day").subtract(1, "day");
 };
 
 export const getNumberForDay = (value) => {

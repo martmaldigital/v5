@@ -1,16 +1,15 @@
 import React from "react";
 import PatientNav from "components/nav/patientNav";
-import Bannerform from "../components/bannerform/bannerform";
+import Bannerform from "components/bannerform/bannerform";
 import { Row, Col } from "antd";
 import { useSelector } from "react-redux";
-import moment from "moment";
 import Headtags from "components/seo";
 import Doccard from "components/search/doccard"
 import { useRouter } from "next/router";
+import dayjs from "dayjs"
 
-
-
-
+// const Doccard = dynamic(() => import("components/search/doccard"))
+// const Bannerform = dynamic(() => import("components/bannerform/bannerform"))
 
 
 
@@ -39,7 +38,7 @@ const Search = () => {
               router.back()
             }}
           >
-             <img src="/img/left.svg" alt="" />
+             <img src="/img/left.svg" alt="back" />
              Back
           </p>
           <h1 className="title">Get Doctoora Healthcare Services Faster
@@ -65,7 +64,7 @@ const Search = () => {
                       for {search.visitType} on{" "}
                       {search.searchObj.date === null
                         ? null
-                        : moment(search.searchObj.date).format("YYYY-MM-DD")}
+                        : dayjs(search.searchObj.date).format("YYYY-MM-DD")}
                     </p>
                     <p className="resultnumber">
                       Showing results for {search.searchObj.specialization}

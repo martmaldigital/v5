@@ -331,20 +331,19 @@
       }
   
       .search-holder {
-        padding: 6rem 14rem;
+        margin: auto;
+        width: 30rem;
+        padding-top: 4rem;
+        // padding: 6rem 14rem;
   
-        @include mobile() {
-          padding: 1rem 0rem;
+        @include tablet() {
+          width: 25rem;       
+          padding-top: 1rem;
         }
-        @include tablandscape() {
-            padding: 6rem 6rem;
-          }
-          @include tablet() {
-            padding: 1rem 1rem;
-          }
-          @include biggerscreen() {
-            padding: 4rem 20rem;
-          }
+        @include mobile() {
+          width: fit-content;       
+          padding-top: 1rem;
+        }
       }
   
       .why-choose {

@@ -1,15 +1,16 @@
-import React from 'react';
-import Bannerform from 'components/bannerform/bannerform'
-import PatientNav from 'components/nav/patientNav'
+import React, {createRef} from 'react';
 import { useMediaQuery } from "components/useWidth";
-import { FAQ } from 'pages/api/hello'
-import { Collapse, Carousel } from 'antd'
+import { Carousel } from 'antd'
 import { useRouter } from "next/router";
 import Headtags from 'components/seo';
+import dynamic from 'next/dynamic';
+import PatientNav from "components/nav/patientNav";
+
+const FAQ = dynamic(() => import('components/faqq'))
+const Bannerform = dynamic(() => import('components/bannerform/bannerform'))
 
 
 
-const { Panel } = Collapse;
 
 const bone = [
 {
@@ -35,7 +36,7 @@ const bone = [
 ]
 
 const Index = () => {
-  const book = React.createRef()
+  const book = createRef()
   const router = useRouter();
 
 
@@ -76,12 +77,12 @@ const Index = () => {
           {useMediaQuery(481) ? (
                 <Carousel autoplay dots={true} slidesToShow={1}>
                   {bone.map((item, index) => (
-                    <div className="teamcard" key={index}>
+                    <div className="teamcard" key={index} onClick={() => router.push(`/services/${item.link}`)}>
                       <div className="img-holder">
-                      <img src={item.img} alt="" onClick={() => router.push(`/services/${item.link}`)}/>
+                      <img src={item.img} alt="" />
                       </div>
                       <div className="card-text-holder">
-                        <h3 className="name" onClick={() => router.push(`/services/${item.link}`)}>{item.name}</h3>
+                        <h3 className="name" >{item.name}</h3>
                       </div>
                     </div>
                   ))}
@@ -89,12 +90,12 @@ const Index = () => {
               ) : (
                 <Carousel autoplay dots={true} slidesToShow={1.7}>
                   {bone.map((item, index) => (
-                    <div className="teamcard" key={index}>
+                    <div className="teamcard" key={index} onClick={() => router.push(`/services/${item.link}`)}>
                       <div className="img-holder">
-                      <img src={item.img} alt="" onClick={() => router.push(`/services/${item.link}`)}/>
+                      <img src={item.img} alt="" />
                       </div>
                       <div className="card-text-holder">
-                        <h3 className="name" onClick={() => router.push(`/services/${item.link}`)}>{item.name}</h3>
+                        <h3 className="name" >{item.name}</h3>
                       </div>
                     </div>
                   ))}
@@ -107,12 +108,12 @@ const Index = () => {
               {useMediaQuery(1024) ? (
                 <Carousel autoplay dots={true} slidesToShow={2.6}>
                   {bone.map((item, index) => (
-                    <div className="teamcard" key={index}>
+                    <div className="teamcard" key={index} onClick={() => router.push(`/services/${item.link}`)}>
                       <div className="img-holder">
-                      <img src={item.img} alt="" onClick={() => router.push(`/services/${item.link}`)}/>
+                      <img src={item.img} alt=""/>
                       </div>
                       <div className="card-text-holder">
-                        <h3 className="name" onClick={() => router.push(`/services/${item.link}`)}>{item.name}</h3>
+                        <h3 className="name" >{item.name}</h3>
                       </div>
                     </div>
                   ))}
@@ -120,12 +121,12 @@ const Index = () => {
               ) : (
                 <Carousel autoplay dots={true} slidesToShow={4}>
                   {bone.map((item, index) => (
-                    <div className="teamcard" key={index}>
+                    <div className="teamcard" key={index} onClick={() => router.push(`/services/${item.link}`)}>
                       <div className="img-holder">
-                      <img src={item.img} alt="" onClick={() => router.push(`/services/${item.link}`)}/>
+                      <img src={item.img} alt="" />
                       </div>
                       <div className="card-text-holder">
-                        <h3 className="name" onClick={() => router.push(`/services/${item.link}`)}>{item.name}</h3>
+                        <h3 className="name">{item.name}</h3>
                       </div>
                     </div>
                   ))}
@@ -198,13 +199,7 @@ const Index = () => {
         <h1 className="title">
           FAQs, Let us Answer Some of your Frequent Questions
         </h1>
-            <Collapse expandIconPosition='end' accordion>
-        {FAQ.map((item, index) => (
-              <Panel header={item.header} key={index}>
-                <p className="faq-text">{item.text}</p>
-              </Panel>
-        ))}
-        </Collapse>
+            <FAQ />
         </div>
             </div>
           </div>

@@ -1,16 +1,14 @@
-import React from 'react';
-import Bannerform from 'components/bannerform/bannerform'
-import PatientNav from 'components/nav/patientNav'
-import { FAQ } from 'pages/api/hello'
-import { Collapse } from 'antd'
+import React, {createRef} from 'react';
+import dynamic from 'next/dynamic';
 import Headtags from 'components/seo'
+import PatientNav from 'components/nav/patientnav';
 
+const FAQ = dynamic(() => import('components/faqq'))
+const Bannerform = dynamic(() =>import ('components/bannerform/bannerform'))
 
-
-const { Panel } = Collapse;
 
 const Index = () => {
-  const book = React.createRef()
+  const book = createRef()
 
 
   const scrollToBook = () => {
@@ -45,7 +43,6 @@ const Index = () => {
             </div>
           </div>
 
-
           <div className="booking" ref={book}>
             <img src="/services/booking.svg" className="booking-img" alt="" />
             <div className="text-info">
@@ -59,8 +56,6 @@ const Index = () => {
             />
           </div>
           </div>
-
-
 
           <div className="why-choose">
             <h1 className="why-title">
@@ -112,13 +107,8 @@ const Index = () => {
               <div className="content">
                 <p className="message-footnote">
                 An Occupational therapist should be easy to reach and affordable if you have stiffness, muscle weakness from stroke and other rehabilitation concerns. Searching for the right occupational therapist in Nigeria can be difficult and time-consuming, especially when you are in dire need of one. To see an occupational therapist at the hospital, you must wait hours, and you don't want to put your health at risk by seeing a quack.
-
-
 <br /><br />
 With Doctoora Health, you can now have an occupational therapist’s opinion right when you need it. Get affordable, reliable healthcare via your mobile device.
-
-
-
 <br /><br /> An occupational therapist is the most qualified health professional to treat conditions like back pain, arthritis, muscle stiffness and all forms of rehabilitation issues. Access on-demand occupational therapy services in Nigeria with an extensive network of occupational therapists. Find an occupational therapist near you for same-day home care and clinic appointments. Find the best occupational therapist for you today. Compare healthcare prices, patient ratings and reviews. There will be no lines or waiting!
                 </p>
               </div>
@@ -135,17 +125,10 @@ With Doctoora Health, you can now have an occupational therapist’s opinion rig
         <h1 className="title">
           FAQs, Let us Answer Some of your Frequent Questions
         </h1>
-            <Collapse expandIconPosition='end' accordion>
-        {FAQ.map((item, index) => (
-              <Panel header={item.header} key={index}>
-                <p className="faq-text">{item.text}</p>
-              </Panel>
-        ))}
-        </Collapse>
+            <FAQ />
         </div>
             </div>
           </div>
-
 
           <div className="getstarted">
             <img src="/services/doctorvase.svg" className="vase-img" alt="" />

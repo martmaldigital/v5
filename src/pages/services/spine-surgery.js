@@ -1,14 +1,13 @@
-import React from 'react'
-import Bannerform from 'components/bannerform/bannerform'
-import PatientNav from 'components/nav/patientNav'
-import { FAQ } from 'pages/api/hello'
-import { Collapse } from 'antd'
+import React, {createRef} from 'react'
+import dynamic from 'next/dynamic'
 import Headtags from 'components/seo'
+import PatientNav from 'components/nav/patientnav'
 
-const { Panel } = Collapse;
+const FAQ = dynamic(() => import('components/faqq'))
+const Bannerform = dynamic(() =>import ('components/bannerform/bannerform'))
 
 const Index = () => {
-  const book = React.createRef()
+  const book = createRef()
 
   const scrollToBook = () => {
     window.scrollTo({
@@ -100,7 +99,6 @@ const Index = () => {
             <h1 className="message-title">
             Why Choose Doctoora Spine Surgery Service
             </h1>
-
             <div className="message-holder">
               <div className="content">
                 <p className="message-footnote">
@@ -117,23 +115,15 @@ An experienced spine surgeon is the best person to perform procedures like lamin
           </div>
 
           <div className="faqs">
-
             <div className="faqs-holder">
             <div className="works">
         <h1 className="title">
           FAQs, Let us Answer Some of your Frequent Questions
         </h1>
-            <Collapse expandIconPosition='end' accordion>
-        {FAQ.map((item, index) => (
-              <Panel header={item.header} key={index}>
-                <p className="faq-text">{item.text}</p>
-              </Panel>
-        ))}
-        </Collapse>
+            <FAQ />
         </div>
             </div>
           </div>
-
 
           <div className="getstarted">
             <img src="/services/doctorvase.svg" className="vase-img" alt="" />
@@ -149,7 +139,6 @@ An experienced spine surgeon is the best person to perform procedures like lamin
               Get Started
             </button>
           </div>
-
         </div>
 </> 
    )

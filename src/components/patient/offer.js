@@ -63,7 +63,7 @@ const Offer = () => {
    <div className="img-style" key={`tested-${index}`}>
      <Image
        src={`/tested/${item}.svg`}
-       alt={item.name}
+       alt="logo"
        layout="fill"
      />
    </div>
@@ -75,7 +75,7 @@ const Offer = () => {
               <div className="img-style" key={`tested-${index}`}>
                 <Image
                   src={`/tested/${item}.svg`}
-                  alt={item.name}
+                  alt="logo"
                   layout="fill"
                 />
               </div>

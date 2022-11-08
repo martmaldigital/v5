@@ -1,1 +1,427 @@
-{}
+{
+  "../components/about.js -> react-player/youtube": {
+    "id": 5655,
+    "files": [
+      "static/chunks/5655.12ad4fd4141f5ba0.js"
+    ]
+  },
+  "../components/corporate.js -> ./corporateform": {
+    "id": 4291,
+    "files": [
+      "static/chunks/9842-736ef1c3b7b4e06f.js",
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/7824-971496d970e43104.js",
+      "static/chunks/5041-a00c356f6b5bef17.js",
+      "static/chunks/3126-c780f5f0d49a20cd.js",
+      "static/chunks/1577-380ecb7408f77338.js",
+      "static/chunks/9014-4d1df2a89428b1fb.js",
+      "static/chunks/2688-78c8293c77403f5f.js",
+      "static/chunks/4291.6b2a4a3f33b99539.js"
+    ]
+  },
+  "../components/faq.js -> ./faqq": {
+    "id": 4070,
+    "files": [
+      "static/chunks/2032.29cda5699d011cb8.js",
+      "static/chunks/4070.9a8795d727ced020.js"
+    ]
+  },
+  "../components/nav/patientNav.js -> components/modal/getstarted": {
+    "id": 663,
+    "files": [
+      "static/chunks/9842-736ef1c3b7b4e06f.js",
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/7824-971496d970e43104.js",
+      "static/chunks/5041-a00c356f6b5bef17.js",
+      "static/chunks/3126-c780f5f0d49a20cd.js",
+      "static/chunks/1577-380ecb7408f77338.js",
+      "static/chunks/2688-78c8293c77403f5f.js",
+      "static/chunks/3790-f01f6ffe8718a6eb.js",
+      "static/chunks/2916.538c6f15a65e5640.js"
+    ]
+  },
+  "../components/nav/patientnav.js -> components/modal/getstarted": {
+    "id": 663,
+    "files": [
+      "static/chunks/9842-736ef1c3b7b4e06f.js",
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/7824-971496d970e43104.js",
+      "static/chunks/5041-a00c356f6b5bef17.js",
+      "static/chunks/3126-c780f5f0d49a20cd.js",
+      "static/chunks/1577-380ecb7408f77338.js",
+      "static/chunks/2688-78c8293c77403f5f.js",
+      "static/chunks/3790-f01f6ffe8718a6eb.js",
+      "static/chunks/2916.538c6f15a65e5640.js"
+    ]
+  },
+  "../components/patient/banner.js -> components/modal/getstarted": {
+    "id": 663,
+    "files": [
+      "static/chunks/2688-78c8293c77403f5f.js",
+      "static/chunks/3790-f01f6ffe8718a6eb.js",
+      "static/chunks/663.25370fbdf30593c2.js"
+    ]
+  },
+  "about.js -> components/about": {
+    "id": 5863,
+    "files": [
+      "static/chunks/9842-736ef1c3b7b4e06f.js",
+      "static/chunks/1980-b356f6a66cb7ce45.js",
+      "static/chunks/7599-5dbecfa3cff743cb.js"
+    ]
+  },
+  "about.js -> components/modal/getstarted": {
+    "id": 663,
+    "files": [
+      "static/chunks/9842-736ef1c3b7b4e06f.js",
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/7824-971496d970e43104.js",
+      "static/chunks/5041-a00c356f6b5bef17.js",
+      "static/chunks/3126-c780f5f0d49a20cd.js",
+      "static/chunks/1577-380ecb7408f77338.js",
+      "static/chunks/2688-78c8293c77403f5f.js",
+      "static/chunks/3790-f01f6ffe8718a6eb.js",
+      "static/chunks/2916.538c6f15a65e5640.js"
+    ]
+  },
+  "blog/[slug].js -> components/blog/blogcard": {
+    "id": 3586,
+    "files": [
+      "static/chunks/9326.698dae7f2b62c666.js"
+    ]
+  },
+  "blog/index.js -> components/blog/blogcard": {
+    "id": 3586,
+    "files": [
+      "static/chunks/6838.10425dbc5178bb27.js"
+    ]
+  },
+  "services/aesthetic-medicine.js -> components/bannerform/bannerform": {
+    "id": 936,
+    "files": [
+      "static/chunks/9842-736ef1c3b7b4e06f.js",
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/7824-971496d970e43104.js",
+      "static/chunks/5041-a00c356f6b5bef17.js",
+      "static/chunks/3126-c780f5f0d49a20cd.js",
+      "static/chunks/1577-380ecb7408f77338.js",
+      "static/chunks/196-071ecb38d1eab874.js",
+      "static/chunks/9014-4d1df2a89428b1fb.js",
+      "static/chunks/936-a60ad7c5cb4ca980.js"
+    ]
+  },
+  "services/aesthetic-medicine.js -> components/faqq": {
+    "id": 4070,
+    "files": [
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/2032.29cda5699d011cb8.js",
+      "static/chunks/3189.90d835f0baf4e5c4.js"
+    ]
+  },
+  "services/bone-muscle.js -> components/bannerform/bannerform": {
+    "id": 936,
+    "files": [
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/7824-971496d970e43104.js",
+      "static/chunks/5041-a00c356f6b5bef17.js",
+      "static/chunks/3126-c780f5f0d49a20cd.js",
+      "static/chunks/1577-380ecb7408f77338.js",
+      "static/chunks/196-071ecb38d1eab874.js",
+      "static/chunks/9014-4d1df2a89428b1fb.js",
+      "static/chunks/936-a60ad7c5cb4ca980.js"
+    ]
+  },
+  "services/bone-muscle.js -> components/faqq": {
+    "id": 4070,
+    "files": [
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/2032.29cda5699d011cb8.js",
+      "static/chunks/3522.3570e51d3c09cac8.js"
+    ]
+  },
+  "services/brain-nerves.js -> components/bannerform/bannerform": {
+    "id": 936,
+    "files": [
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/7824-971496d970e43104.js",
+      "static/chunks/5041-a00c356f6b5bef17.js",
+      "static/chunks/3126-c780f5f0d49a20cd.js",
+      "static/chunks/1577-380ecb7408f77338.js",
+      "static/chunks/196-071ecb38d1eab874.js",
+      "static/chunks/9014-4d1df2a89428b1fb.js",
+      "static/chunks/936-a60ad7c5cb4ca980.js"
+    ]
+  },
+  "services/brain-nerves.js -> components/faqq": {
+    "id": 4070,
+    "files": [
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/2032.29cda5699d011cb8.js",
+      "static/chunks/3522.3570e51d3c09cac8.js"
+    ]
+  },
+  "services/dermatology.js -> components/bannerform/bannerform": {
+    "id": 936,
+    "files": [
+      "static/chunks/9842-736ef1c3b7b4e06f.js",
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/7824-971496d970e43104.js",
+      "static/chunks/5041-a00c356f6b5bef17.js",
+      "static/chunks/3126-c780f5f0d49a20cd.js",
+      "static/chunks/1577-380ecb7408f77338.js",
+      "static/chunks/196-071ecb38d1eab874.js",
+      "static/chunks/9014-4d1df2a89428b1fb.js",
+      "static/chunks/936-a60ad7c5cb4ca980.js"
+    ]
+  },
+  "services/dermatology.js -> components/faqq": {
+    "id": 4070,
+    "files": [
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/2032.29cda5699d011cb8.js",
+      "static/chunks/3189.90d835f0baf4e5c4.js"
+    ]
+  },
+  "services/neurology.js -> components/bannerform/bannerform": {
+    "id": 936,
+    "files": [
+      "static/chunks/9842-736ef1c3b7b4e06f.js",
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/7824-971496d970e43104.js",
+      "static/chunks/5041-a00c356f6b5bef17.js",
+      "static/chunks/3126-c780f5f0d49a20cd.js",
+      "static/chunks/1577-380ecb7408f77338.js",
+      "static/chunks/196-071ecb38d1eab874.js",
+      "static/chunks/9014-4d1df2a89428b1fb.js",
+      "static/chunks/936-a60ad7c5cb4ca980.js"
+    ]
+  },
+  "services/neurology.js -> components/faqq": {
+    "id": 4070,
+    "files": [
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/2032.29cda5699d011cb8.js",
+      "static/chunks/3189.90d835f0baf4e5c4.js"
+    ]
+  },
+  "services/neurosurgery.js -> components/bannerform/bannerform": {
+    "id": 936,
+    "files": [
+      "static/chunks/9842-736ef1c3b7b4e06f.js",
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/7824-971496d970e43104.js",
+      "static/chunks/5041-a00c356f6b5bef17.js",
+      "static/chunks/3126-c780f5f0d49a20cd.js",
+      "static/chunks/1577-380ecb7408f77338.js",
+      "static/chunks/196-071ecb38d1eab874.js",
+      "static/chunks/9014-4d1df2a89428b1fb.js",
+      "static/chunks/936-a60ad7c5cb4ca980.js"
+    ]
+  },
+  "services/neurosurgery.js -> components/faqq": {
+    "id": 4070,
+    "files": [
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/2032.29cda5699d011cb8.js",
+      "static/chunks/3189.90d835f0baf4e5c4.js"
+    ]
+  },
+  "services/occupational-therapy.js -> components/bannerform/bannerform": {
+    "id": 936,
+    "files": [
+      "static/chunks/9842-736ef1c3b7b4e06f.js",
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/7824-971496d970e43104.js",
+      "static/chunks/5041-a00c356f6b5bef17.js",
+      "static/chunks/3126-c780f5f0d49a20cd.js",
+      "static/chunks/1577-380ecb7408f77338.js",
+      "static/chunks/196-071ecb38d1eab874.js",
+      "static/chunks/9014-4d1df2a89428b1fb.js",
+      "static/chunks/936-a60ad7c5cb4ca980.js"
+    ]
+  },
+  "services/occupational-therapy.js -> components/faqq": {
+    "id": 4070,
+    "files": [
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/2032.29cda5699d011cb8.js",
+      "static/chunks/3189.90d835f0baf4e5c4.js"
+    ]
+  },
+  "services/orthopaedic-surgery.js -> components/bannerform/bannerform": {
+    "id": 936,
+    "files": [
+      "static/chunks/9842-736ef1c3b7b4e06f.js",
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/7824-971496d970e43104.js",
+      "static/chunks/5041-a00c356f6b5bef17.js",
+      "static/chunks/3126-c780f5f0d49a20cd.js",
+      "static/chunks/1577-380ecb7408f77338.js",
+      "static/chunks/196-071ecb38d1eab874.js",
+      "static/chunks/9014-4d1df2a89428b1fb.js",
+      "static/chunks/936-a60ad7c5cb4ca980.js"
+    ]
+  },
+  "services/orthopaedic-surgery.js -> components/faqq": {
+    "id": 4070,
+    "files": [
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/2032.29cda5699d011cb8.js",
+      "static/chunks/3189.90d835f0baf4e5c4.js"
+    ]
+  },
+  "services/physiotherapy.js -> components/bannerform/bannerform": {
+    "id": 936,
+    "files": [
+      "static/chunks/9842-736ef1c3b7b4e06f.js",
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/7824-971496d970e43104.js",
+      "static/chunks/5041-a00c356f6b5bef17.js",
+      "static/chunks/3126-c780f5f0d49a20cd.js",
+      "static/chunks/1577-380ecb7408f77338.js",
+      "static/chunks/196-071ecb38d1eab874.js",
+      "static/chunks/9014-4d1df2a89428b1fb.js",
+      "static/chunks/936-a60ad7c5cb4ca980.js"
+    ]
+  },
+  "services/physiotherapy.js -> components/faqq": {
+    "id": 4070,
+    "files": [
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/2032.29cda5699d011cb8.js",
+      "static/chunks/3189.90d835f0baf4e5c4.js"
+    ]
+  },
+  "services/plastic-surgery.js -> components/bannerform/bannerform": {
+    "id": 936,
+    "files": [
+      "static/chunks/9842-736ef1c3b7b4e06f.js",
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/7824-971496d970e43104.js",
+      "static/chunks/5041-a00c356f6b5bef17.js",
+      "static/chunks/3126-c780f5f0d49a20cd.js",
+      "static/chunks/1577-380ecb7408f77338.js",
+      "static/chunks/196-071ecb38d1eab874.js",
+      "static/chunks/9014-4d1df2a89428b1fb.js",
+      "static/chunks/936-a60ad7c5cb4ca980.js"
+    ]
+  },
+  "services/plastic-surgery.js -> components/faqq": {
+    "id": 4070,
+    "files": [
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/2032.29cda5699d011cb8.js",
+      "static/chunks/3189.90d835f0baf4e5c4.js"
+    ]
+  },
+  "services/podiatry.js -> components/bannerform/bannerform": {
+    "id": 936,
+    "files": [
+      "static/chunks/9842-736ef1c3b7b4e06f.js",
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/7824-971496d970e43104.js",
+      "static/chunks/5041-a00c356f6b5bef17.js",
+      "static/chunks/3126-c780f5f0d49a20cd.js",
+      "static/chunks/1577-380ecb7408f77338.js",
+      "static/chunks/196-071ecb38d1eab874.js",
+      "static/chunks/9014-4d1df2a89428b1fb.js",
+      "static/chunks/936-a60ad7c5cb4ca980.js"
+    ]
+  },
+  "services/podiatry.js -> components/faqq": {
+    "id": 4070,
+    "files": [
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/2032.29cda5699d011cb8.js",
+      "static/chunks/3189.90d835f0baf4e5c4.js"
+    ]
+  },
+  "services/rheumatology.js -> components/bannerform/bannerform": {
+    "id": 936,
+    "files": [
+      "static/chunks/9842-736ef1c3b7b4e06f.js",
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/7824-971496d970e43104.js",
+      "static/chunks/5041-a00c356f6b5bef17.js",
+      "static/chunks/3126-c780f5f0d49a20cd.js",
+      "static/chunks/1577-380ecb7408f77338.js",
+      "static/chunks/196-071ecb38d1eab874.js",
+      "static/chunks/9014-4d1df2a89428b1fb.js",
+      "static/chunks/936-a60ad7c5cb4ca980.js"
+    ]
+  },
+  "services/rheumatology.js -> components/faqq": {
+    "id": 4070,
+    "files": [
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/2032.29cda5699d011cb8.js",
+      "static/chunks/3189.90d835f0baf4e5c4.js"
+    ]
+  },
+  "services/skin-body-care.js -> components/bannerform/bannerform": {
+    "id": 936,
+    "files": [
+      "static/chunks/9842-736ef1c3b7b4e06f.js",
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/7824-971496d970e43104.js",
+      "static/chunks/5041-a00c356f6b5bef17.js",
+      "static/chunks/3126-c780f5f0d49a20cd.js",
+      "static/chunks/1577-380ecb7408f77338.js",
+      "static/chunks/196-071ecb38d1eab874.js",
+      "static/chunks/9014-4d1df2a89428b1fb.js",
+      "static/chunks/936-a60ad7c5cb4ca980.js"
+    ]
+  },
+  "services/skin-body-care.js -> components/faqq": {
+    "id": 4070,
+    "files": [
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/2032.29cda5699d011cb8.js",
+      "static/chunks/3189.90d835f0baf4e5c4.js"
+    ]
+  },
+  "services/speech-therapy.js -> components/bannerform/bannerform": {
+    "id": 936,
+    "files": [
+      "static/chunks/9842-736ef1c3b7b4e06f.js",
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/7824-971496d970e43104.js",
+      "static/chunks/5041-a00c356f6b5bef17.js",
+      "static/chunks/3126-c780f5f0d49a20cd.js",
+      "static/chunks/1577-380ecb7408f77338.js",
+      "static/chunks/196-071ecb38d1eab874.js",
+      "static/chunks/9014-4d1df2a89428b1fb.js",
+      "static/chunks/936-a60ad7c5cb4ca980.js"
+    ]
+  },
+  "services/speech-therapy.js -> components/faqq": {
+    "id": 4070,
+    "files": [
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/2032.29cda5699d011cb8.js",
+      "static/chunks/3189.90d835f0baf4e5c4.js"
+    ]
+  },
+  "services/spine-surgery.js -> components/bannerform/bannerform": {
+    "id": 936,
+    "files": [
+      "static/chunks/9842-736ef1c3b7b4e06f.js",
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/7824-971496d970e43104.js",
+      "static/chunks/5041-a00c356f6b5bef17.js",
+      "static/chunks/3126-c780f5f0d49a20cd.js",
+      "static/chunks/1577-380ecb7408f77338.js",
+      "static/chunks/196-071ecb38d1eab874.js",
+      "static/chunks/9014-4d1df2a89428b1fb.js",
+      "static/chunks/936-a60ad7c5cb4ca980.js"
+    ]
+  },
+  "services/spine-surgery.js -> components/faqq": {
+    "id": 4070,
+    "files": [
+      "static/chunks/6057-62db42617369663f.js",
+      "static/chunks/2032.29cda5699d011cb8.js",
+      "static/chunks/3189.90d835f0baf4e5c4.js"
+    ]
+  }
+}

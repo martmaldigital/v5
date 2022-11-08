@@ -1,6 +1,7 @@
 import PatientNav from "components/nav/patientNav";
 import {Row, Col} from "antd"
 import Headtags from "components/seo";
+import Image from "next/image";
 
 
 const serv = [
@@ -30,21 +31,21 @@ const Index = () => {
         <div className="about-main">
         <div className="corporate">
       <div className="services portal">
-        <div className="head">
           <h1 className="title">Never Deal With HMO Palaver Ever Again
           </h1>
           <p className="footnote">Join Nigeria’s first members-only healthcare network and enjoy 24/7 access to the best medical<br />
 services at affordable rates
 </p>
+        <div className="head">
 <ul>
-  <li>
-  No approvals ✅
-  </li>
-  <li>No waiting period ✅</li>
-  <li>No pre-existing conditions excluded ✅</li>
-  <li>No age-groups excluded ✅</li>
+  <li><img src = "/img/check-circle.svg"></img><span>No approvals</span></li>
+  <li><img src = "/img/check-circle.svg"></img><span>No waiting period</span></li>
+  <li><img src = "/img/check-circle.svg"></img><span>No pre-existing conditions excluded</span></li>
+  <li><img src = "/img/check-circle.svg"></img><span>No age-groups excluded</span></li>
 </ul>
-
+<div className="img-holder">
+            <Image src="/img/membership.svg" alt="" layout="responsive" width={441} height={160} priority />
+          </div>
         </div>
 
 <h1 className="title pro">How Doctoora Membership Works</h1>

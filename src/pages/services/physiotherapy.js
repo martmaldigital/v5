@@ -1,16 +1,15 @@
-import React from 'react';
-import Bannerform from 'components/bannerform/bannerform'
-import PatientNav from 'components/nav/patientNav'
-import { FAQ } from 'pages/api/hello'
-import { Collapse } from 'antd'
+import React, {createRef} from 'react';
+import dynamic from 'next/dynamic';
 import Headtags from 'components/seo';
+import PatientNav from 'components/nav/patientnav';
+
+const FAQ = dynamic(() => import('components/faqq'))
+const Bannerform = dynamic(() =>import ('components/bannerform/bannerform'))
 
 
-
-const { Panel } = Collapse;
 
 const Index = () => {
-  const book = React.createRef()
+  const book = createRef()
 
 
   const scrollToBook = () => {
@@ -45,7 +44,6 @@ const Index = () => {
             </div>
           </div>
 
-
           <div className="booking" ref={book}>
             <img src="/services/booking.svg" className="booking-img" alt="" />
             <div className="text-info">
@@ -61,13 +59,10 @@ const Index = () => {
           </div>
           </div>
 
-
-
           <div className="why-choose">
             <h1 className="why-title">
             Why Choose Doctoora Physiotherapy Service
             </h1>
-
             <div className="why-holder">
               <div className="why-item">
                 <img src="/services/medal.svg" alt="" className="why-img" />
@@ -115,7 +110,6 @@ const Index = () => {
                 A Physiotherapist should be easy to reach and affordable if you have stiffness, muscle weakness from stroke and other physical rehabilitation concerns. Searching for the right physiotherapist in Nigeria can be difficult and time-consuming, especially when you are in dire need of one. To see a physiotherapist at the hospital, you must wait hours, and you don't want to put your health at risk by seeing a quack.
  <br /><br />
  With Doctoora Health, you can now have a Physiotherapist’s opinion right when you need it. Get affordable, reliable healthcare via your mobile device.
-
  <br /><br /> A Physiotherapist is the most qualified health professional to treat conditions like back pain, arthritis, muscle stiffness and all forms of physical rehabilitation issues. Access on-demand physiotherapy services in Nigeria with an extensive network of physiotherapists. Find a physiotherapist near you for same-day home care and clinic appointments. Find the best physiotherapist for you today. Compare healthcare prices, patient ratings and reviews. There will be no lines or waiting!
                 </p>
               </div>
@@ -126,23 +120,15 @@ const Index = () => {
           </div>
 
           <div className="faqs">
-
             <div className="faqs-holder">
             <div className="works">
         <h1 className="title">
           FAQs, Let us Answer Some of your Frequent Questions
         </h1>
-            <Collapse expandIconPosition='end' accordion>
-        {FAQ.map((item, index) => (
-              <Panel header={item.header} key={index}>
-                <p className="faq-text">{item.text}</p>
-              </Panel>
-        ))}
-        </Collapse>
+            <FAQ />
         </div>
             </div>
           </div>
-
 
           <div className="getstarted">
             <img src="/services/doctorvase.svg" className="vase-img" alt="" />
@@ -158,7 +144,6 @@ const Index = () => {
               Get Started
             </button>
           </div>
-
         </div>
 </> 
    )

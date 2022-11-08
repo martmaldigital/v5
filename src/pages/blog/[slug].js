@@ -2,11 +2,13 @@ import React, {useEffect, useState} from 'react'
 import PatientNav from 'components/nav/patientNav'
 import axios from 'axios'
 import api from "config/api"
-import Blogcard from 'components/blog/blogcard'
 import { Row, Col, message, notification } from 'antd'
 import  { useRouter } from "next/router";
-import moment from 'moment'
 import Headtags from 'components/seo'
+import dayjs from "dayjs"
+import dynamic from 'next/dynamic'
+
+const Blogcard = dynamic(() => import('components/blog/blogcard'))
 
 const openNotificationWithIcon = (type, msg, desc) => {
   notification[type]({
@@ -105,7 +107,7 @@ const getBlogs = () => {
                       <div className="person-name">
                         <h3 className="name">{blog.author}</h3>
                         <p className="person-timing">
-                        {moment(blog.created_at).format('DD-MM-YYYY')}
+                        {dayjs(blog.created_at).format('DD-MM-YYYY')}
                         </p>
                       </div>
                     </div>

@@ -1,16 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { Form, Row, Col, Select, DatePicker, notification, Button } from "antd";
-import moment from "moment";
+import React from "react";
+import { Form, Row, Col, Select, notification, Button } from "antd";
 import axios from "axios";
-import api from "../../config/api";
-import { disabledDate } from "../../utils/helper";
+import api from "config/api";
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import {
   updateResult,
   startSearchLoading,
   updateSearch,
-} from "../../core/actions/searchAction";
+} from "core/actions/searchAction";
 
 const { Option } = Select;
 

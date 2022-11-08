@@ -1,37 +1,38 @@
 import React, {useState, createRef} from 'react'
-import { useRouter } from 'next/router'
-import { Form, Input, notification, Button, Select } from "antd";
-import axios from "axios";
-import PatientNav from 'components/nav/patientNav';
-import Image from 'next/image';
+// import { useRouter } from 'next/router'
+// import { Form, Input, notification, Button, Select } from "antd";
 
-import api from "config/api";
+// import PatientNav from 'components/nav/patientNav';
 
 
-const openNotificationWithIcon = (type, msg, desc) => {
-  notification[type]({
-    message: msg,
-    description: desc,
-  });
-};
+// import api from "config/api";
 
-const titles = ["Dr.", "Mr.", "Mrs.", "Ms.", "Miss", "Prof", "PT"];
+
+// const openNotificationWithIcon = (type, msg, desc) => {
+//   notification[type]({
+//     message: msg,
+//     description: desc,
+//   });
+// };
+
+// const titles = ["Dr.", "Mr.", "Mrs.", "Ms.", "Miss", "Prof", "PT"];
 
 
 const Voucher = () => {
   
-    const [loading, setLoading] = useState(false);
-    const form = createRef();
-    const router = useRouter();
-    const {slug} = router.query;
+    // const [loading, setLoading] = useState(false);
+    // const form = createRef();
+    // const router = useRouter();
+    // const {slug} = router.query;
 
-    const onFinish = (values) => {
-        console.log(values)
-    }
+    // const onFinish = (values) => {
+    //     console.log(values)
+    // }
 
   return (
     <>
-      <PatientNav />
+    <div>Voucher</div>
+      {/* <PatientNav />
       <div className="about">
         <div className="about-main">
           <div className="banner profServ">
@@ -154,7 +155,7 @@ Select voucher at payment
           </div>
         </div>
 
-      </div>
+      </div> */}
     </>
   )
 }

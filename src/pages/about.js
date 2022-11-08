@@ -1,8 +1,23 @@
+import React, {useState} from 'react'
 import PatientNav from "components/nav/patientNav";
-import AboutPage from "components/about";
 import Headtags from "components/seo";
+import dynamic from 'next/dynamic';
+
+const Getstarted = dynamic(()=> import('components/modal/getstarted'))
+const AboutPage = dynamic(()=> import('components/about'))
 
 const About = () => {
+  const [visible, setVisible] = useState(false);
+
+
+  const openModal = () => {
+    setVisible(true);
+  };
+
+  const closeModal = () => {
+    setVisible(false);
+  };
+
   return (
     <>
      <Headtags
@@ -11,7 +26,10 @@ const About = () => {
         keywords="family memberships, N32,500 family membership, healthcare services, unlimited access, features, benefits"
       />
       <PatientNav />
-      <AboutPage />
+      <AboutPage
+      link={openModal}
+      />
+      <Getstarted onOk={closeModal} onCancel={closeModal} open={visible} />
     </>
   );
 };

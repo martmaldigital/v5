@@ -34,7 +34,7 @@ const Footer = () => {
             <ul>
               <h2>Quick links</h2>
               <li>
-                <Link href="/about">
+                <Link href="/about" prefetch={false}>
                   About Us
                 </Link>
               </li>
