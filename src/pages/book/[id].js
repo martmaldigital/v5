@@ -791,7 +791,6 @@ const Index = () => {
                   </Checkbox.Group>
                 </Form.Item>
                 <Form.Item
-                                className="book-select-holder"
                                 name="health_condition"
                                 rules={[
                                   {
@@ -801,17 +800,17 @@ const Index = () => {
                                 ]}
                               >
                                 <Select
+                                  mode="tags"
                                   placeholder="Existing Conditions (Pick as suitable)"
                                   allowClear
-                                  defaultValue={['a10', 'c12']}
-                                  mode="multiple"
-                                   maxTagCount='responsive'
-                                  tokenSeparators={[',']}
-                                  className="book-select"
-                                >
+                                  // defaultValue={['a10', 'c12']}
+                                  //  maxTagCount='responsive'
+                                   optionLabelProp="label"
+                                  // tokenSeparators={[',']}
+                                  >
                                   {
                                     conditions.map((item) => (
-                                      <Option value={item.name} key={item.name}>{item.name}</Option>
+                                      <Option key={item.id} label={`selected:${item.name}`} value={item.name}>{item.name}</Option>
                                     ))
                                   }
                                 </Select>
