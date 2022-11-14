@@ -834,7 +834,7 @@ const Index = () => {
                                 >
                                   {
                                     conditions.map((item) => (
-                                      <Option value={item.name} key={item.name}></Option>
+                                      <Option value={item.name} label={item.name} key={item.name}></Option>
                                     ))
                                   }
                                 </Select>
