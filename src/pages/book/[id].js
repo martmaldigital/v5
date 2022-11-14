@@ -790,7 +790,7 @@ const Index = () => {
                     </Row>
                   </Checkbox.Group>
                 </Form.Item>
-                {/* <Form.Item
+                <Form.Item
                                 className="book-select-holder"
                                 name="health_condition"
                                 rules={[
@@ -803,6 +803,7 @@ const Index = () => {
                                 <Select
                                   placeholder="Existing Conditions (Pick as suitable)"
                                   allowClear
+                                  defaultValue={['a10', 'c12']}
                                   mode="tags"
                                   // maxTagCount='responsive'
                                   tokenSeparators={[',']}
@@ -814,33 +815,7 @@ const Index = () => {
                                     ))
                                   }
                                 </Select>
-                              </Form.Item> */}
-                              <Form.Item
-                                className="book-select-holder"
-                                name="health_condition"
-                                rules={[
-                                  {
-                                    required: true,
-                                    message: 'Please input a  condition',
-                                  },
-                                ]}
-                              >
-                                <Select
-                                  mode="multiple"
-                                  placeholder="enter conditions"
-                                  allowClear
-                                  defaultValue={['a10', 'c12']}
-                                  maxTagCount='responsive'
-                                  onChange={(value) => console.log(`selected: ${value}`)}
-                                >
-                                  {
-                                    conditions.map((item, index) => (
-                                      <Option value={item.name} key={index}>{item.name}</Option>
-                                    ))
-                                  }
-                                </Select>
                               </Form.Item>
-
             </Form>
 
             <div className="pricing">
