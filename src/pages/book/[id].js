@@ -800,11 +800,10 @@ const Index = () => {
                                 ]}
                               >
                                 <Select
-
                                   placeholder="Existing Conditions (Pick as suitable)"
                                   allowClear
                                   mode="tags"
-                                  maxTagCount='responsive'
+                                  // maxTagCount='responsive'
                                   tokenSeparators={[',']}
                                   className="book-select"
                                 >
