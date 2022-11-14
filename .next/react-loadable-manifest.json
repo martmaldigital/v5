@@ -1,18 +1,6 @@
 {
-  "../components/faq.js -> ./faqq": {
-    "id": "../components/faq.js -> ./faqq",
-    "files": [
-      "static/chunks/src_components_faqq_js.js"
-    ]
-  },
   "../components/nav/patientNav.js -> components/modal/getstarted": {
     "id": "../components/nav/patientNav.js -> components/modal/getstarted",
-    "files": [
-      "static/chunks/src_components_modal_getstarted_js.js"
-    ]
-  },
-  "../components/patient/banner.js -> components/modal/getstarted": {
-    "id": "../components/patient/banner.js -> components/modal/getstarted",
     "files": [
       "static/chunks/src_components_modal_getstarted_js.js"
     ]

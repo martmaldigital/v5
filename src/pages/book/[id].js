@@ -38,6 +38,10 @@ const visitTypes = ["Home Visit", "Facility Visit", "Video Consultation"];
 const titles = ["Dr.", "Mr.", "Mrs.", "Ms.", "Miss", "Prof", "PT"];
 const reasons = ["First Time Visit", "Follow Up", "Procedure"];
 
+
+
+
+
 const Index = () => {
   const router = useRouter();
   const {id} = router.query;
@@ -800,10 +804,12 @@ const Index = () => {
               >
                 <Select
                   placeholder="Existing Conditions (Pick as suitable)"
+                  maxTagCount='responsive'
                   allowClear
-                  mode="tags"
+                  mode="multiple"
                   tokenSeparators={[","]}
                   className="book-select"
+
                 >
                   {conditions.map((item) => (
                     <Select.Option value={item.name} key={item.name}>
