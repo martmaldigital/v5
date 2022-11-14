@@ -827,7 +827,7 @@ const Index = () => {
                               >
                                 <Select
                                   mode="multiple"
-                                  placeholder="Conditions"
+                                  placeholder="Conditions as exist"
                                   allowClear
                                   maxTagCount='responsive'
                                   onChange={(value) => console.log(`selected ${value}`)}
