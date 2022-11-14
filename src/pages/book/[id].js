@@ -816,7 +816,7 @@ const Index = () => {
                                 </Select>
                               </Form.Item> */}
                               <Form.Item
-                                className="book-select-holder"
+                                // className="book-select-holder"
                                 name="health_condition"
                                 rules={[
                                   {
@@ -826,15 +826,15 @@ const Index = () => {
                                 ]}
                               >
                                 <Select
-                                  placeholder="Conditions (Pick as suitable)"
-                                  allowClear
                                   mode="multiple"
+                                  placeholder="Conditions"
+                                  allowClear
                                   maxTagCount='responsive'
                                   onChange={(value) => console.log(`selected ${value}`)}
                                 >
                                   {
-                                    conditions.map((item) => (
-                                      <Option value={item.name} label={item.name} key={item.name}></Option>
+                                    conditions.map((item, index) => (
+                                      <options value={item.name} label={item.name} key={index}></options>
                                     ))
                                   }
                                 </Select>

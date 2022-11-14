@@ -1,1 +1,0 @@
-self.__REACT_LOADABLE_MANIFEST={"../components/nav/patientNav.js -> components/modal/getstarted":{"id":"../components/nav/patientNav.js -> components/modal/getstarted","files":["static/chunks/src_components_modal_getstarted_js.js"]}}
