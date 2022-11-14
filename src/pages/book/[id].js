@@ -94,8 +94,7 @@ const Index = () => {
   }; 
 
      // get available conditions
-     const getConditions = useCallback(
-      () => {
+     const getConditions = () => {
         axios
           .get(`${api}/api/health-conditions`)
           .then((res) => {
@@ -104,12 +103,8 @@ const Index = () => {
           .catch((err) => {
             message.error("Get Conditions: Something went wrong!");
           });
-      },
-      // eslint-disable-next-line
-      []
-    );
+      }
  
-  
 
  // open the form for booking
   const openDrawer = () => {
@@ -809,6 +804,7 @@ const Index = () => {
                                   placeholder="Existing Conditions (Pick as suitable)"
                                   allowClear
                                   mode="tags"
+                                  maxTagCount='responsive'
                                   tokenSeparators={[',']}
                                   className="book-select"
                                 >
