@@ -38,7 +38,7 @@ const visitTypes = ["Home Visit", "Facility Visit", "Video Consultation"];
 const titles = ["Dr.", "Mr.", "Mrs.", "Ms.", "Miss", "Prof", "PT"];
 const reasons = ["First Time Visit", "Follow Up", "Procedure"];
 
-
+const { Option } = Select;
 
 
 
@@ -66,6 +66,7 @@ const Index = () => {
   const [validating, setValidating] = useState(false);
   const [visible, setVisible] = useState(false);
   const [alternativeLocations, setAlternativeLocations] = useState([]);
+  
 
 
 
@@ -556,9 +557,9 @@ const Index = () => {
                       }}
                     >
                       {titles.map((item) => (
-                        <Select.Option value={item} key={item}>
+                        <Option value={item} key={item}>
                           {item}
-                        </Select.Option>
+                        </Option>
                       ))}
                     </Select>
                   </Form.Item>
@@ -638,9 +639,9 @@ const Index = () => {
                       onChange={(e) => checkVisitTypeChange(e)}
                     >
                       {visitTypes.map((visit) => (
-                        <Select.Option value={visit} key={visit}>
+                        <Option value={visit} key={visit}>
                           {visit}
-                        </Select.Option>
+                        </Option>
                       ))}
                     </Select>
                   </Form.Item>
@@ -666,9 +667,9 @@ const Index = () => {
                         }}
                       >
                         {locations.map((item) => (
-                          <Select.Option value={item.landmark} key={item.landmark}>
+                          <Option value={item.landmark} key={item.landmark}>
                             {item.landmark}
-                          </Select.Option>
+                          </Option>
                         ))}
                       </Select>
                     </Form.Item>
@@ -692,9 +693,9 @@ const Index = () => {
                       }}
                     >
                       {reasons.map((reason) => (
-                        <Select.Option value={reason} key={reason}>
+                        <Option value={reason} key={reason}>
                           {reason}
-                        </Select.Option>
+                        </Option>
                       ))}
                     </Select>
                   </Form.Item>
@@ -806,15 +807,15 @@ const Index = () => {
                   placeholder="Existing Conditions (Pick as suitable)"
                   maxTagCount='responsive'
                   allowClear
-                  mode="multiple"
+                  mode="tags"
                   tokenSeparators={[","]}
                   className="book-select"
 
                 >
                   {conditions.map((item) => (
-                    <Select.Option value={item.name} key={item.name}>
+                    <Option value={item.name} key={item.name}>
                       {item.name}
-                    </Select.Option>
+                    </Option>
                   ))}
                 </Select>
               </Form.Item>
