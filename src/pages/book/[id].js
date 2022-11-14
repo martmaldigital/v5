@@ -1,7 +1,7 @@
-import React, {useState, useEffect, useRef, useCallback} from 'react'
-import { useRouter } from 'next/router'
-import axios from 'axios';
-import api from "config/api"
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import { useRouter } from "next/router";
+import axios from "axios";
+import api from "config/api";
 import {
   Form,
   Row,
@@ -16,15 +16,14 @@ import {
   message,
   Modal,
 } from "antd";
-import PatientNav from 'components/nav/patientNav';
-import Headtags from 'components/seo';
+import PatientNav from "components/nav/patientNav";
+import Headtags from "components/seo";
 import numeral from "numeral";
 import Doctor from "components/search/doctor";
 import { disabledDate, getNumberForDay } from "utils/helper";
 import { PaystackButton } from "react-paystack";
-import Related from 'components/search/related';
-import dayjs from 'dayjs'
-
+import Related from "components/search/related";
+import dayjs from "dayjs";
 
 const openNotificationWithIcon = (type, msg, desc) => {
   notification[type]({
@@ -33,18 +32,15 @@ const openNotificationWithIcon = (type, msg, desc) => {
   });
 };
 
-
 const visitTypes = ["Home Visit", "Facility Visit", "Video Consultation"];
 const titles = ["Dr.", "Mr.", "Mrs.", "Ms.", "Miss", "Prof", "PT"];
 const reasons = ["First Time Visit", "Follow Up", "Procedure"];
 
 const { Option } = Select;
 
-
-
 const Index = () => {
   const router = useRouter();
-  const {id} = router.query;
+  const { id } = router.query;
   const formRef = useRef(null);
 
   const [doctor, setDoctor] = useState({});
@@ -66,55 +62,55 @@ const Index = () => {
   const [validating, setValidating] = useState(false);
   const [visible, setVisible] = useState(false);
   const [alternativeLocations, setAlternativeLocations] = useState([]);
-  
-
-
 
   useEffect(() => {
     checkDoctor();
     getConditions();
-   },[])
+  }, []);
 
   // load the page from the api
   const checkDoctor = async () => {
-    try{
-      setLoading(true)
-      const res = await axios.get(`${api}/api/professional/check-doctoora-id/${id}`);   
-      if (res.data.status === 'success' && res.data.data.professional.doctoora_id === id) {
-        setDoctor(res.data.data.professional);   
-         setAvailable(res.data.data.availableDays),
-          setLoading(false)
+    try {
+      setLoading(true);
+      const res = await axios.get(
+        `${api}/api/professional/check-doctoora-id/${id}`
+      );
+      if (
+        res.data.status === "success" &&
+        res.data.data.professional.doctoora_id === id
+      ) {
+        setDoctor(res.data.data.professional);
+        setAvailable(res.data.data.availableDays), setLoading(false);
       } else {
-        openNotificationWithIcon('warning', 'Professional not found!')
+        openNotificationWithIcon("warning", "Professional not found!");
       }
     } catch (err) {
       setLoading(false);
-      message.error('Error: Something went wrong!')
-    } 
-  }; 
+      message.error("Error: Something went wrong!");
+    }
+  };
 
-     // get available conditions
-     const getConditions = () => {
-        axios
-          .get(`${api}/api/health-conditions`)
-          .then((res) => {
-            setConditions(res.data.data.health_conditions);
-          })
-          .catch((err) => {
-            message.error("Get Conditions: Something went wrong!");
-          });
-      }
- 
+  // get available conditions
+  const getConditions = () => {
+    axios
+      .get(`${api}/api/health-conditions`)
+      .then((res) => {
+        setConditions(res.data.data.health_conditions);
+      })
+      .catch((err) => {
+        message.error("Get Conditions: Something went wrong!");
+      });
+  };
 
- // open the form for booking
+  // open the form for booking
   const openDrawer = () => {
     setDrawerVisible(true);
   };
 
-    // close payment portal visiblility
-    const closeActuallPay = () => {
-      setVisible(false);
-    };
+  // close payment portal visiblility
+  const closeActuallPay = () => {
+    setVisible(false);
+  };
 
   // closing the form for booking
   const onClose = () => {
@@ -129,62 +125,61 @@ const Index = () => {
     }
   };
 
- // inital submission
- const onFinish = (values) => {
-  console.log(values)
-  // setFormValues(values);
-  // setValidating(true);
-  // setCouponData(null);
-        // if (coupon.trim().length > 0) {
-        //   axios
-        //     .post(`${api}/api/coupons/validate`, {
-        //       professional_id: doctor.id,
-        //       coupon_code: coupon,
-        //       service: values.type,
-        //     })
-        //     .then((res) => {
-        //       if (res.data.status === "success") {
-        //         setCouponData(res.data.data.coupon);
-        //         message.success(`Validate Coupon: ${res.data.message}`);
-        //         if (price > 0) {
-        //           setValidating(false);
-        //           setVisible(
-        //             res.data.data.coupon.value > price ? false : true
-        //           );
-        //           setPrice(res.data.data.coupon.value > price ? false : true);
-        //           if (res.data.data.coupon.value > price) {
-        //             saveBooking(null);
-        //           }
-        //         } else {
-        //           setValidating(false);
-        //           setVisible(false);
-        //           saveBooking(null);
-        //         }
-        //       } else {
-        //         setCoupon("");
-        //         setValidating(false);
-        //         setCouponData(null);
-        //         message.error(`Validate Coupon: ${res.data.message}`);
-        //       }
-        //     })
-        //     .catch((err) => {
-        //       message.error("Validate Coupon: Something went wrong!");
-        //       setCoupon("");
-        //       setValidating(false);
-        //       setCouponData(null);
-        //     });
-        // } else {
-        //   if (price > 0) {
-        //     setValidating(false);
-        //     setVisible(true);
-        //   } else {
-        //     setValidating(false);
-        //     setVisible(false);
-        //     saveBooking(null);
-        //   }
-        // }
-      };
-
+  // inital submission
+  const onFinish = (values) => {
+    console.log(values);
+    // setFormValues(values);
+    // setValidating(true);
+    // setCouponData(null);
+    // if (coupon.trim().length > 0) {
+    //   axios
+    //     .post(`${api}/api/coupons/validate`, {
+    //       professional_id: doctor.id,
+    //       coupon_code: coupon,
+    //       service: values.type,
+    //     })
+    //     .then((res) => {
+    //       if (res.data.status === "success") {
+    //         setCouponData(res.data.data.coupon);
+    //         message.success(`Validate Coupon: ${res.data.message}`);
+    //         if (price > 0) {
+    //           setValidating(false);
+    //           setVisible(
+    //             res.data.data.coupon.value > price ? false : true
+    //           );
+    //           setPrice(res.data.data.coupon.value > price ? false : true);
+    //           if (res.data.data.coupon.value > price) {
+    //             saveBooking(null);
+    //           }
+    //         } else {
+    //           setValidating(false);
+    //           setVisible(false);
+    //           saveBooking(null);
+    //         }
+    //       } else {
+    //         setCoupon("");
+    //         setValidating(false);
+    //         setCouponData(null);
+    //         message.error(`Validate Coupon: ${res.data.message}`);
+    //       }
+    //     })
+    //     .catch((err) => {
+    //       message.error("Validate Coupon: Something went wrong!");
+    //       setCoupon("");
+    //       setValidating(false);
+    //       setCouponData(null);
+    //     });
+    // } else {
+    //   if (price > 0) {
+    //     setValidating(false);
+    //     setVisible(true);
+    //   } else {
+    //     setValidating(false);
+    //     setVisible(false);
+    //     saveBooking(null);
+    //   }
+    // }
+  };
 
   // location change
   const locationChange = (value) => {
@@ -210,19 +205,19 @@ const Index = () => {
       });
   };
 
-    // get search materials
-    const getSearchMaterials = () => {
-      axios
-        .get(`${api}/api/search-criteria`)
-        .then((res) => {
-          setLocations(res.data.data.availableLocations);
-        })
-        .catch((err) => {
-          message.error("Get Specializations or Location: Something went wrong!");
-        });
-    };
+  // get search materials
+  const getSearchMaterials = () => {
+    axios
+      .get(`${api}/api/search-criteria`)
+      .then((res) => {
+        setLocations(res.data.data.availableLocations);
+      })
+      .catch((err) => {
+        message.error("Get Specializations or Location: Something went wrong!");
+      });
+  };
 
-        // trigger date change
+  // trigger date change
   const triggerChange = (e) => {
     setLoadingSlot(true);
     setPrice(0);
@@ -264,26 +259,25 @@ const Index = () => {
     }
   };
 
-
-    const checkVisitTypeChange = (value) => {
-      formRef.current.setFieldsValue({
-        date: null,
-        time: [],
-        location: "",
-      });
-      setSlots([]);
-      setPrice(0);
-      if (value === "Home Visit") {
-        if (alternativeLocations.length === 0) {
-          getCoverageLocation();
-        } else {
-          setLocations(alternativeLocations);
-        }
-      } 
-      if (value === "Facility Visit") {
-        getSearchMaterials();
+  const checkVisitTypeChange = (value) => {
+    formRef.current.setFieldsValue({
+      date: null,
+      time: [],
+      location: "",
+    });
+    setSlots([]);
+    setPrice(0);
+    if (value === "Home Visit") {
+      if (alternativeLocations.length === 0) {
+        getCoverageLocation();
+      } else {
+        setLocations(alternativeLocations);
       }
-      axios
+    }
+    if (value === "Facility Visit") {
+      getSearchMaterials();
+    }
+    axios
       .get(`${api}/api/professional/check-id/${doctor.id}`)
       .then((res) => {
         if (res.data.status === "success") {
@@ -310,22 +304,20 @@ const Index = () => {
         setLoading(false);
         message.error("Error: Something went wrong!");
       });
-    }
+  };
 
- 
+  // recalculate price after clicking slots
+  const calculatePrice = (values) => {
+    let total = values.reduce((sum, { price }) => sum + price, 0);
+    let cst = 2.5;
+    let bookingFee = 5.0;
+    let paymentCharge = 1.8;
+    let totalCharge = cst + bookingFee + paymentCharge;
+    let grandTotal = (totalCharge / 100) * total + total;
+    setPrice(grandTotal);
+  };
 
-    // recalculate price after clicking slots
-    const calculatePrice = (values) => {
-      let total = values.reduce((sum, { price }) => sum + price, 0);
-      let cst = 2.5;
-      let bookingFee = 5.0;
-      let paymentCharge = 1.8;
-      let totalCharge = cst + bookingFee + paymentCharge;
-      let grandTotal = (totalCharge / 100) * total + total;
-      setPrice(grandTotal);
-    };
-
-     // get price
+  // get price
   const getPrice = (values) => {
     let total = values.reduce((sum, { price }) => sum + price, 0);
     let cst = 2.5;
@@ -340,7 +332,6 @@ const Index = () => {
   const handleCouponChange = (e) => {
     setCoupon(e.target.value);
   };
-
 
   // savebooking
   const saveBooking = async (reference) => {
@@ -379,19 +370,21 @@ const Index = () => {
       lastname: formRef.current.getFieldValue("lastname"),
       firstname: formRef.current.getFieldValue("firstname"),
       title: formRef.current.getFieldValue("title"),
-    }; 
-   await axios
+    };
+    await axios
       .post(`${api}/api/appointments/guest/book`, {
         ...details,
       })
-      .then((res) => {     
-          openNotificationWithIcon(
-            "success","Booking", "Booking was made successfully, Please check your email to proceed appropriately."
-          );
-          setDrawerVisible(false);
-          setProcessing(false);
-          setVisible(false);
-          formRef.current.resetFields();
+      .then((res) => {
+        openNotificationWithIcon(
+          "success",
+          "Booking",
+          "Booking was made successfully, Please check your email to proceed appropriately."
+        );
+        setDrawerVisible(false);
+        setProcessing(false);
+        setVisible(false);
+        formRef.current.resetFields();
       })
       .catch((err) => {
         message.error("Booking: Something went wrong");
@@ -400,87 +393,81 @@ const Index = () => {
       });
   };
 
-    //paystack payment props
-    const componentProps = {
-      email: formValues?.email,
-      amount: price * 100,
-      metadata: {
-        name: `${formValues?.firstname + " " + formValues?.lastname}`,
-        phone: formValues?.phone,
-      },
-      publicKey: "pk_test_d3e5ef049fea223a261408b111833a6c46a7186c",
-      text: "Pay",
-      onClick: () => {
-        console.log("pay");
-      },
-      onSuccess: (res) => {
-        saveBooking(res.reference);
-      },
-    };
+  //paystack payment props
+  const componentProps = {
+    email: formValues?.email,
+    amount: price * 100,
+    metadata: {
+      name: `${formValues?.firstname + " " + formValues?.lastname}`,
+      phone: formValues?.phone,
+    },
+    publicKey: "pk_test_d3e5ef049fea223a261408b111833a6c46a7186c",
+    text: "Pay",
+    onClick: () => {
+      console.log("pay");
+    },
+    onSuccess: (res) => {
+      saveBooking(res.reference);
+    },
+  };
 
   return (
     <>
-    <div className="search">
-      <Headtags
-        title="Doctoora - Same-Day Appointments With The Best Doctors Near You. "
-        desc="Doctoora provides easy and affordable online and offline access to verified, quality healthcare services by Doctors, other experts and hospitals in Nigeria"
-        keywords="Doctor search results, Search results for doctors in Nigeria, the best doctors near me, search and compare top doctors, find the best specialists in Nigeria, The best dermatologists, Cardiology specialist doctors in nigeria, emergency healthcare, doctor ratings in Nigeria, Health Insurance, Low cost healthcare, Affordable hospitals, digital health, telemedicine"
-      />
-      <PatientNav />
-      <div className="search-main">
-           <p className="back bio"
+      <div className="search">
+        <Headtags
+          title="Doctoora - Same-Day Appointments With The Best Doctors Near You. "
+          desc="Doctoora provides easy and affordable online and offline access to verified, quality healthcare services by Doctors, other experts and hospitals in Nigeria"
+          keywords="Doctor search results, Search results for doctors in Nigeria, the best doctors near me, search and compare top doctors, find the best specialists in Nigeria, The best dermatologists, Cardiology specialist doctors in nigeria, emergency healthcare, doctor ratings in Nigeria, Health Insurance, Low cost healthcare, Affordable hospitals, digital health, telemedicine"
+        />
+        <PatientNav />
+        <div className="search-main">
+          <p
+            className="back bio"
             onClick={() => {
-              router.back()
+              router.back();
             }}
           >
-             <img src="/img/left.svg" alt="back" />
-             Back
+            <img src="/img/left.svg" alt="back" />
+            Back
           </p>
           <div className="search-body">
-          <hr className="custom-line" />
-          <div className="search-body-content">
-            
-            {
-              loading ? 
-              (
+            <hr className="custom-line" />
+            <div className="search-body-content">
+              {loading ? (
                 <div className="loader-container">
-                <div className="loader"></div>
-                </div> 
-              ):(
+                  <div className="loader"></div>
+                </div>
+              ) : (
                 <>
-                <Row gutter={64}>
-                  <Col lg={6} xs={24} md={24}>
-                    <div className="filter-holder">
-                      <div className="related-searches">
-                        <h1 className="side-title">
-                          Available General Practitioner
-                  </h1>
-                        <Related 
-                        relate={doctor.doctoora_id}
+                  <Row gutter={64}>
+                    <Col lg={6} xs={24} md={24}>
+                      <div className="filter-holder">
+                        <div className="related-searches">
+                          <h1 className="side-title">
+                            Available General Practitioner
+                          </h1>
+                          <Related relate={doctor.doctoora_id} />
+                        </div>
+                      </div>
+                    </Col>
+                    <Col lg={18} xs={24} md={24}>
+                      <div className="result-holder">
+                        <Doctor
+                          doctor={doctor}
+                          availableDays={available}
+                          key={`doctor-key-${doctor.id}`}
+                          openDrawer={openDrawer}
                         />
                       </div>
-                    </div>
-                  </Col>
-                  <Col lg={18} xs={24} md={24}>
-                    <div className="result-holder"> 
-                            <Doctor
-                              doctor={doctor}
-                              availableDays={available}
-                              key={`doctor-key-${doctor.id}`}
-                              openDrawer={openDrawer}
-                      />
-                    </div>
-                  </Col>
-                </Row>
+                    </Col>
+                  </Row>
                 </>
-              )
-            }               
+              )}
+            </div>
           </div>
         </div>
-          </div>
 
-
-          <Drawer
+        <Drawer
           title={null}
           placement="left"
           onClose={onClose}
@@ -528,12 +515,7 @@ const Index = () => {
           </p>
 
           <div className="form-holder">
-
-            <Form
-              layout="vertical"
-              ref={formRef}
-              onFinish={onFinish}
-            >
+            <Form layout="vertical" ref={formRef} onFinish={onFinish}>
               <Row gutter={8}>
                 <Col lg={24} xs={24}>
                   <Form.Item
@@ -670,7 +652,7 @@ const Index = () => {
                       </Select>
                     </Form.Item>
                   </Col>
-                )} 
+                )}
                 <Col lg={24} xs={24}>
                   <Form.Item
                     name="reason"
@@ -706,11 +688,12 @@ const Index = () => {
                   },
                 ]}
               >
-                <Input.TextArea rows={4}
-                style={{
-                  resize: "none",
-                  height:"100%"
-                }}
+                <Input.TextArea
+                  rows={4}
+                  style={{
+                    resize: "none",
+                    height: "100%",
+                  }}
                   className="book-input"
                   placeholder="Reason for Visit/Complaint"
                 />
@@ -729,8 +712,8 @@ const Index = () => {
                     const style = {};
                     getNumberForDay(availableDays).map((item) => {
                       if (dayjs(current).day() === item) {
-                        style.border = '1px solid #1890ff';
-                        style.borderRadius = '50%';
+                        style.border = "1px solid #1890ff";
+                        style.borderRadius = "50%";
                       }
                     });
                     return (
@@ -745,77 +728,75 @@ const Index = () => {
                   format="YYYY-MM-DD"
                 />
               </Form.Item>
-                <Form.Item
-                  name="time"
-                  label="Time (Pick a suitable time)"
-                  className="book-check"
-                  rules={[
-                    {
-                      required: true,
-                      message: "Input field",
-                    },
-                  ]}
+              <Form.Item
+                name="time"
+                label="Time (Pick a suitable time)"
+                className="book-check"
+                rules={[
+                  {
+                    required: true,
+                    message: "Input field",
+                  },
+                ]}
+              >
+                <Checkbox.Group onChange={calculatePrice}>
+                  <Row
+                    gutter={32}
+                    className={`slots-holder  ${loadingSlot ? "loading" : ""}`}
+                  >
+                    {loadingSlot ? (
+                      <div className="x-loader">
+                        <div className="loader"></div>
+                      </div>
+                    ) : (
+                      <>
+                        {slots.length > 0 ? (
+                          slots.map((slot, index) => (
+                            <Col
+                              key={index}
+                              sm={12}
+                              xs={24}
+                              className="book-check"
+                            >
+                              <Checkbox value={slot}>{slot.time}</Checkbox>
+                            </Col>
+                          ))
+                        ) : (
+                          <p className="none-found">
+                            There are no slots availble
+                          </p>
+                        )}
+                      </>
+                    )}
+                  </Row>
+                </Checkbox.Group>
+              </Form.Item>
+              <Form.Item
+                className="book-select-holder"
+                name="health_condition"
+                rules={[
+                  {
+                    required: true,
+                    message: "Please input a  condition",
+                  },
+                ]}
+              >
+                <Select
+                  placeholder="Existing Conditions (Pick as suitable)"
+                  allowClear
+                  defaultValue={["a10", "c12"]}
+                  mode="multiple"
+                  maxTagCount="responsive"
+                  // tokenSeparators={[',']}
+                  className="book-select"
                 >
-                  <Checkbox.Group onChange={calculatePrice}>
-                    <Row
-                      gutter={32}
-                      className={`slots-holder  ${
-                        loadingSlot ? "loading" : ""
-                      }`}
-                    >
-                      {loadingSlot ? (
-                        <div className="x-loader">
-                         <div className="loader"></div>
-                        </div>
-                      ) : (
-                        <>
-                          {slots.length > 0 ? (
-                            slots.map((slot, index) => (
-                              <Col
-                                key={index}
-                                sm={12}
-                                xs={24}
-                                className="book-check"
-                              >
-                                <Checkbox value={slot}>{slot.time}</Checkbox>
-                              </Col>
-                            ))
-                          ) : (
-                            <p className="none-found">
-                              There are no slots availble
-                            </p>
-                          )}
-                        </>
-                      )}
-                    </Row>
-                  </Checkbox.Group>
-                </Form.Item>
-                <Form.Item
-                                className="book-select-holder"
-                                name="health_condition"
-                                rules={[
-                                  {
-                                    required: true,
-                                    message: 'Please input a  condition',
-                                  },
-                                ]}
-                              >
-                                <Select
-                                  placeholder="Existing Conditions (Pick as suitable)"
-                                  allowClear
-                                  defaultValue={['a10', 'c12']}
-                                  mode="tags"
-                                  // maxTagCount='responsive'
-                                  tokenSeparators={[',']}
-                                  className="book-select"
-                                >
-                                  {
-                                    conditions.map((item) => (
-                                      <Option value={item.name} key={item.name}>{item.name}</Option>
-                                    ))
-                                  }
-                                </Select>
-                              </Form.Item>
+                  {conditions.map((item, index) => (
+                    <Option value={item.name} key={index}>
+                      {item.name}
+                    </Option>
+                  ))}
+                </Select>
+              </Form.Item>
             </Form>
 
             <div className="pricing">
@@ -859,8 +840,8 @@ const Index = () => {
             </Form>
           </div>
         </Drawer>
-          </div>
-          <Modal
+      </div>
+      <Modal
         open={visible}
         footer={null}
         className="paystack-modal"
@@ -897,7 +878,7 @@ const Index = () => {
         </div>
       </Modal>
     </>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;
