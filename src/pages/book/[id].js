@@ -794,31 +794,32 @@ const Index = () => {
                     </Row>
                   </Checkbox.Group>
                 </Form.Item>
-              <Form.Item
-                name="health_condition"
-                rules={[
-                  {
-                    required: true,
-                    message: "Input required",
-                  },
-                ]}
-              >
-                <Select
-                  placeholder="Existing Conditions (Pick as suitable)"
-                  maxTagCount='responsive'
-                  allowClear
-                  mode="tags"
-                  tokenSeparators={[","]}
-                  className="book-select"
+                <Form.Item
+                                className="book-select-holder"
+                                name="health_condition"
+                                rules={[
+                                  {
+                                    required: true,
+                                    message: 'Please input a  condition',
+                                  },
+                                ]}
+                              >
+                                <Select
 
-                >
-                  {conditions.map((item) => (
-                    <Option value={item.name} key={item.name}>
-                      {item.name}
-                    </Option>
-                  ))}
-                </Select>
-              </Form.Item>
+                                  placeholder="Existing Conditions (Pick as suitable)"
+                                  allowClear
+                                  mode="tags"
+                                  tokenSeparators={[',']}
+                                  className="book-select"
+                                >
+                                  {
+                                    conditions.map((item) => (
+                                      <Option value={item.name} key={item.name}>{item.name}</Option>
+                                    ))
+                                  }
+                                </Select>
+                              </Form.Item>
+
             </Form>
 
             <div className="pricing">
