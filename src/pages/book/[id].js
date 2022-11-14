@@ -830,11 +830,12 @@ const Index = () => {
                                   placeholder="Conditions as exist"
                                   allowClear
                                   maxTagCount='responsive'
+                                  optionLabelProp="label"
                                   onChange={(value) => console.log(`selected ${value}`)}
                                 >
                                   {
                                     conditions.map((item, index) => (
-                                      <options value={item.name} label={item.name} key={index}></options>
+                                      <Option value={item.name} label={item.name} key={index}></Option>
                                     ))
                                   }
                                 </Select>
