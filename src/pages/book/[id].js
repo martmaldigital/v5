@@ -131,57 +131,58 @@ const Index = () => {
 
  // inital submission
  const onFinish = (values) => {
-  setFormValues(values);
-  setValidating(true);
-  setCouponData(null);
-        if (coupon.trim().length > 0) {
-          axios
-            .post(`${api}/api/coupons/validate`, {
-              professional_id: doctor.id,
-              coupon_code: coupon,
-              service: values.type,
-            })
-            .then((res) => {
-              if (res.data.status === "success") {
-                setCouponData(res.data.data.coupon);
-                message.success(`Validate Coupon: ${res.data.message}`);
-                if (price > 0) {
-                  setValidating(false);
-                  setVisible(
-                    res.data.data.coupon.value > price ? false : true
-                  );
-                  setPrice(res.data.data.coupon.value > price ? false : true);
-                  if (res.data.data.coupon.value > price) {
-                    saveBooking(null);
-                  }
-                } else {
-                  setValidating(false);
-                  setVisible(false);
-                  saveBooking(null);
-                }
-              } else {
-                setCoupon("");
-                setValidating(false);
-                setCouponData(null);
-                message.error(`Validate Coupon: ${res.data.message}`);
-              }
-            })
-            .catch((err) => {
-              message.error("Validate Coupon: Something went wrong!");
-              setCoupon("");
-              setValidating(false);
-              setCouponData(null);
-            });
-        } else {
-          if (price > 0) {
-            setValidating(false);
-            setVisible(true);
-          } else {
-            setValidating(false);
-            setVisible(false);
-            saveBooking(null);
-          }
-        }
+  console.log(values)
+  // setFormValues(values);
+  // setValidating(true);
+  // setCouponData(null);
+        // if (coupon.trim().length > 0) {
+        //   axios
+        //     .post(`${api}/api/coupons/validate`, {
+        //       professional_id: doctor.id,
+        //       coupon_code: coupon,
+        //       service: values.type,
+        //     })
+        //     .then((res) => {
+        //       if (res.data.status === "success") {
+        //         setCouponData(res.data.data.coupon);
+        //         message.success(`Validate Coupon: ${res.data.message}`);
+        //         if (price > 0) {
+        //           setValidating(false);
+        //           setVisible(
+        //             res.data.data.coupon.value > price ? false : true
+        //           );
+        //           setPrice(res.data.data.coupon.value > price ? false : true);
+        //           if (res.data.data.coupon.value > price) {
+        //             saveBooking(null);
+        //           }
+        //         } else {
+        //           setValidating(false);
+        //           setVisible(false);
+        //           saveBooking(null);
+        //         }
+        //       } else {
+        //         setCoupon("");
+        //         setValidating(false);
+        //         setCouponData(null);
+        //         message.error(`Validate Coupon: ${res.data.message}`);
+        //       }
+        //     })
+        //     .catch((err) => {
+        //       message.error("Validate Coupon: Something went wrong!");
+        //       setCoupon("");
+        //       setValidating(false);
+        //       setCouponData(null);
+        //     });
+        // } else {
+        //   if (price > 0) {
+        //     setValidating(false);
+        //     setVisible(true);
+        //   } else {
+        //     setValidating(false);
+        //     setVisible(false);
+        //     saveBooking(null);
+        //   }
+        // }
       };
 
 
@@ -789,7 +790,7 @@ const Index = () => {
                     </Row>
                   </Checkbox.Group>
                 </Form.Item>
-                <Form.Item
+                {/* <Form.Item
                                 className="book-select-holder"
                                 name="health_condition"
                                 rules={[
@@ -810,6 +811,30 @@ const Index = () => {
                                   {
                                     conditions.map((item) => (
                                       <Option value={item.name} key={item.name}>{item.name}</Option>
+                                    ))
+                                  }
+                                </Select>
+                              </Form.Item> */}
+                              <Form.Item
+                                className="book-select-holder"
+                                name="health_condition"
+                                rules={[
+                                  {
+                                    required: true,
+                                    message: 'Please input a  condition',
+                                  },
+                                ]}
+                              >
+                                <Select
+                                  placeholder="Conditions (Pick as suitable)"
+                                  allowClear
+                                  mode="multiple"
+                                  maxTagCount='responsive'
+                                  onChange={(value) => console.log(`selected ${value}`)}
+                                >
+                                  {
+                                    conditions.map((item) => (
+                                      <Option value={item.name} key={item.name}></Option>
                                     ))
                                   }
                                 </Select>
